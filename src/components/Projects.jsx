@@ -1,29 +1,55 @@
 const projects = [
   {
-    title: 'StoryAfrika',
-    tagline: 'Connecting African markets to the world',
+    title: 'Gestion-Commerce',
+    tagline: 'Offline POS & inventory system',
     description:
-      'A market discovery platform that helps buyers and sellers across Africa find each other, list products, and transact digitally. Built to reduce information asymmetry and open up local economies.',
-    tags: ['React', 'Node.js', 'MongoDB', 'REST API'],
+      'A full-featured Point of Sale system built for offline use. Handles product catalog, real-time inventory tracking, in-store sales with barcode support, delivery orders, automated financials, and a live dashboard — all stored locally in SQLite.',
+    tags: ['Python', 'PySide6', 'SQLite', 'SQLModel', 'Pytest'],
     links: {
-      github: 'https://github.com/mdouaour',
+      github: 'https://github.com/mdouaour/Gestion-Commerce',
       live: null,
     },
-    accent: 'from-violet-600/20 to-purple-800/10',
+    accent: 'from-violet-600/20 to-purple-900/10',
     badge: 'Featured',
   },
   {
-    title: 'POS System',
-    tagline: 'Modern point-of-sale for small retailers',
+    title: 'StoryAfrika',
+    tagline: 'Market discovery platform for Africa',
     description:
-      'A lightweight, offline-capable point-of-sale system tailored for small and medium retailers. Handles inventory, sales tracking, receipts, and end-of-day reporting with a clean, fast UI.',
-    tags: ['React', 'TypeScript', 'PostgreSQL', 'Express'],
+      'A digital platform connecting buyers and sellers across African markets. Designed to reduce information asymmetry, enable product discovery, and open local economies to broader audiences. Currently in early development.',
+    tags: ['React', 'Node.js', 'MongoDB', 'Tailwind CSS'],
     links: {
       github: 'https://github.com/mdouaour',
       live: null,
     },
-    accent: 'from-blue-600/20 to-cyan-800/10',
+    accent: 'from-amber-600/15 to-orange-900/10',
+    badge: 'In progress',
+  },
+  {
+    title: 'Gestion-de-Stock',
+    tagline: 'Desktop stock management (Java)',
+    description:
+      'A desktop application for stock and inventory management built with Java Swing and MySQL. Supports product tracking, stock entries/exits, and basic reporting. One of the first complete projects I shipped.',
+    tags: ['Java', 'Swing', 'MySQL', 'NetBeans'],
+    links: {
+      github: 'https://github.com/mdouaour/gestion-de-stock',
+      live: null,
+    },
+    accent: 'from-blue-600/15 to-cyan-900/10',
     badge: null,
+  },
+  {
+    title: 'ALX SE Program',
+    tagline: 'Systems & full-stack engineering training',
+    description:
+      'Year-long intensive software engineering program through ALX Africa. Built a custom shell in C, a printf from scratch, binary trees, Python higher-level programming, and devops/shell scripting. Rigorous, real-world focused curriculum.',
+    tags: ['C', 'Python', 'Shell', 'DevOps', 'Algorithms'],
+    links: {
+      github: 'https://github.com/mdouaour/alx-higher_level_programming',
+      live: null,
+    },
+    accent: 'from-emerald-600/15 to-teal-900/10',
+    badge: 'Completed',
   },
 ]
 
@@ -35,12 +61,10 @@ function GitHubIcon() {
   )
 }
 
-function ExternalLinkIcon() {
-  return (
-    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-    </svg>
-  )
+const badgeColors = {
+  'Featured': 'bg-violet-600/30 text-violet-300 border-violet-500/30',
+  'In progress': 'bg-amber-600/30 text-amber-300 border-amber-500/30',
+  'Completed': 'bg-emerald-600/30 text-emerald-300 border-emerald-500/30',
 }
 
 export default function Projects() {
@@ -50,25 +74,28 @@ export default function Projects() {
         <p className="text-violet-400 text-sm font-semibold tracking-widest uppercase mb-3 text-center">
           Projects
         </p>
-        <h2 className="text-3xl sm:text-4xl font-bold text-white text-center mb-16">
+        <h2 className="text-3xl sm:text-4xl font-bold text-white text-center mb-4">
           Things I&apos;ve built
         </h2>
+        <p className="text-slate-500 text-center mb-16 max-w-xl mx-auto">
+          Real projects — some shipped, some in progress, all pushing my skills forward.
+        </p>
 
         <div className="grid md:grid-cols-2 gap-6">
           {projects.map((project) => (
             <article
               key={project.title}
-              className={`relative rounded-2xl border border-white/10 bg-gradient-to-br ${project.accent} p-6 flex flex-col gap-4 hover:border-violet-400/30 transition-colors group`}
+              className={`relative rounded-2xl border border-white/10 bg-gradient-to-br ${project.accent} p-6 flex flex-col gap-4 hover:border-violet-400/30 transition-colors`}
             >
               {project.badge && (
-                <span className="absolute top-4 right-4 text-xs px-2.5 py-1 rounded-full bg-violet-600/30 text-violet-300 border border-violet-500/30">
+                <span className={`absolute top-4 right-4 text-xs px-2.5 py-1 rounded-full border ${badgeColors[project.badge]}`}>
                   {project.badge}
                 </span>
               )}
 
               <div>
                 <h3 className="text-xl font-bold text-white mb-1">{project.title}</h3>
-                <p className="text-violet-300 text-sm">{project.tagline}</p>
+                <p className="text-slate-400 text-sm">{project.tagline}</p>
               </div>
 
               <p className="text-slate-400 text-sm leading-relaxed flex-1">
@@ -93,22 +120,24 @@ export default function Projects() {
                   rel="noopener noreferrer"
                   className="flex items-center gap-1.5 text-sm text-slate-400 hover:text-white transition-colors"
                 >
-                  <GitHubIcon /> Code
+                  <GitHubIcon /> View on GitHub
                 </a>
-                {project.links.live && (
-                  <a
-                    href={project.links.live}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-1.5 text-sm text-slate-400 hover:text-white transition-colors"
-                  >
-                    <ExternalLinkIcon /> Live demo
-                  </a>
-                )}
               </div>
             </article>
           ))}
         </div>
+
+        <p className="text-center mt-10 text-slate-500 text-sm">
+          More on{' '}
+          <a
+            href="https://github.com/mdouaour"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-violet-400 hover:text-violet-300 transition-colors"
+          >
+            github.com/mdouaour
+          </a>
+        </p>
       </div>
     </section>
   )

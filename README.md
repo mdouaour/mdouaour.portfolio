@@ -1,20 +1,20 @@
 # mdouaour.portfolio
 
-Personal portfolio for **Mohammed Yassine Douaouria** — Full-Stack Engineer building impactful digital products across Africa and beyond.
+Personal portfolio for **Mohammed Yassine Douaouria** — Full-Stack Engineer from Algeria. ALX Software Engineering graduate. Builder of practical tools.
 
 > **"Engineering for Impact"**
+
+## 🧠 About this project
+
+This is my personal portfolio site, built with React 19 + Tailwind CSS v4 on Vite. It showcases:
+
+- **Who I am** — CS grad (Univ. Guelma) + ALX SE certified
+- **What I've built** — Gestion-Commerce (Python POS), StoryAfrika, Gestion-de-Stock, ALX projects
+- **My skills** — Python, C, Java, JavaScript, React, Node.js, SQLite/MySQL, PySide6, Tailwind
 
 ## 🌐 Live site
 
 _Coming soon_
-
-## ✨ Features
-
-- **Hero** — Introduction with profile picture, brand statement, and CTAs
-- **About** — Bio, background, and tech stack
-- **Projects** — StoryAfrika (African market discovery platform) and POS System (retail point-of-sale)
-- **Contact** — Email CTA and social links (GitHub, LinkedIn)
-- Dark-mode design with smooth scroll navigation
 
 ## 🛠 Tech stack
 
@@ -27,29 +27,15 @@ _Coming soon_
 
 ## 🚀 Getting started
 
-### Prerequisites
-
-- Node.js 18+
-- npm 9+
-
-### Setup
-
 ```bash
-# Install dependencies
 npm install
-
-# Start development server
-npm run dev
+npm run dev        # → http://localhost:5173
 ```
 
-Open [http://localhost:5173](http://localhost:5173) in your browser.
-
-### Other commands
-
 ```bash
-npm run build    # Production build → dist/
-npm run preview  # Preview production build locally
-npm run lint     # Run ESLint
+npm run build      # Production build → dist/
+npm run preview    # Preview production build
+npm run lint       # ESLint check
 ```
 
 ## 📁 Project structure
@@ -57,23 +43,28 @@ npm run lint     # Run ESLint
 ```
 src/
 ├── assets/
-│   └── profile.jpg        ← Your profile photo
+│   └── profile.jpg          ← Profile photo (replace with yours)
 ├── components/
 │   ├── Navbar.jsx
-│   ├── Hero.jsx
-│   ├── About.jsx
-│   ├── Projects.jsx
-│   ├── Contact.jsx
+│   ├── Hero.jsx             ← Name, tagline, stats, photo
+│   ├── About.jsx            ← Bio, skills, journey timeline
+│   ├── Projects.jsx         ← Project cards (real GitHub repos)
+│   ├── Contact.jsx          ← Email CTA + social links
 │   └── Footer.jsx
 ├── App.jsx
-├── App.css
-├── index.css
+├── index.css                ← Tailwind entry + global resets
 └── main.jsx
 ```
 
 ## 🖼 Adding your profile photo
 
-Place your photo at `src/assets/profile.jpg`. The Hero component will automatically pick it up. Any common image format (`.jpg`, `.png`, `.webp`) works — just update the import in `src/components/Hero.jsx` if you use a different filename.
+Replace `src/assets/profile.jpg` with your actual photo. Any format works (`.jpg`, `.png`, `.webp`) — update the import in `src/components/Hero.jsx` if you change the filename.
+
+## 🔗 Links
+
+- GitHub: [github.com/mdouaour](https://github.com/mdouaour)
+- Twitter: [@mdoer](https://twitter.com/mdoer)
+- LinkedIn: [linkedin.com/in/mdouaour](https://linkedin.com/in/mdouaour)
 
 ## 📄 License
 

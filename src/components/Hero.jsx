@@ -13,20 +13,26 @@ export default function Hero() {
             Engineering for Impact
           </p>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-            Hi, I&apos;m Mohammed Yassine{' '}
-            <span className="text-violet-400">Douaouria</span>
+            Hi, I&apos;m{' '}
+            <span className="text-violet-400">Yassine</span>
+            <br />
+            Douaouria
           </h1>
-          <p className="text-slate-400 text-lg leading-relaxed mb-8 max-w-lg">
-            Full-Stack Engineer crafting digital products that solve real-world
-            problems across Africa and beyond — from market platforms to retail
-            systems.
+          <p className="text-slate-400 text-lg leading-relaxed mb-4 max-w-lg">
+            Full-Stack Engineer from Algeria — ALX graduate, CS grad, builder of
+            tools that solve real problems.
+          </p>
+          <p className="text-slate-500 text-base leading-relaxed mb-8 max-w-lg">
+            I craft everything from offline POS systems and inventory platforms
+            to React web apps. I write Python, C, Java, and JavaScript — and I
+            love systems that actually ship.
           </p>
           <div className="flex flex-wrap gap-4">
             <a
               href="#projects"
               className="px-6 py-3 rounded-full bg-violet-600 hover:bg-violet-500 text-white font-medium transition-colors"
             >
-              View my work
+              See my work
             </a>
             <a
               href="#contact"
@@ -34,6 +40,22 @@ export default function Hero() {
             >
               Get in touch
             </a>
+          </div>
+
+          {/* Quick stats */}
+          <div className="flex gap-8 mt-10">
+            <div>
+              <p className="text-2xl font-bold text-white">19+</p>
+              <p className="text-slate-500 text-xs uppercase tracking-wide mt-1">GitHub repos</p>
+            </div>
+            <div>
+              <p className="text-2xl font-bold text-white">4+</p>
+              <p className="text-slate-500 text-xs uppercase tracking-wide mt-1">Years building</p>
+            </div>
+            <div>
+              <p className="text-2xl font-bold text-white">ALX</p>
+              <p className="text-slate-500 text-xs uppercase tracking-wide mt-1">Certified SE</p>
+            </div>
           </div>
         </div>
 
