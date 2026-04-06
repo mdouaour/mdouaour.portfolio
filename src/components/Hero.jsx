@@ -1,4 +1,27 @@
+import { useState } from 'react'
 import profileImg from '../assets/profile.jpg'
+
+function ProfileAvatar() {
+  const [imgError, setImgError] = useState(false)
+
+  if (imgError) {
+    // Fallback: styled initials circle shown until real photo is in place
+    return (
+      <div className="relative w-64 h-64 sm:w-80 sm:h-80 rounded-full border-4 border-violet-600/30 shadow-2xl bg-gradient-to-br from-violet-900/60 to-slate-900 flex items-center justify-center select-none">
+        <span className="text-5xl sm:text-6xl font-bold text-violet-300 tracking-tight">MYD</span>
+      </div>
+    )
+  }
+
+  return (
+    <img
+      src={profileImg}
+      alt="Mohammed Yassine Douaouria"
+      onError={() => setImgError(true)}
+      className="relative w-64 h-64 sm:w-80 sm:h-80 rounded-full object-cover border-4 border-violet-600/30 shadow-2xl"
+    />
+  )
+}
 
 export default function Hero() {
   return (
@@ -63,11 +86,7 @@ export default function Hero() {
         <div className="flex justify-center md:justify-end">
           <div className="relative">
             <div className="absolute inset-0 rounded-full bg-violet-600/20 blur-3xl scale-110" />
-            <img
-              src={profileImg}
-              alt="Mohammed Yassine Douaouria"
-              className="relative w-64 h-64 sm:w-80 sm:h-80 rounded-full object-cover border-4 border-violet-600/30 shadow-2xl"
-            />
+            <ProfileAvatar />
           </div>
         </div>
       </div>
