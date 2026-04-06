@@ -1,16 +1,80 @@
-# React + Vite
+# mdouaour.portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio for **Mohammed Yassine Douaouria** — Full-Stack Engineer building impactful digital products across Africa and beyond.
 
-Currently, two official plugins are available:
+> **"Engineering for Impact"**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🌐 Live site
 
-## React Compiler
+_Coming soon_
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Features
 
-## Expanding the ESLint configuration
+- **Hero** — Introduction with profile picture, brand statement, and CTAs
+- **About** — Bio, background, and tech stack
+- **Projects** — StoryAfrika (African market discovery platform) and POS System (retail point-of-sale)
+- **Contact** — Email CTA and social links (GitHub, LinkedIn)
+- Dark-mode design with smooth scroll navigation
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠 Tech stack
+
+| Layer | Technology |
+|---|---|
+| UI framework | React 19 |
+| Build tool | Vite 8 |
+| Styling | Tailwind CSS v4 |
+| Language | JavaScript (JSX) |
+
+## 🚀 Getting started
+
+### Prerequisites
+
+- Node.js 18+
+- npm 9+
+
+### Setup
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+```
+
+Open [http://localhost:5173](http://localhost:5173) in your browser.
+
+### Other commands
+
+```bash
+npm run build    # Production build → dist/
+npm run preview  # Preview production build locally
+npm run lint     # Run ESLint
+```
+
+## 📁 Project structure
+
+```
+src/
+├── assets/
+│   └── profile.jpg        ← Your profile photo
+├── components/
+│   ├── Navbar.jsx
+│   ├── Hero.jsx
+│   ├── About.jsx
+│   ├── Projects.jsx
+│   ├── Contact.jsx
+│   └── Footer.jsx
+├── App.jsx
+├── App.css
+├── index.css
+└── main.jsx
+```
+
+## 🖼 Adding your profile photo
+
+Place your photo at `src/assets/profile.jpg`. The Hero component will automatically pick it up. Any common image format (`.jpg`, `.png`, `.webp`) works — just update the import in `src/components/Hero.jsx` if you use a different filename.
+
+## 📄 License
+
+MIT
