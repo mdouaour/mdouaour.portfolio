@@ -1,48 +1,66 @@
+import { useLang } from '../context/LanguageContext.jsx'
+import { translations } from '../data/translations.js'
 import { SectionHeading } from './About.jsx'
 
 const skillGroups = [
   {
-    category: 'Languages',
+    categoryKey: 'frontend',
+    skills: [
+      { name: 'React', level: 80 },
+      { name: 'JavaScript / TypeScript', level: 78 },
+      { name: 'Tailwind CSS', level: 82 },
+      { name: 'HTML / CSS', level: 88 },
+    ],
+  },
+  {
+    categoryKey: 'backend',
+    skills: [
+      { name: 'Node.js / Express', level: 70 },
+      { name: 'Python', level: 90 },
+      { name: 'REST APIs', level: 78 },
+      { name: 'SQLite / MySQL', level: 78 },
+    ],
+  },
+  {
+    categoryKey: 'tools',
+    skills: [
+      { name: 'Git & GitHub', level: 88 },
+      { name: 'AI-Assisted Dev', level: 85 },
+      { name: 'Vite / Build Tools', level: 72 },
+      { name: 'Linux / Shell', level: 78 },
+    ],
+  },
+  {
+    categoryKey: 'languages',
     skills: [
       { name: 'Python', level: 90 },
-      { name: 'JavaScript', level: 75 },
-      { name: 'Java', level: 70 },
-      { name: 'C', level: 65 },
-    ],
-  },
-  {
-    category: 'Frontend',
-    skills: [
-      { name: 'React', level: 70 },
-      { name: 'HTML / CSS', level: 80 },
-      { name: 'Tailwind CSS', level: 70 },
-      { name: 'Vite', level: 65 },
-    ],
-  },
-  {
-    category: 'Backend & Tools',
-    skills: [
-      { name: 'SQLite / MySQL', level: 75 },
-      { name: 'PySide6 / Qt', level: 70 },
-      { name: 'Git & GitHub', level: 85 },
-      { name: 'Linux / Shell', level: 75 },
+      { name: 'JavaScript', level: 78 },
+      { name: 'Java', level: 72 },
+      { name: 'C', level: 68 },
     ],
   },
 ]
 
 export default function Skills() {
+  const { lang, isRTL } = useLang()
+  const T = translations[lang].skills
+
   return (
-    <section id="skills" className="py-20 px-4">
+    <section
+      id="skills"
+      dir={isRTL ? 'rtl' : 'ltr'}
+      className="py-20 px-4"
+    >
       <div className="max-w-5xl mx-auto">
-        <SectionHeading>Skills</SectionHeading>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+        <SectionHeading>{T.title}</SectionHeading>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-12">
           {skillGroups.map((group) => (
             <div
-              key={group.category}
-              className="bg-slate-800 rounded-2xl p-6 border border-slate-700"
+              key={group.categoryKey}
+              className="bg-slate-800 rounded-2xl p-5 border border-slate-700 hover:border-violet-500/40 transition-colors"
             >
-              <h3 className="text-white font-semibold text-lg mb-4">
-                {group.category}
+              <h3 className="text-violet-300 font-semibold text-sm uppercase tracking-wide mb-4">
+                {T.categories[group.categoryKey]}
               </h3>
               <ul className="space-y-3">
                 {group.skills.map(({ name, level }) => (
@@ -61,7 +79,7 @@ export default function Skills() {
                         aria-valuenow={level}
                         aria-valuemin={0}
                         aria-valuemax={100}
-                        aria-label={`${name} proficiency`}
+                        aria-label={`${name} proficiency: ${level}%`}
                       />
                     </div>
                   </li>
@@ -74,3 +92,4 @@ export default function Skills() {
     </section>
   )
 }
+

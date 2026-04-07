@@ -1,44 +1,62 @@
+import { useLang } from '../context/LanguageContext.jsx'
+import { translations } from '../data/translations.js'
+
 export default function About() {
+  const { lang, isRTL } = useLang()
+  const T = translations[lang].about
+
   return (
-    <section id="about" className="py-20 px-4 bg-slate-800/40">
+    <section
+      id="about"
+      dir={isRTL ? 'rtl' : 'ltr'}
+      className="py-20 px-4 bg-slate-800/40"
+    >
       <div className="max-w-5xl mx-auto">
-        <SectionHeading>About Me</SectionHeading>
+        <SectionHeading>{T.title}</SectionHeading>
         <div className="grid md:grid-cols-2 gap-10 mt-10 text-left">
           <div>
             <h3 className="text-white font-semibold text-lg mb-3">
-              Background
+              {T.background}
             </h3>
             <p className="text-slate-400 leading-relaxed mb-4">
-              I&apos;m Mohammed Yassine Douaouria, a Computer Science graduate from the
-              University of Guelma, Algeria. I hold an ALX Software Engineering
-              certification and am passionate about building useful, real-world
-              software.
+              {T.backgroundText1}
             </p>
-            <p className="text-slate-400 leading-relaxed">
-              I thrive at the intersection of backend logic and clean user
-              interfaces, and I enjoy tackling problems in inventory management,
-              commerce tools, and platform development.
+            <p className="text-slate-400 leading-relaxed mb-6">
+              {T.backgroundText2}
             </p>
+
+            <h3 className="text-white font-semibold text-lg mb-3">
+              {T.whatIDo}
+            </h3>
+            <ul className="space-y-2">
+              {T.services.map((service) => (
+                <li key={service} className="flex items-start gap-2 text-slate-400 text-sm">
+                  <span className="text-violet-400 mt-0.5 flex-shrink-0">▹</span>
+                  {service}
+                </li>
+              ))}
+            </ul>
           </div>
+
           <div>
             <h3 className="text-white font-semibold text-lg mb-3">
-              Education &amp; Certifications
+              {T.education}
             </h3>
             <ul className="space-y-3">
               <InfoItem
                 icon="🎓"
-                title="B.Sc. Computer Science"
-                subtitle="University of Guelma, Algeria"
+                title={T.degree}
+                subtitle={T.university}
               />
               <InfoItem
                 icon="🏅"
-                title="ALX Software Engineering"
-                subtitle="ALX Africa — Full-Stack Certification"
+                title={T.alx}
+                subtitle={T.alxSub}
               />
               <InfoItem
                 icon="📍"
-                title="Based in Algeria"
-                subtitle="Open to remote opportunities"
+                title={T.location}
+                subtitle={T.locationSub}
               />
             </ul>
           </div>
@@ -60,7 +78,7 @@ function SectionHeading({ children }) {
 function InfoItem({ icon, title, subtitle }) {
   return (
     <li className="flex items-start gap-3">
-      <span className="text-xl mt-0.5">{icon}</span>
+      <span className="text-xl mt-0.5" aria-hidden="true">{icon}</span>
       <div>
         <p className="text-white font-medium">{title}</p>
         <p className="text-slate-400 text-sm">{subtitle}</p>
@@ -70,3 +88,4 @@ function InfoItem({ icon, title, subtitle }) {
 }
 
 export { SectionHeading }
+
