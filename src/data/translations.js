@@ -66,6 +66,9 @@ export const translations = {
       github: 'GitHub',
       linkedin: 'LinkedIn',
       linktree: 'Linktree',
+    },
+    footer: {
+      built: 'Built with React & Tailwind CSS',
       source: 'View source on GitHub',
       rights: 'All rights reserved.',
     },
