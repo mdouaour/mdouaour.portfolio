@@ -41,11 +41,13 @@
 
   var observer = new IntersectionObserver(
     function (entries) {
-      entries.forEach(function (entry, i) {
+      var stagger = 0;
+      entries.forEach(function (entry) {
         if (entry.isIntersecting) {
           setTimeout(function () {
             entry.target.classList.add('visible');
-          }, i * 60);
+          }, stagger * 60);
+          stagger++;
           observer.unobserve(entry.target);
         }
       });
