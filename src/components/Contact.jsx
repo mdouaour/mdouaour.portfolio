@@ -3,7 +3,7 @@ import { translations } from '../data/translations.js'
 import { SectionHeading } from './About.jsx'
 
 // ── Update these with your real details ─────────────────────────────────────
-const EMAIL = 'mdouaour@gmail.com'           // TODO: replace with your email
+const EMAIL = 'yacine23i@hotmail.com'
 const WHATSAPP = 'https://wa.me/213XXXXXXXXX' // TODO: replace with your number
 // ────────────────────────────────────────────────────────────────────────────
 
