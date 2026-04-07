@@ -2,9 +2,9 @@ import { useLang } from '../context/LanguageContext.jsx'
 import { translations } from '../data/translations.js'
 import { SectionHeading } from './About.jsx'
 
-// ── Update these with your real details ─────────────────────────────────────
+// ── Contact details ──────────────────────────────────────────────────────────
 const EMAIL = 'yacine23i@hotmail.com'
-const WHATSAPP = 'https://wa.me/213XXXXXXXXX' // TODO: replace with your number
+const WHATSAPP = 'https://wa.me/213654927818'
 // ────────────────────────────────────────────────────────────────────────────
 
 export default function Contact() {
@@ -22,7 +22,7 @@ export default function Contact() {
     {
       label: T.whatsapp,
       href: WHATSAPP,
-      description: '+213 XX XXX XXXX',
+      description: '+213 65 492 7818',
       icon: <WhatsAppIcon />,
       highlight: true,
     },
