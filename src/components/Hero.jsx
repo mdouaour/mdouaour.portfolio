@@ -12,8 +12,12 @@ export default function Hero() {
       className="min-h-screen flex flex-col items-center justify-center text-center px-4 pt-16"
     >
       {/* Avatar */}
-      <div className="w-28 h-28 rounded-full bg-violet-700 flex items-center justify-center text-4xl font-bold text-white mb-6 ring-4 ring-violet-500/40 shadow-lg shadow-violet-500/20">
-        MY
+      <div className="w-28 h-28 rounded-full mb-6 ring-4 ring-violet-500/40 shadow-lg shadow-violet-500/20 overflow-hidden">
+        <img
+          src="https://github.com/mdouaour.png"
+          alt="Mohammed Yassine Douaouria"
+          className="w-full h-full object-cover"
+        />
       </div>
 
       <p className="text-slate-400 text-sm mb-2 tracking-wide">{T.greeting}</p>
@@ -44,7 +48,7 @@ export default function Hero() {
           GitHub
         </a>
         <a
-          href="https://www.linkedin.com/in/mdouaour"
+          href="https://www.linkedin.com/in/mohammed-yassine-douaouria-0a2272121"
           target="_blank"
           rel="noreferrer"
           className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 text-sm font-medium transition-colors border border-slate-700"
@@ -52,6 +56,16 @@ export default function Hero() {
         >
           <LinkedInIcon />
           LinkedIn
+        </a>
+        <a
+          href="https://linktr.ee/mdouaour"
+          target="_blank"
+          rel="noreferrer"
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 text-sm font-medium transition-colors border border-slate-700"
+          aria-label="Linktree"
+        >
+          <LinktreeIcon />
+          Linktree
         </a>
         <a
           href="https://twitter.com/mdoer"
@@ -99,6 +113,15 @@ function LinkedInIcon() {
     </svg>
   )
 }
+
+function LinktreeIcon() {
+  return (
+    <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M7.953 15.066c-.08-.043-.08.042 0 0m8.09-8.521c.04-.037.04.037 0 0M12 0C5.374 0 0 5.373 0 12s5.374 12 12 12 12-5.373 12-12S18.626 0 12 0m-.437 4.25h.875c.136 0 .248.112.248.25v5.5l3.286-3.286a.248.248 0 0 1 .351 0l.619.619a.247.247 0 0 1 0 .35L13.25 10.97l3.942 3.94a.248.248 0 0 1 0 .35l-.62.62a.25.25 0 0 1-.35 0L12 11.659l-4.222 4.22a.25.25 0 0 1-.35 0l-.62-.619a.248.248 0 0 1 0-.35l3.942-3.94-3.692-3.688a.248.248 0 0 1 0-.35l.619-.619a.248.248 0 0 1 .351 0L11.314 9.99v-5.49c0-.138.112-.25.249-.25m-3.439 15h7.752a.25.25 0 0 0 .25-.25v-.875a.25.25 0 0 0-.25-.25H8.124a.25.25 0 0 0-.25.25V19a.25.25 0 0 0 .25.25" />
+    </svg>
+  )
+}
+
 
 function XIcon() {
   return (

@@ -35,9 +35,16 @@ export default function Contact() {
     },
     {
       label: T.linkedin,
-      href: 'https://www.linkedin.com/in/mdouaour',
+      href: 'https://www.linkedin.com/in/mohammed-yassine-douaouria-0a2272121',
       description: 'linkedin.com/in/mdouaour',
       icon: <LinkedInIcon />,
+      highlight: false,
+    },
+    {
+      label: T.linktree,
+      href: 'https://linktr.ee/mdouaour',
+      description: 'linktr.ee/mdouaour',
+      icon: <LinktreeIcon />,
       highlight: false,
     },
   ]
@@ -124,6 +131,14 @@ function LinkedInIcon() {
   return (
     <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
       <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.95v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.35-1.85 3.58 0 4.24 2.36 4.24 5.43v6.31zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM3.56 20.45h3.56V9H3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z" />
+    </svg>
+  )
+}
+
+function LinktreeIcon() {
+  return (
+    <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M7.953 15.066c-.08-.043-.08.042 0 0m8.09-8.521c.04-.037.04.037 0 0M12 0C5.374 0 0 5.373 0 12s5.374 12 12 12 12-5.373 12-12S18.626 0 12 0m-.437 4.25h.875c.136 0 .248.112.248.25v5.5l3.286-3.286a.248.248 0 0 1 .351 0l.619.619a.247.247 0 0 1 0 .35L13.25 10.97l3.942 3.94a.248.248 0 0 1 0 .35l-.62.62a.25.25 0 0 1-.35 0L12 11.659l-4.222 4.22a.25.25 0 0 1-.35 0l-.62-.619a.248.248 0 0 1 0-.35l3.942-3.94-3.692-3.688a.248.248 0 0 1 0-.35l.619-.619a.248.248 0 0 1 .351 0L11.314 9.99v-5.49c0-.138.112-.25.249-.25m-3.439 15h7.752a.25.25 0 0 0 .25-.25v-.875a.25.25 0 0 0-.25-.25H8.124a.25.25 0 0 0-.25.25V19a.25.25 0 0 0 .25.25" />
     </svg>
   )
 }

@@ -65,9 +65,7 @@ export const translations = {
       whatsapp: 'WhatsApp',
       github: 'GitHub',
       linkedin: 'LinkedIn',
-    },
-    footer: {
-      built: 'Built with React & Tailwind CSS',
+      linktree: 'Linktree',
       source: 'View source on GitHub',
       rights: 'All rights reserved.',
     },
@@ -139,6 +137,7 @@ export const translations = {
       whatsapp: 'WhatsApp',
       github: 'GitHub',
       linkedin: 'LinkedIn',
+      linktree: 'Linktree',
     },
     footer: {
       built: 'Construit avec React & Tailwind CSS',
@@ -213,6 +212,7 @@ export const translations = {
       whatsapp: 'واتساب',
       github: 'GitHub',
       linkedin: 'LinkedIn',
+      linktree: 'Linktree',
     },
     footer: {
       built: 'مبني بـ React و Tailwind CSS',
