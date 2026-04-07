@@ -1,59 +1,32 @@
+import { useLang } from '../context/LanguageContext.jsx'
+import { translations } from '../data/translations.js'
 import { SectionHeading } from './About.jsx'
-
-const projects = [
-  {
-    title: 'Gestion Commerce',
-    description:
-      'A full-featured point-of-sale and inventory management system built with Python, PySide6, and SQLite. Handles products, sales, and stock tracking for small businesses.',
-    tags: ['Python', 'PySide6', 'SQLite'],
-    github: 'https://github.com/mdouaour/Gestion-Commerce',
-    status: 'completed',
-  },
-  {
-    title: 'Gestion de Stock',
-    description:
-      'A Java Swing desktop application for stock and inventory management backed by MySQL. Clean MVC architecture with full CRUD operations.',
-    tags: ['Java', 'Swing', 'MySQL'],
-    github: 'https://github.com/mdouaour/gestion-de-stock',
-    status: 'completed',
-  },
-  {
-    title: 'StoryAfrika',
-    description:
-      'An in-progress African storytelling and marketplace platform. Aiming to connect creators and consumers across the African continent.',
-    tags: ['JavaScript', 'React', 'Platform'],
-    github: 'https://github.com/mdouaour',
-    status: 'in-progress',
-  },
-  {
-    title: 'ALX Projects',
-    description:
-      'A collection of projects from the ALX Software Engineering program covering C, Python, Shell scripting, and system programming fundamentals.',
-    tags: ['C', 'Python', 'Shell'],
-    github: 'https://github.com/mdouaour',
-    status: 'completed',
-  },
-]
+import projectsData from '../data/projects.json'
 
 const statusConfig = {
   completed: {
-    label: 'Completed',
     className: 'bg-green-500/20 text-green-400 border border-green-500/30',
   },
   'in-progress': {
-    label: 'In Progress',
     className: 'bg-amber-500/20 text-amber-400 border border-amber-500/30',
   },
 }
 
 export default function Projects() {
+  const { lang, isRTL } = useLang()
+  const T = translations[lang].projects
+
   return (
-    <section id="projects" className="py-20 px-4 bg-slate-800/40">
+    <section
+      id="projects"
+      dir={isRTL ? 'rtl' : 'ltr'}
+      className="py-20 px-4 bg-slate-800/40"
+    >
       <div className="max-w-5xl mx-auto">
-        <SectionHeading>Projects</SectionHeading>
+        <SectionHeading>{T.title}</SectionHeading>
         <div className="grid sm:grid-cols-2 gap-6 mt-12">
-          {projects.map((project) => (
-            <ProjectCard key={project.title} {...project} />
+          {projectsData.map((project) => (
+            <ProjectCard key={project.id} project={project} T={T} lang={lang} />
           ))}
         </div>
       </div>
@@ -61,25 +34,76 @@ export default function Projects() {
   )
 }
 
-function ProjectCard({ title, description, tags, github, status }) {
-  const badge = statusConfig[status]
+function ProjectCard({ project, T, lang }) {
+  const badge = statusConfig[project.status]
+  const title = project.title[lang]
+  const description = project.description[lang]
+  const features = project.features[lang]
+
   return (
-    <div className="bg-slate-800 border border-slate-700 rounded-2xl p-6 flex flex-col gap-4 hover:border-violet-500/50 transition-colors group">
+    <article className="bg-slate-800 border border-slate-700 rounded-2xl p-6 flex flex-col gap-4 hover:border-violet-500/50 transition-colors group">
+      {/* Project image / placeholder */}
+      {project.image ? (
+        <img
+          src={project.image}
+          alt={title}
+          className="w-full h-36 object-cover rounded-lg"
+          loading="lazy"
+        />
+      ) : (
+        <div
+          className="w-full h-36 rounded-lg bg-slate-700/60 flex items-center justify-center border border-slate-600"
+          aria-hidden="true"
+        >
+          <svg
+            width="40"
+            height="40"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            viewBox="0 0 24 24"
+            className="text-slate-500"
+            aria-hidden="true"
+          >
+            <rect x="3" y="3" width="18" height="18" rx="2" />
+            <path d="M3 9h18M9 21V9" />
+          </svg>
+        </div>
+      )}
+
+      {/* Title + status */}
       <div className="flex items-start justify-between gap-3">
-        <h3 className="text-white font-semibold text-lg group-hover:text-violet-300 transition-colors">
+        <h3 className="text-white font-semibold text-lg group-hover:text-violet-300 transition-colors leading-snug">
           {title}
         </h3>
         <span
-          className={`text-xs font-medium px-2 py-1 rounded-full whitespace-nowrap ${badge.className}`}
+          className={`text-xs font-medium px-2 py-1 rounded-full whitespace-nowrap flex-shrink-0 ${badge.className}`}
         >
-          {badge.label}
+          {T.status[project.status]}
         </span>
       </div>
-      <p className="text-slate-400 text-sm leading-relaxed flex-1">
-        {description}
-      </p>
+
+      {/* Description */}
+      <p className="text-slate-400 text-sm leading-relaxed">{description}</p>
+
+      {/* Features */}
+      <div>
+        <p className="text-slate-500 text-xs uppercase tracking-wide mb-2 font-medium">
+          {T.features}
+        </p>
+        <ul className="space-y-1">
+          {features.map((feat) => (
+            <li key={feat} className="text-slate-400 text-xs flex items-start gap-1.5">
+              <span className="text-violet-400 flex-shrink-0">▹</span>
+              {feat}
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {/* Tags */}
       <div className="flex flex-wrap gap-2">
-        {tags.map((tag) => (
+        {project.tags.map((tag) => (
           <span
             key={tag}
             className="text-xs text-violet-300 bg-violet-500/10 border border-violet-500/20 px-2 py-0.5 rounded-full"
@@ -88,17 +112,33 @@ function ProjectCard({ title, description, tags, github, status }) {
           </span>
         ))}
       </div>
-      <a
-        href={github}
-        target="_blank"
-        rel="noreferrer"
-        className="inline-flex items-center gap-2 text-sm text-slate-300 hover:text-violet-400 transition-colors mt-auto"
-        aria-label={`View ${title} on GitHub`}
-      >
-        <GithubIcon />
-        View on GitHub →
-      </a>
-    </div>
+
+      {/* Links */}
+      <div className="flex flex-wrap gap-4 mt-auto pt-2 border-t border-slate-700">
+        <a
+          href={project.github}
+          target="_blank"
+          rel="noreferrer"
+          className="inline-flex items-center gap-1.5 text-sm text-slate-300 hover:text-violet-400 transition-colors"
+          aria-label={`View ${title} on GitHub`}
+        >
+          <GithubIcon />
+          {T.viewGithub}
+        </a>
+        {project.demo && (
+          <a
+            href={project.demo}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-1.5 text-sm text-violet-300 hover:text-violet-400 transition-colors"
+            aria-label={`Live demo for ${title}`}
+          >
+            <ExternalLinkIcon />
+            {T.viewDemo}
+          </a>
+        )}
+      </div>
+    </article>
   )
 }
 
@@ -109,3 +149,12 @@ function GithubIcon() {
     </svg>
   )
 }
+
+function ExternalLinkIcon() {
+  return (
+    <svg width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" aria-hidden="true">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+    </svg>
+  )
+}
+

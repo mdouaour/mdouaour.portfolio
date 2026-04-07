@@ -1,0 +1,94 @@
+[
+  {
+    "id": "gestion-commerce",
+    "status": "completed",
+    "github": "https://github.com/mdouaour/Gestion-Commerce",
+    "demo": null,
+    "image": null,
+    "tags": ["Python", "PySide6", "SQLite"],
+    "title": {
+      "en": "Gestion Commerce — Smart POS",
+      "fr": "Gestion Commerce — POS Intelligent",
+      "ar": "إدارة التجارة — نظام نقاط بيع ذكي"
+    },
+    "description": {
+      "en": "A full-featured point-of-sale and inventory management system built with Python, PySide6, and SQLite. Handles products, sales, and stock tracking for small businesses.",
+      "fr": "Un système complet de point de vente et de gestion des stocks construit avec Python, PySide6 et SQLite. Gère les produits, les ventes et le suivi des stocks pour les petites entreprises.",
+      "ar": "نظام متكامل لنقاط البيع وإدارة المخزون مبني بـ Python وPySide6 وSQLite. يدير المنتجات والمبيعات وتتبع المخزون للشركات الصغيرة."
+    },
+    "features": {
+      "en": ["Full POS interface", "Inventory & stock tracking", "Sales reports & analytics", "Local SQLite database"],
+      "fr": ["Interface POS complète", "Suivi des stocks", "Rapports de vente", "Base de données SQLite locale"],
+      "ar": ["واجهة نقاط بيع كاملة", "تتبع المخزون", "تقارير المبيعات والتحليلات", "قاعدة بيانات SQLite محلية"]
+    }
+  },
+  {
+    "id": "gestion-de-stock",
+    "status": "completed",
+    "github": "https://github.com/mdouaour/gestion-de-stock",
+    "demo": null,
+    "image": null,
+    "tags": ["Java", "Swing", "MySQL"],
+    "title": {
+      "en": "Gestion de Stock",
+      "fr": "Gestion de Stock",
+      "ar": "إدارة المخزون"
+    },
+    "description": {
+      "en": "A Java Swing desktop application for stock and inventory management backed by MySQL. Clean MVC architecture with full CRUD operations.",
+      "fr": "Une application de bureau Java Swing pour la gestion des stocks avec MySQL. Architecture MVC propre avec toutes les opérations CRUD.",
+      "ar": "تطبيق سطح مكتب Java Swing لإدارة المخزون مع MySQL. بنية MVC نظيفة مع عمليات CRUD كاملة."
+    },
+    "features": {
+      "en": ["Stock & inventory management", "MVC architecture", "MySQL backend", "Full CRUD operations"],
+      "fr": ["Gestion des stocks", "Architecture MVC", "Backend MySQL", "Opérations CRUD complètes"],
+      "ar": ["إدارة المخزون", "بنية MVC", "قاعدة بيانات MySQL", "عمليات CRUD كاملة"]
+    }
+  },
+  {
+    "id": "story-afrika",
+    "status": "in-progress",
+    "github": "https://github.com/mdouaour",
+    "demo": null,
+    "image": null,
+    "tags": ["JavaScript", "React", "Platform"],
+    "title": {
+      "en": "StoryAfrika",
+      "fr": "StoryAfrika",
+      "ar": "ستوري أفريكا"
+    },
+    "description": {
+      "en": "An African storytelling and marketplace platform. Connecting creators and consumers across the African continent.",
+      "fr": "Une plateforme de narration africaine et de marché. Connecter créateurs et consommateurs à travers le continent africain.",
+      "ar": "منصة قصص أفريقية وسوق إلكتروني. تربط المبدعين والمستهلكين عبر القارة الأفريقية."
+    },
+    "features": {
+      "en": ["Creator marketplace", "African stories & content", "Multi-language support", "React frontend"],
+      "fr": ["Marché des créateurs", "Histoires africaines", "Support multilingue", "Frontend React"],
+      "ar": ["سوق المبدعين", "قصص ومحتوى أفريقي", "دعم متعدد اللغات", "واجهة React"]
+    }
+  },
+  {
+    "id": "alx-projects",
+    "status": "completed",
+    "github": "https://github.com/mdouaour",
+    "demo": null,
+    "image": null,
+    "tags": ["C", "Python", "Shell"],
+    "title": {
+      "en": "ALX Projects",
+      "fr": "Projets ALX",
+      "ar": "مشاريع ALX"
+    },
+    "description": {
+      "en": "A collection of projects from the ALX Software Engineering program covering C, Python, Shell scripting, and system programming fundamentals.",
+      "fr": "Une collection de projets du programme ALX Software Engineering couvrant C, Python, Shell scripting et les fondamentaux de la programmation système.",
+      "ar": "مجموعة مشاريع من برنامج ALX لهندسة البرمجيات تشمل C وPython وسكريبت Shell والبرمجة النظامية."
+    },
+    "features": {
+      "en": ["System programming in C", "Python scripting & automation", "Shell scripting", "Algorithm design"],
+      "fr": ["Programmation système en C", "Scripts Python & automatisation", "Scripts Shell", "Conception d'algorithmes"],
+      "ar": ["برمجة نظمية بـ C", "سكريبت Python والأتمتة", "سكريبت Shell", "تصميم الخوارزميات"]
+    }
+  }
+]

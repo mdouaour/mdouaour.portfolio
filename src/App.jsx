@@ -1,4 +1,5 @@
 import './index.css'
+import { useLang } from './context/LanguageContext.jsx'
 import Navbar from './components/Navbar.jsx'
 import Hero from './components/Hero.jsx'
 import About from './components/About.jsx'
@@ -8,8 +9,10 @@ import Contact from './components/Contact.jsx'
 import Footer from './components/Footer.jsx'
 
 function App() {
+  const { isRTL } = useLang()
+
   return (
-    <>
+    <div dir={isRTL ? 'rtl' : 'ltr'} lang={isRTL ? 'ar' : undefined}>
       <Navbar />
       <main>
         <Hero />
@@ -19,8 +22,9 @@ function App() {
         <Contact />
       </main>
       <Footer />
-    </>
+    </div>
   )
 }
 
 export default App
+

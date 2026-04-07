@@ -15,3 +15,14 @@ body {
   background: #0f172a;
   color: #e2e8f0;
 }
+
+/* Arabic / RTL typography */
+:lang(ar) {
+  font-family: 'Segoe UI', Tahoma, 'Arabic Typesetting', 'Traditional Arabic',
+    system-ui, sans-serif;
+  line-height: 1.8;
+}
+
+[dir='rtl'] {
+  text-align: right;
+}

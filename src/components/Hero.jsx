@@ -1,26 +1,38 @@
+import { useLang } from '../context/LanguageContext.jsx'
+import { translations } from '../data/translations.js'
+
 export default function Hero() {
+  const { lang, isRTL } = useLang()
+  const T = translations[lang].hero
+
   return (
     <section
       id="hero"
+      dir={isRTL ? 'rtl' : 'ltr'}
       className="min-h-screen flex flex-col items-center justify-center text-center px-4 pt-16"
     >
-      {/* Avatar placeholder */}
+      {/* Avatar */}
       <div className="w-28 h-28 rounded-full bg-violet-700 flex items-center justify-center text-4xl font-bold text-white mb-6 ring-4 ring-violet-500/40 shadow-lg shadow-violet-500/20">
         MY
       </div>
+
+      <p className="text-slate-400 text-sm mb-2 tracking-wide">{T.greeting}</p>
 
       <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-4">
         Mohammed Yassine{' '}
         <span className="text-violet-400">Douaouria</span>
       </h1>
 
-      <p className="text-lg sm:text-xl text-slate-400 max-w-2xl mb-6 leading-relaxed">
-        Computer Science Graduate · ALX Software Engineering Certified · Building
-        real-world apps with Python, Java, and JavaScript.
+      <p className="text-violet-300 font-semibold text-base sm:text-lg mb-4">
+        {T.tagline}
+      </p>
+
+      <p className="text-slate-400 max-w-2xl mb-8 leading-relaxed text-sm sm:text-base">
+        {T.description}
       </p>
 
       {/* Social links */}
-      <div className="flex gap-4 mb-10">
+      <div className="flex flex-wrap justify-center gap-3 mb-10">
         <a
           href="https://github.com/mdouaour"
           target="_blank"
@@ -53,13 +65,21 @@ export default function Hero() {
         </a>
       </div>
 
-      {/* CTA */}
-      <a
-        href="#projects"
-        className="px-6 py-3 rounded-xl bg-violet-600 hover:bg-violet-500 text-white font-semibold text-sm transition-colors shadow-lg shadow-violet-500/30"
-      >
-        View My Projects ↓
-      </a>
+      {/* CTAs */}
+      <div className="flex flex-wrap justify-center gap-3">
+        <a
+          href="#projects"
+          className="px-6 py-3 rounded-xl bg-violet-600 hover:bg-violet-500 text-white font-semibold text-sm transition-colors shadow-lg shadow-violet-500/30"
+        >
+          {T.cta} ↓
+        </a>
+        <a
+          href="#contact"
+          className="px-6 py-3 rounded-xl border border-violet-500 hover:bg-violet-500/10 text-violet-300 font-semibold text-sm transition-colors"
+        >
+          {T.hire}
+        </a>
+      </div>
     </section>
   )
 }
@@ -87,3 +107,4 @@ function XIcon() {
     </svg>
   )
 }
+
