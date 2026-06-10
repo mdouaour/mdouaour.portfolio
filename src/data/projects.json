@@ -1,25 +1,186 @@
 [
   {
+    "id": "vibe-trading",
+    "status": "completed",
+    "github": "https://github.com/mdouaour/Vibe-Trading",
+    "demo": null,
+    "image": "/screenshots/vibe-trading.jpg",
+    "tags": ["Python", "OpenAI", "AI Agent", "Trading"],
+    "title": {
+      "en": "Vibe-Trading — AI Trading Agent",
+      "fr": "Vibe-Trading — Agent de Trading IA",
+      "ar": "Vibe-Trading — وكيل تداول بالذكاء الاصطناعي"
+    },
+    "description": {
+      "en": "An AI-powered trading agent that analyzes financial markets and executes strategies autonomously. Built with Python and integrated with OpenAI for intelligent market insights and decision-making.",
+      "fr": "Un agent de trading propulsé par l'IA qui analyse les marchés financiers et exécute des stratégies de manière autonome. Construit avec Python et intégré à OpenAI.",
+      "ar": "وكيل تداول مدعوم بالذكاء الاصطناعي يحلل الأسواق المالية وينفذ الاستراتيجيات بشكل مستقل. مبني بـ Python ومتكامل مع OpenAI."
+    },
+    "features": {
+      "en": ["AI-powered market analysis & predictions", "Automated strategy execution", "OpenAI integration for insights", "Real-time market data processing"],
+      "fr": ["Analyse et prévisions de marché par IA", "Exécution automatisée de stratégies", "Intégration OpenAI pour analyses", "Traitement des données en temps réel"],
+      "ar": ["تحليل السوق وتوقعات بالذكاء الاصطناعي", "تنفيذ استراتيجيات آلي", "دمج OpenAI للتحليلات", "معالجة بيانات السوق الفورية"]
+    }
+  },
+  {
+    "id": "openclaude",
+    "status": "completed",
+    "github": "https://github.com/mdouaour/openclaude",
+    "demo": null,
+    "image": "/screenshots/openclaude.jpg",
+    "tags": ["TypeScript", "OpenAI", "AI", "CLI", "API"],
+    "title": {
+      "en": "OpenClaude — Any LLM, One CLI",
+      "fr": "OpenClaude — Tous les LLM, un seul CLI",
+      "ar": "OpenClaude — أي نموذج لغوي، واجهة واحدة"
+    },
+    "description": {
+      "en": "Opens Claude Code to any LLM provider — OpenAI, Gemini, DeepSeek, Ollama, and 200+ models via an OpenAI-compatible API shim. Run Claude Code's agentic workflow with your preferred model.",
+      "fr": "Ouvre Claude Code à tous les fournisseurs de LLM — OpenAI, Gemini, DeepSeek, Ollama et 200+ modèles. Utilisez le flux de travail agentique de Claude Code avec votre modèle préféré.",
+      "ar": "يفتح Claude Code لأي مزود نماذج لغوية — OpenAI وGemini وDeepSeek وOllama وأكثر من 200 نموذج. استخدم سير عمل Claude Code مع النموذج الذي تفضله."
+    },
+    "features": {
+      "en": ["200+ LLM provider support", "OpenAI-compatible API shim", "Claude Code agentic workflow", "TypeScript codebase"],
+      "fr": ["Support de 200+ fournisseurs LLM", "API compatible OpenAI", "Flux agentique Claude Code", "Codebase TypeScript"],
+      "ar": ["دعم أكثر من 200 مزود نماذج", "واجهة برمجية متوافقة مع OpenAI", "سير عمل Claude Code", "قاعدة بيانات TypeScript"]
+    }
+  },
+  {
+    "id": "scrapling",
+    "status": "completed",
+    "github": "https://github.com/mdouaour/Scrapling",
+    "demo": null,
+    "image": "/screenshots/scrapling.jpg",
+    "tags": ["Python", "Web Scraping", "Framework", "Automation"],
+    "title": {
+      "en": "Scrapling — Adaptive Web Scraping Framework",
+      "fr": "Scrapling — Framework de Scraping Web Adaptatif",
+      "ar": "Scrapling — إطار كشط ويب تكيفي"
+    },
+    "description": {
+      "en": "A resilient, adaptive web scraping framework built for production. Handles everything from a single API request to large-scale distributed extraction with built-in retry, proxy rotation, and anti-detection.",
+      "fr": "Un framework de scraping web résilient et adaptatif conçu pour la production. Gère tout, d'une simple requête API à l'extraction distribuée à grande échelle.",
+      "ar": "إطار كشط ويب متكيف ومرن مصمم للإنتاج. يتعامل مع كل شيء من طلب API واحد إلى استخراج موزع واسع النطاق."
+    },
+    "features": {
+      "en": ["Adaptive anti-detection engine", "Single-request to distributed scale", "Automatic retry & proxy rotation", "Production-grade Python framework"],
+      "fr": ["Moteur anti-détection adaptatif", "Simple requête à échelle distribuée", "Réessai auto & rotation proxy", "Framework Python grade production"],
+      "ar": ["محرك تكيفي لمكافحة الكشف", "من طلب واحد إلى نطاق موزع", "إعادة محاولة تلقائية وتدوير وكيل", "إطار Python بجودة إنتاجية"]
+    }
+  },
+  {
+    "id": "guelma-guide",
+    "status": "completed",
+    "github": "https://github.com/mdouaour/GuelmaGuidev3",
+    "demo": null,
+    "image": "/screenshots/guelma-guide.jpg",
+    "tags": ["TypeScript", "React", "Tourism", "Algeria"],
+    "title": {
+      "en": "Guelma Guide — Tourism Platform",
+      "fr": "Guide de Guelma — Plateforme Touristique",
+      "ar": "دليل قالمة — منصة سياحية"
+    },
+    "description": {
+      "en": "A comprehensive tourism guide for Guelma, Algeria. Built with modern TypeScript and React, it showcases local attractions, cultural heritage, history, and travel information for visitors.",
+      "fr": "Un guide touristique complet pour Guelma, Algérie. Construit avec TypeScript et React moderne, il présente les attractions locales, le patrimoine culturel et les informations de voyage.",
+      "ar": "دليل سياحي شامل لقالمة، الجزائر. مبني بـ TypeScript و React الحديث، يعرض المعالم المحلية والتراث الثقافي ومعلومات السفر."
+    },
+    "features": {
+      "en": ["Tourism attraction showcase", "Cultural heritage & history", "Modern TypeScript + React", "Fully responsive design"],
+      "fr": ["Présentation des attractions", "Patrimoine culturel et histoire", "TypeScript + React moderne", "Design entièrement responsive"],
+      "ar": ["عرض المعالم السياحية", "التراث الثقافي والتاريخ", "TypeScript + React حديث", "تصميم متجاوب بالكامل"]
+    }
+  },
+  {
+    "id": "tari9i-bus",
+    "status": "in-progress",
+    "github": "https://github.com/mdouaour/Tari9i-Bus",
+    "demo": null,
+    "image": "/screenshots/tari9i-bus.jpg",
+    "tags": ["JavaScript", "Node.js", "Real-Time", "Tracking"],
+    "title": {
+      "en": "Tari9i-Bus — Real-Time Bus Tracking",
+      "fr": "Tari9i-Bus — Suivi de Bus en Temps Réel",
+      "ar": "Tari9i-Bus — تتبع الحافلات فورياً"
+    },
+    "description": {
+      "en": "A real-time bus tracking application for Algerian cities. Helps commuters track public transport, plan routes, and navigate efficiently using JavaScript and Node.js.",
+      "fr": "Une application de suivi de bus en temps réel pour les villes algériennes. Aide les voyageurs à suivre les transports, planifier leurs itinéraires et naviguer efficacement.",
+      "ar": "تطبيق تتبع حافلات فوري للمدن الجزائرية. يساعد المسافرين على تتبع النقل العام وتخطيط المسارات والتنقل بكفاءة."
+    },
+    "features": {
+      "en": ["Real-time GPS bus tracking", "Route planning & optimization", "JavaScript + Node.js backend", "Algerian city support"],
+      "fr": ["Suivi GPS en temps réel", "Planification d'itinéraires", "Backend JavaScript + Node.js", "Support des villes algériennes"],
+      "ar": ["تتبع GPS فوري للحافلات", "تخطيط المسارات وتحسينها", "خادم JavaScript + Node.js", "دعم المدن الجزائرية"]
+    }
+  },
+  {
+    "id": "fitsquad-ai",
+    "status": "in-progress",
+    "github": "https://github.com/mdouaour/FitSquad-AI",
+    "demo": null,
+    "image": "/screenshots/fitsquad-ai.jpg",
+    "tags": ["TypeScript", "AI", "Fitness", "Health"],
+    "title": {
+      "en": "FitSquad-AI — AI Fitness Coach",
+      "fr": "FitSquad-AI — Coach Fitness IA",
+      "ar": "FitSquad-AI — مدرب لياقة ذكي"
+    },
+    "description": {
+      "en": "An intelligent fitness assistant powered by AI. Creates personalized workout plans, tracks progress over time, and provides adaptive coaching recommendations using TypeScript.",
+      "fr": "Un assistant fitness intelligent propulsé par l'IA. Crée des plans d'entraînement personnalisés, suit la progression et fournit des recommandations adaptatives.",
+      "ar": "مساعد لياقة ذكي مدعوم بالذكاء الاصطناعي. ينشئ خطط تمارين مخصصة، ويتتبع التقدم، ويقدم توصيات تدريب تكيفية."
+    },
+    "features": {
+      "en": ["AI-generated workout plans", "Progress tracking & analytics", "Adaptive coaching", "TypeScript frontend"],
+      "fr": ["Plans d'entraînement générés par IA", "Suivi et analyses de progression", "Coaching adaptatif", "Frontend TypeScript"],
+      "ar": ["خطط تمارين مولدة بالذكاء الاصطناعي", "تتبع التقدم والتحليلات", "تدريب تكيفي", "واجهة TypeScript"]
+    }
+  },
+  {
+    "id": "tapis",
+    "status": "completed",
+    "github": "https://github.com/mdouaour/tapis",
+    "demo": null,
+    "image": "/screenshots/tapis.jpg",
+    "tags": ["TypeScript", "API", "CLI", "Tooling"],
+    "title": {
+      "en": "Tapis — API Development Toolkit",
+      "fr": "Tapis — Kit d'Outils de Développement API",
+      "ar": "Tapis — مجموعة أدوات تطوير API"
+    },
+    "description": {
+      "en": "A TypeScript-powered API development toolkit for building, testing, and documenting RESTful services. Streamlines the entire API workflow from prototype to production.",
+      "fr": "Un kit d'outils de développement API propulsé par TypeScript pour construire, tester et documenter des services REST. Simplifie tout le workflow API.",
+      "ar": "مجموعة أدوات تطوير API مدعومة بـ TypeScript لبناء واختبار وتوثيق خدمات REST. تبسط سير عمل API بأكمله."
+    },
+    "features": {
+      "en": ["REST API development & testing", "API documentation generation", "TypeScript-first tooling", "Streamlined dev workflow"],
+      "fr": ["Développement et test d'API REST", "Génération de documentation API", "Outillage TypeScript-first", "Workflow de développement simplifié"],
+      "ar": ["تطوير واختبار REST API", "توليد توثيق API", "أدوات TypeScript-first", "سير عمل تطوير مبسط"]
+    }
+  },
+  {
     "id": "gestion-commerce",
     "status": "completed",
     "github": "https://github.com/mdouaour/Gestion-Commerce",
     "demo": null,
-    "image": null,
-    "tags": ["Python", "PySide6", "SQLite"],
+    "image": "/screenshots/gestion-commerce.jpg",
+    "tags": ["Python", "PySide6", "SQLite", "Desktop"],
     "title": {
-      "en": "Gestion Commerce — Smart POS",
-      "fr": "Gestion Commerce — POS Intelligent",
+      "en": "Gestion Commerce — Smart POS System",
+      "fr": "Gestion Commerce — Système POS Intelligent",
       "ar": "إدارة التجارة — نظام نقاط بيع ذكي"
     },
     "description": {
-      "en": "A full-featured point-of-sale and inventory management system built with Python, PySide6, and SQLite. Handles products, sales, and stock tracking for small businesses.",
-      "fr": "Un système complet de point de vente et de gestion des stocks construit avec Python, PySide6 et SQLite. Gère les produits, les ventes et le suivi des stocks pour les petites entreprises.",
-      "ar": "نظام متكامل لنقاط البيع وإدارة المخزون مبني بـ Python وPySide6 وSQLite. يدير المنتجات والمبيعات وتتبع المخزون للشركات الصغيرة."
+      "en": "A full-featured point-of-sale and inventory management desktop application. Built with Python and PySide6, it handles products, sales, stock tracking, and reporting for small to medium businesses.",
+      "fr": "Une application de bureau complète pour la gestion des points de vente et des stocks. Construite avec Python et PySide6, elle gère les produits, les ventes et les rapports.",
+      "ar": "تطبيق سطح مكتب متكامل لنقاط البيع وإدارة المخزون. مبني بـ Python و PySide6، يدير المنتجات والمبيعات والتقارير."
     },
     "features": {
-      "en": ["Full POS interface", "Inventory & stock tracking", "Sales reports & analytics", "Local SQLite database"],
-      "fr": ["Interface POS complète", "Suivi des stocks", "Rapports de vente", "Base de données SQLite locale"],
-      "ar": ["واجهة نقاط بيع كاملة", "تتبع المخزون", "تقارير المبيعات والتحليلات", "قاعدة بيانات SQLite محلية"]
+      "en": ["Complete POS interface", "Inventory & stock tracking", "Sales reports & analytics", "Local SQLite database", "Desktop GUI with PySide6"],
+      "fr": ["Interface POS complète", "Suivi des stocks", "Rapports de vente et analyses", "Base SQLite locale", "Interface graphique PySide6"],
+      "ar": ["واجهة نقاط بيع كاملة", "تتبع المخزون", "تقارير المبيعات والتحليلات", "قاعدة بيانات SQLite محلية", "واجهة رسومية PySide6"]
     }
   },
   {
@@ -27,68 +188,22 @@
     "status": "completed",
     "github": "https://github.com/mdouaour/gestion-de-stock",
     "demo": null,
-    "image": null,
-    "tags": ["Java", "Swing", "MySQL"],
+    "image": "/screenshots/gestion-de-stock.jpg",
+    "tags": ["Java", "Swing", "MySQL", "Desktop"],
     "title": {
-      "en": "Gestion de Stock",
-      "fr": "Gestion de Stock",
-      "ar": "إدارة المخزون"
+      "en": "Gestion de Stock — Inventory Manager",
+      "fr": "Gestion de Stock — Gestionnaire d'Inventaire",
+      "ar": "إدارة المخزون — مدير المخزون"
     },
     "description": {
-      "en": "A Java Swing desktop application for stock and inventory management backed by MySQL. Clean MVC architecture with full CRUD operations.",
-      "fr": "Une application de bureau Java Swing pour la gestion des stocks avec MySQL. Architecture MVC propre avec toutes les opérations CRUD.",
-      "ar": "تطبيق سطح مكتب Java Swing لإدارة المخزون مع MySQL. بنية MVC نظيفة مع عمليات CRUD كاملة."
+      "en": "A Java Swing desktop application for inventory and stock management with a MySQL backend. Features a clean MVC architecture with full CRUD operations and data persistence.",
+      "fr": "Une application de bureau Java Swing pour la gestion des stocks avec MySQL. Architecture MVC propre avec opérations CRUD complètes et persistance des données.",
+      "ar": "تطبيق سطح مكتب Java Swing لإدارة المخزون مع MySQL. بنية MVC نظيفة مع عمليات CRUD كاملة واستمرارية البيانات."
     },
     "features": {
-      "en": ["Stock & inventory management", "MVC architecture", "MySQL backend", "Full CRUD operations"],
-      "fr": ["Gestion des stocks", "Architecture MVC", "Backend MySQL", "Opérations CRUD complètes"],
-      "ar": ["إدارة المخزون", "بنية MVC", "قاعدة بيانات MySQL", "عمليات CRUD كاملة"]
-    }
-  },
-  {
-    "id": "story-afrika",
-    "status": "in-progress",
-    "github": "https://github.com/mdouaour",
-    "demo": null,
-    "image": null,
-    "tags": ["JavaScript", "React", "Platform"],
-    "title": {
-      "en": "StoryAfrika",
-      "fr": "StoryAfrika",
-      "ar": "ستوري أفريكا"
-    },
-    "description": {
-      "en": "An African storytelling and marketplace platform. Connecting creators and consumers across the African continent.",
-      "fr": "Une plateforme de narration africaine et de marché. Connecter créateurs et consommateurs à travers le continent africain.",
-      "ar": "منصة قصص أفريقية وسوق إلكتروني. تربط المبدعين والمستهلكين عبر القارة الأفريقية."
-    },
-    "features": {
-      "en": ["Creator marketplace", "African stories & content", "Multi-language support", "React frontend"],
-      "fr": ["Marché des créateurs", "Histoires africaines", "Support multilingue", "Frontend React"],
-      "ar": ["سوق المبدعين", "قصص ومحتوى أفريقي", "دعم متعدد اللغات", "واجهة React"]
-    }
-  },
-  {
-    "id": "alx-projects",
-    "status": "completed",
-    "github": "https://github.com/mdouaour",
-    "demo": null,
-    "image": null,
-    "tags": ["C", "Python", "Shell"],
-    "title": {
-      "en": "ALX Projects",
-      "fr": "Projets ALX",
-      "ar": "مشاريع ALX"
-    },
-    "description": {
-      "en": "A collection of projects from the ALX Software Engineering program covering C, Python, Shell scripting, and system programming fundamentals.",
-      "fr": "Une collection de projets du programme ALX Software Engineering couvrant C, Python, Shell scripting et les fondamentaux de la programmation système.",
-      "ar": "مجموعة مشاريع من برنامج ALX لهندسة البرمجيات تشمل C وPython وسكريبت Shell والبرمجة النظامية."
-    },
-    "features": {
-      "en": ["System programming in C", "Python scripting & automation", "Shell scripting", "Algorithm design"],
-      "fr": ["Programmation système en C", "Scripts Python & automatisation", "Scripts Shell", "Conception d'algorithmes"],
-      "ar": ["برمجة نظمية بـ C", "سكريبت Python والأتمتة", "سكريبت Shell", "تصميم الخوارزميات"]
+      "en": ["Full stock & inventory management", "Clean MVC architecture", "MySQL database backend", "Complete CRUD operations", "Java Swing desktop GUI"],
+      "fr": ["Gestion complète des stocks", "Architecture MVC propre", "Base de données MySQL", "Opérations CRUD complètes", "Interface Java Swing"],
+      "ar": ["إدارة كاملة للمخزون", "بنية MVC نظيفة", "قاعدة بيانات MySQL", "عمليات CRUD كاملة", "واجهة Java Swing"]
     }
   }
 ]

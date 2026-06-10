@@ -7,6 +7,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
 }
 
 body {
@@ -14,9 +15,15 @@ body {
   font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
   background: #0f172a;
   color: #e2e8f0;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Arabic / RTL typography */
+/* Light theme overrides */
+html:not(.dark) body {
+  background: #f8fafc;
+  color: #1e293b;
+}
+
 :lang(ar) {
   font-family: 'Segoe UI', Tahoma, 'Arabic Typesetting', 'Traditional Arabic',
     system-ui, sans-serif;
@@ -25,4 +32,13 @@ body {
 
 [dir='rtl'] {
   text-align: right;
+}
+
+/* Smooth theme transitions */
+*,
+*::before,
+*::after {
+  transition-property: background-color, border-color, box-shadow;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
 }

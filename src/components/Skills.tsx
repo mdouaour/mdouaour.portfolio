@@ -1,8 +1,10 @@
-import { useLang } from '../context/LanguageContext.jsx'
-import { translations } from '../data/translations.js'
-import { SectionHeading } from './About.jsx'
+import { motion } from 'framer-motion'
+import { useLang } from '../context/LanguageContext'
+import { translations } from '../data/translations'
+import { SectionHeading } from './About'
+import type { SkillGroup } from '../types'
 
-const skillGroups = [
+const skillGroups: SkillGroup[] = [
   {
     categoryKey: 'frontend',
     skills: [
@@ -46,18 +48,26 @@ export default function Skills() {
   const T = translations[lang].skills
 
   return (
-    <section
+    <motion.section
       id="skills"
       dir={isRTL ? 'rtl' : 'ltr'}
       className="py-20 px-4"
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: '-100px' }}
+      transition={{ duration: 0.5 }}
     >
       <div className="max-w-5xl mx-auto">
         <SectionHeading>{T.title}</SectionHeading>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-12">
-          {skillGroups.map((group) => (
-            <div
+          {skillGroups.map((group, i) => (
+            <motion.div
               key={group.categoryKey}
-              className="bg-slate-800 rounded-2xl p-5 border border-slate-700 hover:border-violet-500/40 transition-colors"
+              className="bg-slate-800 dark:bg-slate-800 rounded-2xl p-5 border border-slate-700 dark:border-slate-700 hover:border-violet-500/40 transition-colors"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: i * 0.1 }}
             >
               <h3 className="text-violet-300 font-semibold text-sm uppercase tracking-wide mb-4">
                 {T.categories[group.categoryKey]}
@@ -66,15 +76,18 @@ export default function Skills() {
                 {group.skills.map(({ name, level }) => (
                   <li key={name}>
                     <div className="flex justify-between mb-1">
-                      <span className="text-slate-300 text-sm">{name}</span>
+                      <span className="text-slate-300 dark:text-slate-300 text-sm">{name}</span>
                       <span className="text-violet-400 text-xs font-mono">
                         {level}%
                       </span>
                     </div>
-                    <div className="h-1.5 bg-slate-700 rounded-full overflow-hidden">
-                      <div
-                        className="h-full bg-violet-500 rounded-full transition-all duration-700"
-                        style={{ width: `${level}%` }}
+                    <div className="h-1.5 bg-slate-700 dark:bg-slate-700 rounded-full overflow-hidden">
+                      <motion.div
+                        className="h-full bg-violet-500 rounded-full"
+                        initial={{ width: 0 }}
+                        whileInView={{ width: `${level}%` }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8, ease: 'easeOut' }}
                         role="progressbar"
                         aria-valuenow={level}
                         aria-valuemin={0}
@@ -85,11 +98,10 @@ export default function Skills() {
                   </li>
                 ))}
               </ul>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   )
 }
-

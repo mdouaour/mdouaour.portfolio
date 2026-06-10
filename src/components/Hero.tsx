@@ -1,28 +1,36 @@
-import { useLang } from '../context/LanguageContext.jsx'
-import { translations } from '../data/translations.js'
+import { motion } from 'framer-motion'
+import { useLang } from '../context/LanguageContext'
+import { translations } from '../data/translations'
 
 export default function Hero() {
   const { lang, isRTL } = useLang()
   const T = translations[lang].hero
 
   return (
-    <section
+    <motion.section
       id="hero"
       dir={isRTL ? 'rtl' : 'ltr'}
       className="min-h-screen flex flex-col items-center justify-center text-center px-4 pt-16"
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
     >
-      {/* Avatar */}
-      <div className="w-28 h-28 rounded-full mb-6 ring-4 ring-violet-500/40 shadow-lg shadow-violet-500/20 overflow-hidden">
+      <motion.div
+        className="w-28 h-28 rounded-full mb-6 ring-4 ring-violet-500/40 shadow-lg shadow-violet-500/20 overflow-hidden"
+        initial={{ scale: 0 }}
+        animate={{ scale: 1 }}
+        transition={{ type: 'spring', stiffness: 200, damping: 15 }}
+      >
         <img
           src="https://github.com/mdouaour.png"
           alt="Mohammed Yassine Douaouria"
           className="w-full h-full object-cover"
         />
-      </div>
+      </motion.div>
 
-      <p className="text-slate-400 text-sm mb-2 tracking-wide">{T.greeting}</p>
+      <p className="text-slate-400 dark:text-slate-400 text-sm mb-2 tracking-wide">{T.greeting}</p>
 
-      <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-4">
+      <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white dark:text-white leading-tight mb-4">
         Mohammed Yassine{' '}
         <span className="text-violet-400">Douaouria</span>
       </h1>
@@ -31,55 +39,21 @@ export default function Hero() {
         {T.tagline}
       </p>
 
-      <p className="text-slate-400 max-w-2xl mb-8 leading-relaxed text-sm sm:text-base">
+      <p className="text-slate-400 dark:text-slate-400 max-w-2xl mb-8 leading-relaxed text-sm sm:text-base">
         {T.description}
       </p>
 
-      {/* Social links */}
       <div className="flex flex-wrap justify-center gap-3 mb-10">
-        <a
-          href="https://github.com/mdouaour"
-          target="_blank"
-          rel="noreferrer"
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 text-sm font-medium transition-colors border border-slate-700"
-          aria-label="GitHub"
-        >
-          <GithubIcon />
-          GitHub
-        </a>
-        <a
+        <SocialLink href="https://github.com/mdouaour" label="GitHub" icon={<GithubIcon />} />
+        <SocialLink
           href="https://www.linkedin.com/in/mohammed-yassine-douaouria-0a2272121"
-          target="_blank"
-          rel="noreferrer"
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 text-sm font-medium transition-colors border border-slate-700"
-          aria-label="LinkedIn"
-        >
-          <LinkedInIcon />
-          LinkedIn
-        </a>
-        <a
-          href="https://linktr.ee/mdouaour"
-          target="_blank"
-          rel="noreferrer"
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 text-sm font-medium transition-colors border border-slate-700"
-          aria-label="Linktree"
-        >
-          <LinktreeIcon />
-          Linktree
-        </a>
-        <a
-          href="https://twitter.com/mdoer"
-          target="_blank"
-          rel="noreferrer"
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 text-sm font-medium transition-colors border border-slate-700"
-          aria-label="Twitter/X"
-        >
-          <XIcon />
-          Twitter
-        </a>
+          label="LinkedIn"
+          icon={<LinkedInIcon />}
+        />
+        <SocialLink href="https://linktr.ee/mdouaour" label="Linktree" icon={<LinktreeIcon />} />
+        <SocialLink href="https://twitter.com/mdoer" label="Twitter" icon={<XIcon />} />
       </div>
 
-      {/* CTAs */}
       <div className="flex flex-wrap justify-center gap-3">
         <a
           href="#projects"
@@ -94,7 +68,22 @@ export default function Hero() {
           {T.hire}
         </a>
       </div>
-    </section>
+    </motion.section>
+  )
+}
+
+function SocialLink({ href, label, icon }: { href: string; label: string; icon: React.ReactNode }) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noreferrer"
+      className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-slate-800 dark:bg-slate-800 hover:bg-slate-700 text-slate-200 text-sm font-medium transition-colors border border-slate-700"
+      aria-label={label}
+    >
+      {icon}
+      {label}
+    </a>
   )
 }
 
@@ -122,7 +111,6 @@ function LinktreeIcon() {
   )
 }
 
-
 function XIcon() {
   return (
     <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -130,4 +118,3 @@ function XIcon() {
     </svg>
   )
 }
-

@@ -1,15 +1,21 @@
-import { useLang } from '../context/LanguageContext.jsx'
-import { translations } from '../data/translations.js'
-import { SectionHeading } from './About.jsx'
+import { useState, type FormEvent } from 'react'
+import { motion } from 'framer-motion'
+import { useLang } from '../context/LanguageContext'
+import { translations } from '../data/translations'
+import { SectionHeading } from './About'
 
-// ── Contact details ──────────────────────────────────────────────────────────
 const EMAIL = 'yacine23i@hotmail.com'
 const WHATSAPP = 'https://wa.me/213654927818'
-// ────────────────────────────────────────────────────────────────────────────
+
+const FORMSPREE_URL = 'https://formspree.io/f/xjkyekdv'
 
 export default function Contact() {
   const { lang, isRTL } = useLang()
   const T = translations[lang].contact
+  const [sent, setSent] = useState(false)
+  const [sending, setSending] = useState(false)
+  const [error, setError] = useState<string | null>(null)
+  const [formData, setFormData] = useState({ name: '', email: '', message: '' })
 
   const contactLinks = [
     {
@@ -49,24 +55,120 @@ export default function Contact() {
     },
   ]
 
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault()
+    setSending(true)
+    setError(null)
+    try {
+      const res = await fetch(FORMSPREE_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      })
+      if (res.ok) {
+        setSent(true)
+        setFormData({ name: '', email: '', message: '' })
+      } else {
+        setError(lang === 'ar' ? 'حدث خطأ. حاول مرة أخرى.' : lang === 'fr' ? 'Une erreur est survenue. Réessayez.' : 'Something went wrong. Please try again.')
+      }
+    } catch {
+      setError(lang === 'ar' ? 'فشل الاتصال. تحقق من اتصالك بالإنترنت.' : lang === 'fr' ? 'Échec de connexion. Vérifiez votre connexion.' : 'Connection failed. Check your internet.')
+    } finally {
+      setSending(false)
+    }
+  }
+
   return (
-    <section
+    <motion.section
       id="contact"
       dir={isRTL ? 'rtl' : 'ltr'}
       className="py-20 px-4"
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: '-100px' }}
+      transition={{ duration: 0.5 }}
     >
       <div className="max-w-3xl mx-auto text-center">
         <SectionHeading>{T.title}</SectionHeading>
-        <p className="text-slate-400 mt-6 leading-relaxed max-w-2xl mx-auto">
+        <p className="text-slate-400 dark:text-slate-400 mt-6 leading-relaxed max-w-2xl mx-auto">
           {T.subtitle}
         </p>
 
-        <a
-          href={`mailto:${EMAIL}`}
-          className="inline-flex items-center gap-2 mt-8 px-8 py-3 rounded-xl bg-violet-600 hover:bg-violet-500 text-white font-semibold text-sm transition-colors shadow-lg shadow-violet-500/30"
+        {/* Contact form */}
+        <motion.form
+          onSubmit={handleSubmit}
+          className="mt-8 max-w-xl mx-auto text-left space-y-4"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.1 }}
         >
-          {T.cta} →
-        </a>
+          <div>
+            <input
+              type="text"
+              name="name"
+              placeholder={lang === 'ar' ? 'الاسم' : lang === 'fr' ? 'Nom' : 'Name'}
+              required
+              value={formData.name}
+              onChange={(e) => setFormData((p) => ({ ...p, name: e.target.value }))}
+              className="w-full px-4 py-2.5 rounded-xl bg-slate-800 dark:bg-slate-800 border border-slate-700 dark:border-slate-700 text-slate-200 dark:text-slate-200 placeholder-slate-500 text-sm focus:outline-none focus:border-violet-500 transition-colors"
+            />
+          </div>
+          <div>
+            <input
+              type="email"
+              name="email"
+              placeholder={lang === 'ar' ? 'البريد الإلكتروني' : lang === 'fr' ? 'Email' : 'Email'}
+              required
+              value={formData.email}
+              onChange={(e) => setFormData((p) => ({ ...p, email: e.target.value }))}
+              className="w-full px-4 py-2.5 rounded-xl bg-slate-800 dark:bg-slate-800 border border-slate-700 dark:border-slate-700 text-slate-200 dark:text-slate-200 placeholder-slate-500 text-sm focus:outline-none focus:border-violet-500 transition-colors"
+            />
+          </div>
+          <div>
+            <textarea
+              name="message"
+              rows={4}
+              placeholder={lang === 'ar' ? 'الرسالة' : lang === 'fr' ? 'Message' : 'Message'}
+              required
+              value={formData.message}
+              onChange={(e) => setFormData((p) => ({ ...p, message: e.target.value }))}
+              className="w-full px-4 py-2.5 rounded-xl bg-slate-800 dark:bg-slate-800 border border-slate-700 dark:border-slate-700 text-slate-200 dark:text-slate-200 placeholder-slate-500 text-sm focus:outline-none focus:border-violet-500 transition-colors resize-none"
+            />
+          </div>
+          {error && (
+            <motion.p
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="text-red-400 text-sm text-center"
+              role="alert"
+            >
+              {error}
+            </motion.p>
+          )}
+          <button
+            type="submit"
+            disabled={sent || sending}
+            className="w-full px-6 py-3 rounded-xl bg-violet-600 hover:bg-violet-500 disabled:bg-violet-600/50 disabled:cursor-not-allowed text-white font-semibold text-sm transition-colors shadow-lg shadow-violet-500/30 flex items-center justify-center gap-2"
+          >
+            {sending ? (
+              <span className="inline-block w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" aria-hidden="true" />
+            ) : null}
+            {sent
+              ? lang === 'ar'
+                ? 'تم الإرسال ✓'
+                : lang === 'fr'
+                  ? 'Envoyé ✓'
+                  : 'Sent ✓'
+              : sending
+                ? lang === 'ar'
+                  ? 'جارٍ الإرسال...'
+                  : lang === 'fr'
+                    ? 'Envoi...'
+                    : 'Sending...'
+                : T.cta}
+          </button>
+        </motion.form>
 
         <div className="grid sm:grid-cols-2 gap-4 mt-10">
           {contactLinks.map(({ label, href, description, icon, highlight }) => (
@@ -78,7 +180,7 @@ export default function Contact() {
               className={`flex items-center gap-4 p-5 rounded-2xl border transition-colors group ${
                 highlight
                   ? 'bg-violet-600/10 border-violet-500/40 hover:border-violet-400 hover:bg-violet-600/20'
-                  : 'bg-slate-800 border-slate-700 hover:border-violet-500/50 hover:bg-slate-700/50'
+                  : 'bg-slate-800 dark:bg-slate-800 border-slate-700 dark:border-slate-700 hover:border-violet-500/50 hover:bg-slate-700/50'
               }`}
               aria-label={label}
             >
@@ -86,20 +188,20 @@ export default function Contact() {
                 className={`flex-shrink-0 transition-colors ${
                   highlight
                     ? 'text-violet-400 group-hover:text-violet-300'
-                    : 'text-slate-300 group-hover:text-violet-400'
+                    : 'text-slate-300 dark:text-slate-300 group-hover:text-violet-400'
                 }`}
               >
                 {icon}
               </span>
               <div className={isRTL ? 'text-right' : 'text-left'}>
-                <p className="text-white font-semibold text-sm">{label}</p>
-                <p className="text-slate-400 text-xs mt-0.5">{description}</p>
+                <p className="text-white dark:text-white font-semibold text-sm">{label}</p>
+                <p className="text-slate-400 dark:text-slate-400 text-xs mt-0.5">{description}</p>
               </div>
             </a>
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   )
 }
 
@@ -142,4 +244,3 @@ function LinktreeIcon() {
     </svg>
   )
 }
-

@@ -1,9 +1,11 @@
-import { useLang } from '../context/LanguageContext.jsx'
-import { translations } from '../data/translations.js'
-import { SectionHeading } from './About.jsx'
+import { motion } from 'framer-motion'
+import { useLang } from '../context/LanguageContext'
+import { translations } from '../data/translations'
+import { SectionHeading } from './About'
 import projectsData from '../data/projects.json'
+import type { Project, Lang } from '../types'
 
-const statusConfig = {
+const statusConfig: Record<string, { className: string }> = {
   completed: {
     className: 'bg-green-500/20 text-green-400 border border-green-500/30',
   },
@@ -17,32 +19,51 @@ export default function Projects() {
   const T = translations[lang].projects
 
   return (
-    <section
+    <motion.section
       id="projects"
       dir={isRTL ? 'rtl' : 'ltr'}
-      className="py-20 px-4 bg-slate-800/40"
+      className="py-20 px-4 bg-slate-800/40 dark:bg-slate-800/40"
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: '-100px' }}
+      transition={{ duration: 0.5 }}
     >
       <div className="max-w-5xl mx-auto">
         <SectionHeading>{T.title}</SectionHeading>
         <div className="grid sm:grid-cols-2 gap-6 mt-12">
-          {projectsData.map((project) => (
-            <ProjectCard key={project.id} project={project} T={T} lang={lang} />
+          {(projectsData as Project[]).map((project, i) => (
+            <motion.div
+              key={project.id}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: i * 0.08 }}
+            >
+              <ProjectCard project={project} T={T} lang={lang} />
+            </motion.div>
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   )
 }
 
-function ProjectCard({ project, T, lang }) {
+function ProjectCard({
+  project,
+  T,
+  lang,
+}: {
+  project: Project
+  T: { viewGithub: string; viewDemo: string; status: Record<string, string>; features: string }
+  lang: Lang
+}) {
   const badge = statusConfig[project.status]
   const title = project.title[lang]
   const description = project.description[lang]
   const features = project.features[lang]
 
   return (
-    <article className="bg-slate-800 border border-slate-700 rounded-2xl p-6 flex flex-col gap-4 hover:border-violet-500/50 transition-colors group">
-      {/* Project image / placeholder */}
+    <article className="bg-slate-800 dark:bg-slate-800 border border-slate-700 dark:border-slate-700 rounded-2xl p-6 flex flex-col gap-4 hover:border-violet-500/50 transition-colors group h-full">
       {project.image ? (
         <img
           src={project.image}
@@ -71,9 +92,8 @@ function ProjectCard({ project, T, lang }) {
         </div>
       )}
 
-      {/* Title + status */}
       <div className="flex items-start justify-between gap-3">
-        <h3 className="text-white font-semibold text-lg group-hover:text-violet-300 transition-colors leading-snug">
+        <h3 className="text-white dark:text-white font-semibold text-lg group-hover:text-violet-300 transition-colors leading-snug">
           {title}
         </h3>
         <span
@@ -83,17 +103,15 @@ function ProjectCard({ project, T, lang }) {
         </span>
       </div>
 
-      {/* Description */}
-      <p className="text-slate-400 text-sm leading-relaxed">{description}</p>
+      <p className="text-slate-400 dark:text-slate-400 text-sm leading-relaxed">{description}</p>
 
-      {/* Features */}
       <div>
-        <p className="text-slate-500 text-xs uppercase tracking-wide mb-2 font-medium">
+        <p className="text-slate-500 dark:text-slate-500 text-xs uppercase tracking-wide mb-2 font-medium">
           {T.features}
         </p>
         <ul className="space-y-1">
           {features.map((feat) => (
-            <li key={feat} className="text-slate-400 text-xs flex items-start gap-1.5">
+            <li key={feat} className="text-slate-400 dark:text-slate-400 text-xs flex items-start gap-1.5">
               <span className="text-violet-400 flex-shrink-0">▹</span>
               {feat}
             </li>
@@ -101,7 +119,6 @@ function ProjectCard({ project, T, lang }) {
         </ul>
       </div>
 
-      {/* Tags */}
       <div className="flex flex-wrap gap-2">
         {project.tags.map((tag) => (
           <span
@@ -113,13 +130,12 @@ function ProjectCard({ project, T, lang }) {
         ))}
       </div>
 
-      {/* Links */}
-      <div className="flex flex-wrap gap-4 mt-auto pt-2 border-t border-slate-700">
+      <div className="flex flex-wrap gap-4 mt-auto pt-2 border-t border-slate-700 dark:border-slate-700">
         <a
           href={project.github}
           target="_blank"
           rel="noreferrer"
-          className="inline-flex items-center gap-1.5 text-sm text-slate-300 hover:text-violet-400 transition-colors"
+          className="inline-flex items-center gap-1.5 text-sm text-slate-300 dark:text-slate-300 hover:text-violet-400 transition-colors"
           aria-label={`View ${title} on GitHub`}
         >
           <GithubIcon />
@@ -157,4 +173,3 @@ function ExternalLinkIcon() {
     </svg>
   )
 }
-

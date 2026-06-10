@@ -1,5 +1,5 @@
-import { useLang } from '../context/LanguageContext.jsx'
-import { translations } from '../data/translations.js'
+import { useLang } from '../context/LanguageContext'
+import { translations } from '../data/translations'
 
 export default function Footer() {
   const { lang, isRTL } = useLang()
@@ -9,11 +9,11 @@ export default function Footer() {
   return (
     <footer
       dir={isRTL ? 'rtl' : 'ltr'}
-      className="border-t border-slate-800 py-8 text-center text-slate-500 text-sm px-4"
+      className="border-t border-slate-800 dark:border-slate-800 py-8 text-center text-slate-500 dark:text-slate-500 text-sm px-4"
     >
       <p>
         © {year}{' '}
-        <span className="text-slate-300 font-medium">
+        <span className="text-slate-300 dark:text-slate-300 font-medium">
           Mohammed Yassine Douaouria
         </span>
         . {T.built}.
@@ -31,4 +31,3 @@ export default function Footer() {
     </footer>
   )
 }
-
