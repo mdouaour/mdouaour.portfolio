@@ -10,11 +10,13 @@ export default function Hero() {
     <motion.section
       id="hero"
       dir={isRTL ? 'rtl' : 'ltr'}
-      className="min-h-screen flex flex-col items-center justify-center text-center px-4 pt-16"
+      className="min-h-screen flex flex-col items-center justify-center text-center px-4 pt-16 relative overflow-hidden"
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
     >
+      <div className="absolute inset-0 bg-gradient-to-b from-violet-900/10 via-transparent to-transparent pointer-events-none" aria-hidden="true" />
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-violet-500/5 rounded-full blur-3xl pointer-events-none" aria-hidden="true" />
       <motion.div
         className="w-28 h-28 rounded-full mb-6 ring-4 ring-violet-500/40 shadow-lg shadow-violet-500/20 overflow-hidden"
         initial={{ scale: 0 }}
@@ -50,6 +52,7 @@ export default function Hero() {
           label="LinkedIn"
           icon={<LinkedInIcon />}
         />
+        <SocialLink href="https://www.facebook.com/mdouaourSolutions" label="Facebook" icon={<FacebookIcon />} />
         <SocialLink href="https://linktr.ee/mdouaour" label="Linktree" icon={<LinktreeIcon />} />
         <SocialLink href="https://twitter.com/mdoer" label="Twitter" icon={<XIcon />} />
       </div>
@@ -107,6 +110,14 @@ function LinktreeIcon() {
   return (
     <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
       <path d="M7.953 15.066c-.08-.043-.08.042 0 0m8.09-8.521c.04-.037.04.037 0 0M12 0C5.374 0 0 5.373 0 12s5.374 12 12 12 12-5.373 12-12S18.626 0 12 0m-.437 4.25h.875c.136 0 .248.112.248.25v5.5l3.286-3.286a.248.248 0 0 1 .351 0l.619.619a.247.247 0 0 1 0 .35L13.25 10.97l3.942 3.94a.248.248 0 0 1 0 .35l-.62.62a.25.25 0 0 1-.35 0L12 11.659l-4.222 4.22a.25.25 0 0 1-.35 0l-.62-.619a.248.248 0 0 1 0-.35l3.942-3.94-3.692-3.688a.248.248 0 0 1 0-.35l.619-.619a.248.248 0 0 1 .351 0L11.314 9.99v-5.49c0-.138.112-.25.249-.25m-3.439 15h7.752a.25.25 0 0 0 .25-.25v-.875a.25.25 0 0 0-.25-.25H8.124a.25.25 0 0 0-.25.25V19a.25.25 0 0 0 .25.25" />
+    </svg>
+  )
+}
+
+function FacebookIcon() {
+  return (
+    <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
     </svg>
   )
 }

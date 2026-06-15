@@ -55,6 +55,7 @@ export interface ContactStrings {
   github: string
   linkedin: string
   linktree: string
+  facebook: string
 }
 
 export interface FooterStrings {
@@ -82,6 +83,7 @@ export interface Translations {
 export interface Project {
   id: string
   status: 'completed' | 'in-progress'
+  kpi: string
   github: string
   demo: string | null
   image: string | null

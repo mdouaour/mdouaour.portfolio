@@ -2,8 +2,10 @@ import { motion } from 'framer-motion'
 import { useLang } from '../context/LanguageContext'
 import { translations } from '../data/translations'
 import { SectionHeading } from './About'
+import { ProjectModal } from './ProjectModal'
 import projectsData from '../data/projects.json'
 import type { Project, Lang } from '../types'
+import { useState } from 'react'
 
 const statusConfig: Record<string, { className: string }> = {
   completed: {
@@ -17,6 +19,15 @@ const statusConfig: Record<string, { className: string }> = {
 export default function Projects() {
   const { lang, isRTL } = useLang()
   const T = translations[lang].projects
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null)
+
+  const handleSelect = (project: Project) => {
+    setSelectedProject(project)
+  }
+
+  const closeModal = () => {
+    setSelectedProject(null)
+  }
 
   return (
     <motion.section
@@ -39,10 +50,12 @@ export default function Projects() {
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.08 }}
             >
-              <ProjectCard project={project} T={T} lang={lang} />
+              <ProjectCard project={project} T={T} lang={lang} onSelect={handleSelect} />
             </motion.div>
           ))}
         </div>
+
+        {selectedProject && <ProjectModal project={selectedProject} lang={lang} onClose={closeModal} />}
       </div>
     </motion.section>
   )
@@ -52,10 +65,12 @@ function ProjectCard({
   project,
   T,
   lang,
+  onSelect,
 }: {
   project: Project
   T: { viewGithub: string; viewDemo: string; status: Record<string, string>; features: string }
   lang: Lang
+  onSelect: (project: Project) => void
 }) {
   const badge = statusConfig[project.status]
   const title = project.title[lang]
@@ -63,14 +78,19 @@ function ProjectCard({
   const features = project.features[lang]
 
   return (
-    <article className="bg-slate-800 dark:bg-slate-800 border border-slate-700 dark:border-slate-700 rounded-2xl p-6 flex flex-col gap-4 hover:border-violet-500/50 transition-colors group h-full">
+    <article
+      onClick={() => onSelect(project)}
+      className="cursor-pointer bg-slate-800 dark:bg-slate-800 border border-slate-700 dark:border-slate-700 rounded-2xl p-6 flex flex-col gap-4 hover:border-violet-500/50 transition-colors group h-full"
+    >
       {project.image ? (
-        <img
-          src={project.image}
-          alt={title}
-          className="w-full h-36 object-cover rounded-lg"
-          loading="lazy"
-        />
+        <div className="overflow-hidden rounded-lg">
+          <img
+            src={project.image}
+            alt={title}
+            className="w-full h-36 object-cover transition-transform duration-300 group-hover:scale-105"
+            loading="lazy"
+          />
+        </div>
       ) : (
         <div
           className="w-full h-36 rounded-lg bg-slate-700/60 flex items-center justify-center border border-slate-600"

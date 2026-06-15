@@ -2,6 +2,7 @@
   {
     "id": "vibe-trading",
     "status": "completed",
+    "kpi": "",
     "github": "https://github.com/mdouaour/Vibe-Trading",
     "demo": null,
     "image": "/screenshots/vibe-trading.jpg",
@@ -25,6 +26,7 @@
   {
     "id": "openclaude",
     "status": "completed",
+    "kpi": "",
     "github": "https://github.com/mdouaour/openclaude",
     "demo": null,
     "image": "/screenshots/openclaude.jpg",
@@ -48,6 +50,7 @@
   {
     "id": "scrapling",
     "status": "completed",
+    "kpi": "",
     "github": "https://github.com/mdouaour/Scrapling",
     "demo": null,
     "image": "/screenshots/scrapling.jpg",
@@ -71,6 +74,7 @@
   {
     "id": "guelma-guide",
     "status": "completed",
+    "kpi": "",
     "github": "https://github.com/mdouaour/GuelmaGuidev3",
     "demo": null,
     "image": "/screenshots/guelma-guide.jpg",
@@ -94,6 +98,7 @@
   {
     "id": "tari9i-bus",
     "status": "in-progress",
+    "kpi": "",
     "github": "https://github.com/mdouaour/Tari9i-Bus",
     "demo": null,
     "image": "/screenshots/tari9i-bus.jpg",
@@ -117,6 +122,7 @@
   {
     "id": "fitsquad-ai",
     "status": "in-progress",
+    "kpi": "",
     "github": "https://github.com/mdouaour/FitSquad-AI",
     "demo": null,
     "image": "/screenshots/fitsquad-ai.jpg",
@@ -140,6 +146,7 @@
   {
     "id": "tapis",
     "status": "completed",
+    "kpi": "",
     "github": "https://github.com/mdouaour/tapis",
     "demo": null,
     "image": "/screenshots/tapis.jpg",
@@ -163,6 +170,7 @@
   {
     "id": "gestion-commerce",
     "status": "completed",
+    "kpi": "",
     "github": "https://github.com/mdouaour/Gestion-Commerce",
     "demo": null,
     "image": "/screenshots/gestion-commerce.jpg",
@@ -186,6 +194,7 @@
   {
     "id": "gestion-de-stock",
     "status": "completed",
+    "kpi": "",
     "github": "https://github.com/mdouaour/gestion-de-stock",
     "demo": null,
     "image": "/screenshots/gestion-de-stock.jpg",

@@ -44,9 +44,23 @@ export default function Navbar() {
       dir={isRTL ? 'rtl' : 'ltr'}
     >
       <div className="max-w-5xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
-        <span className="text-violet-400 font-bold text-lg tracking-tight">
-          mdouaour
-        </span>
+        <div className="flex items-center gap-3">
+          <a href="#hero" className="text-violet-400 font-bold text-lg tracking-tight">
+            mdouaour
+          </a>
+          <a
+            href="https://github.com/mdouaour/mdouaour.portfolio"
+            target="_blank"
+            rel="noreferrer"
+            className="hidden sm:inline-flex items-center gap-1 px-2 py-0.5 text-xs rounded-full bg-slate-800 border border-slate-700 text-slate-400 hover:text-violet-400 hover:border-violet-500/40 transition-colors"
+            aria-label="View portfolio source code"
+          >
+            <svg width="10" height="10" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.48 1 .11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3.01-.4c1.02 0 2.05.14 3.01.4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.65.25 2.87.12 3.17.77.84 1.23 1.91 1.23 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.21.7.82.58C20.56 21.8 24 17.3 24 12 24 5.37 18.63 0 12 0z" />
+            </svg>
+            Source
+          </a>
+        </div>
 
         <ul className="hidden sm:flex gap-6 items-center">
           {navLinks.map(({ label, href }) => (

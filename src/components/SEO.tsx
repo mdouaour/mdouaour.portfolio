@@ -1,13 +1,13 @@
-import { Helmet } from 'react-helmet-async'
-import type { Lang, SEOStrings } from '../types'
+import { Helmet } from 'react-helmet-async';
+import type { Lang, SEOStrings } from '../types';
 
-const BASE_URL = 'https://mdouaour.vercel.app'
+const BASE_URL = 'https://mdouaour-portfolio.vercel.app';
 
 const perLang: Record<Lang, string> = {
   en: 'en',
   fr: 'fr',
   ar: 'ar',
-}
+};
 
 export default function SEO({ lang, t }: { lang: Lang; t: SEOStrings }) {
   return (
@@ -27,5 +27,5 @@ export default function SEO({ lang, t }: { lang: Lang; t: SEOStrings }) {
       <meta name="twitter:title" content={t.title} />
       <meta name="twitter:description" content={t.description} />
     </Helmet>
-  )
+  );
 }

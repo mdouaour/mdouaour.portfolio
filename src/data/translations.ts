@@ -20,17 +20,17 @@ export const translations: TranslationSet = {
       name: 'Mohammed Yassine Douaouria',
       tagline: 'Full-Stack Developer · AI-Assisted Engineer · Freelance Architect',
       description:
-        'I architect and ship production-grade software — from responsive web platforms and RESTful APIs to desktop applications and AI-augmented systems. Based in Algeria, building for the world. Let me turn your vision into deployed reality.',
+        'I architect and ship production-grade software — responsive web platforms, RESTful APIs, desktop applications, and AI-augmented systems. Based in Algeria, building for the world. Let me turn your vision into deployed reality.',
       cta: 'Explore My Work',
-      hire: 'Hire Me',
+      hire: 'Hire Me →',
     },
     about: {
       title: 'About Me',
       background: 'Background',
       backgroundText1:
-        "Computer Science graduate from the University of Guelma, Algeria, and ALX-certified Software Engineer. I deliver end-to-end solutions across the full stack — pixel-perfect React frontends, battle-tested Python backends, and AI-augmented systems that push boundaries.",
+        "Computer Science graduate from the University of Guelma, Algeria, and ALX-certified Software Engineer. I build end-to-end solutions — React frontends, Python backends, and AI-augmented systems.",
       backgroundText2:
-        'What sets me apart is an AI-accelerated development workflow. I combine modern engineering practices with cutting-edge AI tools to architect, code, review, and ship software at speeds traditional approaches cannot match. Result: higher quality, faster delivery, smarter solutions. SaaS platform, POS system, custom API, or AI product — I design it, build it, deploy it, and maintain it.',
+        'What sets me apart is an AI-accelerated workflow. I combine modern engineering with AI tools to design, build, and ship faster. SaaS platform, POS system, API, or AI product — I design, build, deploy, and maintain it end-to-end.',
       whatIDo: 'What I Build',
       services: [
         'Web Applications (React, Node.js, REST APIs)',
@@ -68,13 +68,14 @@ export const translations: TranslationSet = {
     contact: {
       title: "Let's Work Together",
       subtitle:
-        'Have an idea that needs building? A problem that needs solving? Every software solution starts with a conversation. Web, desktop, API, mobile, AI — I can build it. Let us talk and make it happen.',
-      cta: 'Start Your Project',
+        'Have a project in mind? Let\'s talk about it. Web, desktop, API, mobile, or AI — I can build it. Every great software solution starts with a conversation.',
+      cta: 'Send Message',
       email: 'Email Me',
       whatsapp: 'WhatsApp',
       github: 'GitHub',
       linkedin: 'LinkedIn',
       linktree: 'Linktree',
+      facebook: 'Facebook',
     },
     footer: {
       built: 'Built with React & Tailwind CSS',
@@ -102,15 +103,15 @@ export const translations: TranslationSet = {
       description:
         'J\'architecture et livre des logiciels prêts pour la production — plateformes web responsives, APIs RESTful, applications desktop et systèmes augmentés par IA. Basé en Algérie, je construis pour le monde. Donnez vie à votre vision en code déployé.',
       cta: 'Explorer mes projets',
-      hire: 'Me recruter',
+      hire: 'Me recruter →',
     },
     about: {
       title: 'À Propos',
       background: 'Parcours',
       backgroundText1:
-        'Diplômé en Informatique de l\'Université de Guelma et certifié ALX Software Engineering. Je livre des solutions complètes — frontends React au pixel près, backends Python robustes, et systèmes augmentés par IA qui repoussent les limites.',
+        'Diplômé en Informatique de l\'Université de Guelma et certifié ALX Software Engineering. Je livre des solutions complètes — frontends React, backends Python, et systèmes IA.',
       backgroundText2:
-        'Ce qui me distingue : un workflow accéléré par l\'IA. J\'allie pratiques modernes du génie logiciel et outils d\'IA de pointe pour architecturer, coder, réviser et déployer à des vitesses inégalées. Résultat : qualité supérieure, livraison rapide, solutions plus intelligentes. SaaS, POS, API sur mesure ou produit IA — je le conçois, le construis, le déploie et le maintiens.',
+        'Ce qui me distingue : un workflow accéléré par l\'IA. J\'allie pratiques modernes et outils d\'IA pour concevoir, coder et déployer plus vite. SaaS, POS, API ou produit IA — je conçois, construis, déploie et maintiens de bout en bout.',
       whatIDo: 'Ce que je construis',
       services: [
         'Applications Web (React, Node.js, APIs REST)',
@@ -148,13 +149,14 @@ export const translations: TranslationSet = {
     contact: {
       title: 'Travaillons Ensemble',
       subtitle:
-        'Une idée à concrétiser ? Un problème à résoudre ? Chaque solution logicielle commence par une conversation. Web, desktop, API, mobile, IA — je peux tout construire. Parlons-en et faisons-en réalité.',
-      cta: 'Lancez votre projet',
+        'Un projet en tête ? Discutons-en. Web, desktop, API, mobile ou IA — je peux tout construire. Chaque bonne solution logicielle commence par une conversation.',
+      cta: 'Envoyer',
       email: 'Email',
       whatsapp: 'WhatsApp',
       github: 'GitHub',
       linkedin: 'LinkedIn',
       linktree: 'Linktree',
+      facebook: 'Facebook',
     },
     footer: {
       built: 'Construit avec React & Tailwind CSS',
@@ -182,15 +184,15 @@ export const translations: TranslationSet = {
       description:
         'أُصمم وأُطلق برمجيات جاهزة للإنتاج — منصات ويب متجاوبة، واجهات RESTful، تطبيقات سطح مكتب، وأنظمة معززة بالذكاء الاصطناعي. مقيم في الجزائر، أبني للعالم. حوّل رؤيتك إلى واقع منشور.',
       cta: 'استكشف أعمالي',
-      hire: 'وظّفني',
+      hire: 'وظّفني ←',
     },
     about: {
       title: 'عني',
       background: 'الخلفية',
       backgroundText1:
-        'خريج علوم الحاسوب من جامعة قالمة ومعتمد من ALX في هندسة البرمجيات. أقدم حلولاً متكاملة عبر كامل الطيف — واجهات React دقيقة، خوادم Python متمرّسة، وأنظمة ذكاء اصطناعي تتجاوز الحدود.',
+        'خريج علوم الحاسوب من جامعة قالمة ومعتمد من ALX في هندسة البرمجيات. أقدم حلولاً متكاملة — واجهات React، خوادم Python، وأنظمة ذكاء اصطناعي.',
       backgroundText2:
-        'ما يميزني: سير عمل معزز بالذكاء الاصطناعي. أمزج ممارسات الهندسة الحديثة بأحدث أدوات الذكاء الاصطناعي لأصمم وأبرمج وأراجع وأُطلق البرمجيات بسرعات لا تضاهى. النتيجة: جودة أعلى، تسليم أسرع، حلول أذكى. منصة SaaS، نظام نقاط بيع، واجهة برمجية مخصصة، أو منتج ذكاء اصطناعي — أصممه، أبنيه، أنشره، وأصونه.',
+        'ما يميزني: سير عمل معزز بالذكاء الاصطناعي. أمزج الممارسات الحديثة بأدوات الذكاء الاصطناعي لأصمم وأبني وأنشر بشكل أسرع. منصة SaaS، نظام نقاط بيع، API، أو منتج ذكاء اصطناعي — أصممه، أبنيه، أنشره، وأصونه من البداية للنهاية.',
       whatIDo: 'ما أبنيه',
       services: [
         'تطبيقات الويب (React، Node.js، REST APIs)',
@@ -228,13 +230,14 @@ export const translations: TranslationSet = {
     contact: {
       title: 'لنعمل معاً',
       subtitle:
-        'لديك فكرة تحتاج بناء؟ مشكلة تحتاج حلاً؟ كل حل برمجي يبدأ بمحادثة. ويب، سطح مكتب، API، جوال، ذكاء اصطناعي — يمكنني بناؤه. دعنا نتحدث ونحققها.',
-      cta: 'ابدأ مشروعك',
+        'لديك مشروع في بالك؟ دعنا نتحدث عنه. ويب، سطح مكتب، API، جوال، أو ذكاء اصطناعي — يمكنني بناؤه. كل حل برمجي رائع يبدأ بمحادثة.',
+      cta: 'أرسل الرسالة',
       email: 'البريد الإلكتروني',
       whatsapp: 'واتساب',
       github: 'GitHub',
       linkedin: 'LinkedIn',
       linktree: 'Linktree',
+      facebook: 'فيسبوك',
     },
     footer: {
       built: 'مبني بـ React و Tailwind CSS',
