@@ -14,7 +14,6 @@ export interface HeroStrings {
   tagline: string
   description: string
   cta: string
-  hire: string
 }
 
 export interface AboutStrings {

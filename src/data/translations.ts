@@ -18,11 +18,10 @@ export const translations: TranslationSet = {
     hero: {
       greeting: 'Hi, I\'m',
       name: 'Mohammed Yassine Douaouria',
-      tagline: 'Full-Stack Developer · AI-Assisted Engineer · Freelance Architect',
+      tagline: 'Full-Stack Developer · AI-Assisted Engineer · Entrepreneur',
       description:
-        'I architect and ship production-grade software — responsive web platforms, RESTful APIs, desktop applications, and AI-augmented systems. Based in Algeria, building for the world.',
+        'Freelance developer open to remote collaboration worldwide. I architect and ship production-grade software — web platforms, RESTful APIs, desktop applications, and AI-augmented systems. Entrepreneur at heart, builder by craft.',
       cta: 'Explore My Work',
-      hire: 'Hire Me →',
     },
     about: {
       title: 'About Me',
@@ -100,11 +99,10 @@ export const translations: TranslationSet = {
     hero: {
       greeting: 'Bonjour, je suis',
       name: 'Mohammed Yassine Douaouria',
-      tagline: 'Développeur Full-Stack · Ingénieur IA-Assisté · Architecte Freelance',
+      tagline: 'Développeur Full-Stack · Ingénieur IA-Assisté · Entrepreneur',
       description:
-        'J\'architecture et livre des logiciels prêts pour la production — plateformes web, APIs RESTful, applications desktop et systèmes IA. Basé en Algérie, je construis pour le monde.',
+        'Développeur freelance ouvert à la collaboration à distance dans le monde entier. J\'architecture et livre des logiciels prêts pour la production — plateformes web, APIs, applications desktop et systèmes IA. Entrepreneur dans l\'âme, bâtisseur de métier.',
       cta: 'Explorer mes projets',
-      hire: 'Me recruter →',
     },
     about: {
       title: 'À Propos',
@@ -182,11 +180,10 @@ export const translations: TranslationSet = {
     hero: {
       greeting: 'مرحباً، أنا',
       name: 'محمد ياسين دواوريا',
-      tagline: 'مطور Full-Stack · مهندس بالذكاء الاصطناعي · معماري حر',
+      tagline: 'مطور Full-Stack · مهندس بالذكاء الاصطناعي · رائد أعمال',
       description:
-        'أُصمم وأُطلق برمجيات جاهزة للإنتاج — منصات ويب، واجهات RESTful، تطبيقات سطح مكتب، وأنظمة ذكاء اصطناعي. مقيم في الجزائر، أبني للعالم.',
+        'مطور مستقل ومتاح للتعاون عن بُعد حول العالم. أُصمم وأُطلق برمجيات جاهزة للإنتاج — منصات ويب، واجهات RESTful، تطبيقات سطح مكتب، وأنظمة ذكاء اصطناعي. رائد أعمال بالروح، باني بالمهنة.',
       cta: 'استكشف أعمالي',
-      hire: 'وظّفني ←',
     },
     about: {
       title: 'عني',

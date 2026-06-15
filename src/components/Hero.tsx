@@ -92,7 +92,7 @@ export default function Hero() {
       </motion.div>
 
       <motion.div
-        className="flex flex-wrap justify-center gap-3"
+        className="flex justify-center"
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.35 }}
@@ -102,12 +102,6 @@ export default function Hero() {
           className="px-6 py-3 rounded-xl bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 text-white font-semibold text-sm transition-all duration-200 shadow-lg shadow-violet-500/30 hover:shadow-violet-500/40 active:scale-[0.97]"
         >
           {T.cta} ↓
-        </a>
-        <a
-          href="#contact"
-          className="px-6 py-3 rounded-xl border border-violet-500/50 hover:bg-violet-500/10 text-violet-300 font-semibold text-sm transition-all duration-200 active:scale-[0.97]"
-        >
-          {T.hire}
         </a>
       </motion.div>
     </motion.section>
