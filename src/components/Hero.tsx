@@ -88,7 +88,7 @@ export default function Hero() {
         />
         <SocialLink href="https://www.facebook.com/mdouaour/" label="Facebook" icon={<FacebookIcon />} />
         <SocialLink href="https://linktr.ee/mdouaour" label="Linktree" icon={<LinktreeIcon />} />
-        <SocialLink href="https://twitter.com/mdoer" label="X" icon={<XIcon />} />
+        <SocialLink href="https://x.com/mdouaour" label="X" icon={<XIcon />} />
       </motion.div>
 
       <motion.div

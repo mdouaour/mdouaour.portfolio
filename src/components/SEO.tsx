@@ -22,6 +22,7 @@ const jsonLd = {
       sameAs: [
         'https://github.com/mdouaour',
         'https://www.linkedin.com/in/mohammed-yassine-douaouria-0a2272121',
+        'https://x.com/mdouaour',
         'https://www.facebook.com/mdouaour/',
         'https://www.facebook.com/mdouaourSolutions',
       ],
