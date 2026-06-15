@@ -3,26 +3,31 @@ import { motion } from 'framer-motion'
 import { useLang } from '../context/LanguageContext'
 import { translations } from '../data/translations'
 import { SectionHeading } from './About'
+import { useReducedMotion } from '../hooks/useReducedMotion'
+import { motionTokens } from '../lib/motionConfig'
 
 const EMAIL = 'yacine23i@hotmail.com'
 const WHATSAPP = 'https://wa.me/213654927818'
 const FORMSPREE_URL = 'https://formspree.io/f/xjkyekdv'
 
-const containerVariants = {
-  hidden: {},
-  visible: {
-    transition: { staggerChildren: 0.06, delayChildren: 0.1 },
-  },
-}
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 16 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: [0.22, 1, 0.36, 1] } },
-}
+const EASE_SMOOTH = [0.22, 1, 0.36, 1] as [number, number, number, number]
 
 export default function Contact() {
   const { lang, isRTL } = useLang()
+  const reduce = useReducedMotion()
   const T = translations[lang].contact
+
+  const containerVariants = {
+    hidden: {},
+    visible: {
+      transition: { staggerChildren: reduce ? 0 : 0.06, delayChildren: reduce ? 0 : 0.1 },
+    },
+  }
+
+  const itemVariants = {
+    hidden: { opacity: reduce ? 1 : 0, y: reduce ? 0 : 16 },
+    visible: { opacity: 1, y: 0, transition: { duration: motionTokens.duration.normal, ease: EASE_SMOOTH } },
+  }
   const [sent, setSent] = useState(false)
   const [sending, setSending] = useState(false)
   const [error, setError] = useState<string | null>(null)

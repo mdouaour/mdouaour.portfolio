@@ -2,6 +2,8 @@ import { motion } from 'framer-motion'
 import { useLang } from '../context/LanguageContext'
 import { translations } from '../data/translations'
 import { SectionHeading } from './About'
+import { useReducedMotion } from '../hooks/useReducedMotion'
+import { motionTokens } from '../lib/motionConfig'
 import type { SkillGroup } from '../types'
 
 const skillGroups: SkillGroup[] = [
@@ -43,36 +45,46 @@ const skillGroups: SkillGroup[] = [
   },
 ]
 
-const groupVariants = {
-  hidden: { opacity: 0, y: 30 },
-  visible: (i: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.4, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] },
-  }),
-}
-
-const barVariants = {
-  hidden: { width: 0 },
-  visible: (level: number) => ({
-    width: `${level}%`,
-    transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] },
-  }),
+function useVariants(reduce: boolean) {
+  return {
+    group: {
+      hidden: { opacity: reduce ? 1 : 0, y: reduce ? 0 : 30 },
+      visible: (i: number) => ({
+        opacity: 1,
+        y: 0,
+        transition: { duration: reduce ? 0 : motionTokens.duration.normal, delay: reduce ? 0 : i * 0.1, ease: motionTokens.easing.smooth },
+      }),
+    },
+    bar: {
+      hidden: { width: reduce ? '0%' : '0%' },
+      visible: (level: number) => ({
+        width: `${level}%`,
+        transition: { duration: reduce ? 0.01 : 0.8, ease: motionTokens.easing.smooth },
+      }),
+    },
+    section: {
+      hidden: { opacity: reduce ? 1 : 0, y: reduce ? 0 : 40 },
+      visible: { opacity: 1, y: 0 },
+    },
+  }
 }
 
 export default function Skills() {
   const { lang, isRTL } = useLang()
+  const reduce = useReducedMotion()
   const T = translations[lang].skills
+  const V = useVariants(reduce)
 
   return (
     <motion.section
       id="skills"
       dir={isRTL ? 'rtl' : 'ltr'}
       className="py-20 px-4"
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      variants={V.section}
+      initial="hidden"
+      whileInView="visible"
       viewport={{ once: true, margin: '-100px' }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: reduce ? 0 : motionTokens.duration.slow }}
     >
       <div className="max-w-5xl mx-auto">
         <SectionHeading>{T.title}</SectionHeading>
@@ -81,7 +93,7 @@ export default function Skills() {
             <motion.div
               key={group.categoryKey}
               custom={i}
-              variants={groupVariants}
+              variants={V.group}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
@@ -103,7 +115,7 @@ export default function Skills() {
                       <motion.div
                         className="h-full rounded-full bg-gradient-to-r from-violet-500 to-indigo-500"
                         custom={level}
-                        variants={barVariants}
+                        variants={V.bar}
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true }}

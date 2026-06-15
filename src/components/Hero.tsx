@@ -1,9 +1,12 @@
 import { motion } from 'framer-motion'
 import { useLang } from '../context/LanguageContext'
 import { translations } from '../data/translations'
+import { useReducedMotion } from '../hooks/useReducedMotion'
+import { motionTokens, springs } from '../lib/motionConfig'
 
 export default function Hero() {
   const { lang, isRTL } = useLang()
+  const reduce = useReducedMotion()
   const T = translations[lang].hero
 
   return (
@@ -11,9 +14,9 @@ export default function Hero() {
       id="hero"
       dir={isRTL ? 'rtl' : 'ltr'}
       className="min-h-screen flex flex-col items-center justify-center text-center px-4 pt-16 relative overflow-hidden"
-      initial={{ opacity: 0, y: 30 }}
+      initial={{ opacity: 0, y: reduce ? 0 : 30 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
+      transition={{ duration: reduce ? 0.01 : motionTokens.duration.slow }}
     >
       <div className="absolute inset-0 bg-gradient-to-b from-violet-600/10 via-transparent to-transparent pointer-events-none" aria-hidden="true" />
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-radial from-violet-500/8 via-violet-500/5 to-transparent rounded-full blur-3xl pointer-events-none" aria-hidden="true" />
@@ -21,9 +24,9 @@ export default function Hero() {
 
       <motion.div
         className="w-28 h-28 rounded-full mb-6 ring-4 ring-violet-500/40 shadow-lg shadow-violet-500/20 overflow-hidden"
-        initial={{ scale: 0 }}
+        initial={{ scale: reduce ? 1 : 0 }}
         animate={{ scale: 1 }}
-        transition={{ type: 'spring', stiffness: 200, damping: 15 }}
+        transition={reduce ? { duration: 0 } : springs.bouncy}
       >
         <img
           src="https://github.com/mdouaour.png"

@@ -49,6 +49,10 @@ p, li {
   text-wrap: pretty;
 }
 
+.font-variant-numeric-tabular {
+  font-variant-numeric: tabular-nums;
+}
+
 img {
   outline: 1px solid rgba(0, 0, 0, 0.08);
   outline-offset: -1px;
@@ -60,10 +64,20 @@ img {
   }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 *,
 *::before,
 *::after {
   transition-property: background-color, border-color, box-shadow, color;
   transition-duration: 0.15s;
   transition-timing-function: ease;
+}
+
+button, a, input, textarea, select {
+  min-height: 40px;
 }

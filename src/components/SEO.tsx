@@ -9,6 +9,33 @@ const perLang: Record<Lang, string> = {
   ar: 'ar',
 };
 
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Person',
+      name: 'Mohammed Yassine Douaouria',
+      givenName: 'Mohammed Yassine',
+      familyName: 'Douaouria',
+      url: BASE_URL,
+      jobTitle: 'Full-Stack Developer & AI-Assisted Engineer',
+      sameAs: [
+        'https://github.com/mdouaour',
+        'https://www.linkedin.com/in/mohammed-yassine-douaouria-0a2272121',
+        'https://www.facebook.com/mdouaour/',
+        'https://www.facebook.com/mdouaourSolutions',
+      ],
+      knowsAbout: ['Web Development', 'AI-Assisted Development', 'API Design', 'Desktop Applications'],
+    },
+    {
+      '@type': 'WebSite',
+      name: 'Mohammed Yassine Douaouria — Portfolio',
+      url: BASE_URL,
+      description: 'Full-stack developer portfolio featuring web apps, desktop systems, APIs, and AI-powered products.',
+    },
+  ],
+};
+
 export default function SEO({ lang, t }: { lang: Lang; t: SEOStrings }) {
   return (
     <Helmet>
@@ -26,6 +53,7 @@ export default function SEO({ lang, t }: { lang: Lang; t: SEOStrings }) {
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={t.title} />
       <meta name="twitter:description" content={t.description} />
+      <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
     </Helmet>
   );
 }
