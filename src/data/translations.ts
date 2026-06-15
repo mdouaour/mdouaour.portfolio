@@ -16,11 +16,11 @@ export const translations: TranslationSet = {
       contact: 'Contact',
     },
     hero: {
-      greeting: "Hi, I'm",
+      greeting: 'Hi, I\'m',
       name: 'Mohammed Yassine Douaouria',
       tagline: 'Full-Stack Developer · AI-Assisted Engineer · Freelance Architect',
       description:
-        'I architect and ship production-grade software — responsive web platforms, RESTful APIs, desktop applications, and AI-augmented systems. Based in Algeria, building for the world. Let me turn your vision into deployed reality.',
+        'I architect and ship production-grade software — responsive web platforms, RESTful APIs, desktop applications, and AI-augmented systems. Based in Algeria, building for the world.',
       cta: 'Explore My Work',
       hire: 'Hire Me →',
     },
@@ -28,9 +28,9 @@ export const translations: TranslationSet = {
       title: 'About Me',
       background: 'Background',
       backgroundText1:
-        "Computer Science graduate from the University of Guelma, Algeria, and ALX-certified Software Engineer. I build end-to-end solutions — React frontends, Python backends, and AI-augmented systems.",
+        'Computer Science graduate from the University of Guelma, Algeria, and ALX-certified Software Engineer. I build end-to-end solutions — from pixel-perfect frontends to battle-tested backends.',
       backgroundText2:
-        'What sets me apart is an AI-accelerated workflow. I combine modern engineering with AI tools to design, build, and ship faster. SaaS platform, POS system, API, or AI product — I design, build, deploy, and maintain it end-to-end.',
+        'My edge is AI-accelerated development. I combine modern engineering with AI tools to ship faster without cutting corners. SaaS, POS, APIs, or AI products — I design, build, deploy, and maintain.',
       whatIDo: 'What I Build',
       services: [
         'Web Applications (React, Node.js, REST APIs)',
@@ -66,16 +66,17 @@ export const translations: TranslationSet = {
       features: 'Key Features',
     },
     contact: {
-      title: "Let's Work Together",
+      title: 'Let\'s Work Together',
       subtitle:
-        'Have a project in mind? Let\'s talk about it. Web, desktop, API, mobile, or AI — I can build it. Every great software solution starts with a conversation.',
+        'Have a project in mind? Let\'s talk. Web, desktop, API, or AI — I can build it. Every great solution starts with a conversation.',
       cta: 'Send Message',
-      email: 'Email Me',
+      email: 'Email',
       whatsapp: 'WhatsApp',
       github: 'GitHub',
       linkedin: 'LinkedIn',
       linktree: 'Linktree',
-      facebook: 'Facebook',
+      facebook: 'Facebook Page',
+      facebookProfile: 'Facebook Profile',
     },
     footer: {
       built: 'Built with React & Tailwind CSS',
@@ -101,7 +102,7 @@ export const translations: TranslationSet = {
       name: 'Mohammed Yassine Douaouria',
       tagline: 'Développeur Full-Stack · Ingénieur IA-Assisté · Architecte Freelance',
       description:
-        'J\'architecture et livre des logiciels prêts pour la production — plateformes web responsives, APIs RESTful, applications desktop et systèmes augmentés par IA. Basé en Algérie, je construis pour le monde. Donnez vie à votre vision en code déployé.',
+        'J\'architecture et livre des logiciels prêts pour la production — plateformes web, APIs RESTful, applications desktop et systèmes IA. Basé en Algérie, je construis pour le monde.',
       cta: 'Explorer mes projets',
       hire: 'Me recruter →',
     },
@@ -109,9 +110,9 @@ export const translations: TranslationSet = {
       title: 'À Propos',
       background: 'Parcours',
       backgroundText1:
-        'Diplômé en Informatique de l\'Université de Guelma et certifié ALX Software Engineering. Je livre des solutions complètes — frontends React, backends Python, et systèmes IA.',
+        'Diplômé en Informatique de l\'Université de Guelma et certifié ALX Software Engineering. Je livre des solutions complètes — frontends soignés aux backends robustes.',
       backgroundText2:
-        'Ce qui me distingue : un workflow accéléré par l\'IA. J\'allie pratiques modernes et outils d\'IA pour concevoir, coder et déployer plus vite. SaaS, POS, API ou produit IA — je conçois, construis, déploie et maintiens de bout en bout.',
+        'Mon atout : un workflow accéléré par l\'IA. J\'allie pratiques modernes et outils d\'IA pour livrer plus vite sans sacrifier la qualité. SaaS, POS, API ou produit IA — je conçois, construis, déploie et maintiens.',
       whatIDo: 'Ce que je construis',
       services: [
         'Applications Web (React, Node.js, APIs REST)',
@@ -149,14 +150,15 @@ export const translations: TranslationSet = {
     contact: {
       title: 'Travaillons Ensemble',
       subtitle:
-        'Un projet en tête ? Discutons-en. Web, desktop, API, mobile ou IA — je peux tout construire. Chaque bonne solution logicielle commence par une conversation.',
+        'Un projet en tête ? Discutons-en. Web, desktop, API ou IA — je peux tout construire. Chaque bonne solution commence par une conversation.',
       cta: 'Envoyer',
       email: 'Email',
       whatsapp: 'WhatsApp',
       github: 'GitHub',
       linkedin: 'LinkedIn',
       linktree: 'Linktree',
-      facebook: 'Facebook',
+      facebook: 'Page Facebook',
+      facebookProfile: 'Profil Facebook',
     },
     footer: {
       built: 'Construit avec React & Tailwind CSS',
@@ -182,7 +184,7 @@ export const translations: TranslationSet = {
       name: 'محمد ياسين دواوريا',
       tagline: 'مطور Full-Stack · مهندس بالذكاء الاصطناعي · معماري حر',
       description:
-        'أُصمم وأُطلق برمجيات جاهزة للإنتاج — منصات ويب متجاوبة، واجهات RESTful، تطبيقات سطح مكتب، وأنظمة معززة بالذكاء الاصطناعي. مقيم في الجزائر، أبني للعالم. حوّل رؤيتك إلى واقع منشور.',
+        'أُصمم وأُطلق برمجيات جاهزة للإنتاج — منصات ويب، واجهات RESTful، تطبيقات سطح مكتب، وأنظمة ذكاء اصطناعي. مقيم في الجزائر، أبني للعالم.',
       cta: 'استكشف أعمالي',
       hire: 'وظّفني ←',
     },
@@ -190,9 +192,9 @@ export const translations: TranslationSet = {
       title: 'عني',
       background: 'الخلفية',
       backgroundText1:
-        'خريج علوم الحاسوب من جامعة قالمة ومعتمد من ALX في هندسة البرمجيات. أقدم حلولاً متكاملة — واجهات React، خوادم Python، وأنظمة ذكاء اصطناعي.',
+        'خريج علوم الحاسوب من جامعة قالمة ومعتمد من ALX في هندسة البرمجيات. أقدم حلولاً متكاملة — من واجهات دقيقة إلى خوادم متمرسة.',
       backgroundText2:
-        'ما يميزني: سير عمل معزز بالذكاء الاصطناعي. أمزج الممارسات الحديثة بأدوات الذكاء الاصطناعي لأصمم وأبني وأنشر بشكل أسرع. منصة SaaS، نظام نقاط بيع، API، أو منتج ذكاء اصطناعي — أصممه، أبنيه، أنشره، وأصونه من البداية للنهاية.',
+        'ميزتي التنافسية: تطوير معزز بالذكاء الاصطناعي. أمزج الهندسة الحديثة بأدوات الذكاء الاصطناعي لأنتج بشكل أسرع دون التضحية بالجودة. SaaS، نقاط بيع، APIs، أو منتجات ذكاء اصطناعي — أصمم، أبني، أنشر، وأصون.',
       whatIDo: 'ما أبنيه',
       services: [
         'تطبيقات الويب (React، Node.js، REST APIs)',
@@ -230,14 +232,15 @@ export const translations: TranslationSet = {
     contact: {
       title: 'لنعمل معاً',
       subtitle:
-        'لديك مشروع في بالك؟ دعنا نتحدث عنه. ويب، سطح مكتب، API، جوال، أو ذكاء اصطناعي — يمكنني بناؤه. كل حل برمجي رائع يبدأ بمحادثة.',
+        'لديك مشروع في بالك؟ دعنا نتحدث. ويب، سطح مكتب، API، أو ذكاء اصطناعي — يمكنني بناؤه. كل حل رائع يبدأ بمحادثة.',
       cta: 'أرسل الرسالة',
       email: 'البريد الإلكتروني',
       whatsapp: 'واتساب',
       github: 'GitHub',
       linkedin: 'LinkedIn',
       linktree: 'Linktree',
-      facebook: 'فيسبوك',
+      facebook: 'صفحة فيسبوك',
+      facebookProfile: 'الملف الشخصي',
     },
     footer: {
       built: 'مبني بـ React و Tailwind CSS',

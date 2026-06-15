@@ -16,24 +16,25 @@ const statusConfig: Record<string, { className: string }> = {
   },
 }
 
+const cardVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.4, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] },
+  }),
+}
+
 export default function Projects() {
   const { lang, isRTL } = useLang()
   const T = translations[lang].projects
   const [selectedProject, setSelectedProject] = useState<Project | null>(null)
 
-  const handleSelect = (project: Project) => {
-    setSelectedProject(project)
-  }
-
-  const closeModal = () => {
-    setSelectedProject(null)
-  }
-
   return (
     <motion.section
       id="projects"
       dir={isRTL ? 'rtl' : 'ltr'}
-      className="py-20 px-4 bg-slate-800/40 dark:bg-slate-800/40"
+      className="py-20 px-4 bg-slate-800/40"
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-100px' }}
@@ -45,17 +46,20 @@ export default function Projects() {
           {(projectsData as Project[]).map((project, i) => (
             <motion.div
               key={project.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              custom={i}
+              variants={cardVariants}
+              initial="hidden"
+              whileInView="visible"
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: i * 0.08 }}
             >
-              <ProjectCard project={project} T={T} lang={lang} onSelect={handleSelect} />
+              <ProjectCard project={project} T={T} lang={lang} onSelect={() => setSelectedProject(project)} />
             </motion.div>
           ))}
         </div>
 
-        {selectedProject && <ProjectModal project={selectedProject} lang={lang} onClose={closeModal} />}
+        {selectedProject && (
+          <ProjectModal project={selectedProject} lang={lang} onClose={() => setSelectedProject(null)} />
+        )}
       </div>
     </motion.section>
   )
@@ -70,7 +74,7 @@ function ProjectCard({
   project: Project
   T: { viewGithub: string; viewDemo: string; status: Record<string, string>; features: string }
   lang: Lang
-  onSelect: (project: Project) => void
+  onSelect: () => void
 }) {
   const badge = statusConfig[project.status]
   const title = project.title[lang]
@@ -79,8 +83,8 @@ function ProjectCard({
 
   return (
     <article
-      onClick={() => onSelect(project)}
-      className="cursor-pointer bg-slate-800 dark:bg-slate-800 border border-slate-700 dark:border-slate-700 rounded-2xl p-6 flex flex-col gap-4 hover:border-violet-500/50 transition-colors group h-full"
+      onClick={onSelect}
+      className="cursor-pointer bg-slate-800 border border-slate-700 rounded-2xl p-6 flex flex-col gap-4 hover:border-violet-500/50 transition-colors group h-full"
     >
       {project.image ? (
         <div className="overflow-hidden rounded-lg">
@@ -113,7 +117,7 @@ function ProjectCard({
       )}
 
       <div className="flex items-start justify-between gap-3">
-        <h3 className="text-white dark:text-white font-semibold text-lg group-hover:text-violet-300 transition-colors leading-snug">
+        <h3 className="text-white font-semibold text-lg group-hover:text-violet-300 transition-colors leading-snug">
           {title}
         </h3>
         <span
@@ -123,15 +127,15 @@ function ProjectCard({
         </span>
       </div>
 
-      <p className="text-slate-400 dark:text-slate-400 text-sm leading-relaxed">{description}</p>
+      <p className="text-slate-400 text-sm leading-relaxed">{description}</p>
 
       <div>
-        <p className="text-slate-500 dark:text-slate-500 text-xs uppercase tracking-wide mb-2 font-medium">
+        <p className="text-slate-500 text-xs uppercase tracking-wide mb-2 font-medium">
           {T.features}
         </p>
         <ul className="space-y-1">
           {features.map((feat) => (
-            <li key={feat} className="text-slate-400 dark:text-slate-400 text-xs flex items-start gap-1.5">
+            <li key={feat} className="text-slate-400 text-xs flex items-start gap-1.5">
               <span className="text-violet-400 flex-shrink-0">▹</span>
               {feat}
             </li>
@@ -150,12 +154,12 @@ function ProjectCard({
         ))}
       </div>
 
-      <div className="flex flex-wrap gap-4 mt-auto pt-2 border-t border-slate-700 dark:border-slate-700">
+      <div className="flex flex-wrap gap-4 mt-auto pt-2 border-t border-slate-700">
         <a
           href={project.github}
           target="_blank"
           rel="noreferrer"
-          className="inline-flex items-center gap-1.5 text-sm text-slate-300 dark:text-slate-300 hover:text-violet-400 transition-colors"
+          className="inline-flex items-center gap-1.5 text-sm text-slate-300 hover:text-violet-400 transition-colors"
           aria-label={`View ${title} on GitHub`}
         >
           <GithubIcon />

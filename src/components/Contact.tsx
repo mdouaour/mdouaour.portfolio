@@ -6,8 +6,19 @@ import { SectionHeading } from './About'
 
 const EMAIL = 'yacine23i@hotmail.com'
 const WHATSAPP = 'https://wa.me/213654927818'
-
 const FORMSPREE_URL = 'https://formspree.io/f/xjkyekdv'
+
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: { staggerChildren: 0.06, delayChildren: 0.1 },
+  },
+}
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 16 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: [0.22, 1, 0.36, 1] } },
+}
 
 export default function Contact() {
   const { lang, isRTL } = useLang()
@@ -54,6 +65,13 @@ export default function Contact() {
       highlight: false,
     },
     {
+      label: T.facebookProfile,
+      href: 'https://www.facebook.com/mdouaour/',
+      description: 'facebook.com/mdouaour',
+      icon: <FacebookProfileIcon />,
+      highlight: false,
+    },
+    {
       label: T.linktree,
       href: 'https://linktr.ee/mdouaour',
       description: 'linktr.ee/mdouaour',
@@ -97,20 +115,25 @@ export default function Contact() {
     >
       <div className="max-w-3xl mx-auto text-center">
         <SectionHeading>{T.title}</SectionHeading>
-        <p className="text-slate-400 dark:text-slate-400 mt-6 leading-relaxed max-w-2xl mx-auto">
-          {T.subtitle}
-        </p>
-
-        {/* Contact form */}
-        <motion.form
-          onSubmit={handleSubmit}
-          className="mt-8 max-w-xl mx-auto text-left space-y-4"
-          initial={{ opacity: 0, y: 20 }}
+        <motion.p
+          className="text-slate-400 mt-6 leading-relaxed max-w-2xl mx-auto"
+          initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.1 }}
         >
-          <div>
+          {T.subtitle}
+        </motion.p>
+
+        <motion.form
+          onSubmit={handleSubmit}
+          className="mt-8 max-w-xl mx-auto text-left space-y-4"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          <motion.div variants={itemVariants}>
             <input
               type="text"
               name="name"
@@ -118,10 +141,10 @@ export default function Contact() {
               required
               value={formData.name}
               onChange={(e) => setFormData((p) => ({ ...p, name: e.target.value }))}
-              className="w-full px-4 py-2.5 rounded-xl bg-slate-800 dark:bg-slate-800 border border-slate-700 dark:border-slate-700 text-slate-200 dark:text-slate-200 placeholder-slate-500 text-sm focus:outline-none focus:border-violet-500 transition-colors"
+              className="w-full px-4 py-3 rounded-xl bg-slate-800 border border-slate-700 text-slate-200 placeholder-slate-500 text-sm focus:outline-none focus:border-violet-500 focus:ring-1 focus:ring-violet-500/30 transition-all"
             />
-          </div>
-          <div>
+          </motion.div>
+          <motion.div variants={itemVariants}>
             <input
               type="email"
               name="email"
@@ -129,10 +152,10 @@ export default function Contact() {
               required
               value={formData.email}
               onChange={(e) => setFormData((p) => ({ ...p, email: e.target.value }))}
-              className="w-full px-4 py-2.5 rounded-xl bg-slate-800 dark:bg-slate-800 border border-slate-700 dark:border-slate-700 text-slate-200 dark:text-slate-200 placeholder-slate-500 text-sm focus:outline-none focus:border-violet-500 transition-colors"
+              className="w-full px-4 py-3 rounded-xl bg-slate-800 border border-slate-700 text-slate-200 placeholder-slate-500 text-sm focus:outline-none focus:border-violet-500 focus:ring-1 focus:ring-violet-500/30 transition-all"
             />
-          </div>
-          <div>
+          </motion.div>
+          <motion.div variants={itemVariants}>
             <textarea
               name="message"
               rows={4}
@@ -140,9 +163,9 @@ export default function Contact() {
               required
               value={formData.message}
               onChange={(e) => setFormData((p) => ({ ...p, message: e.target.value }))}
-              className="w-full px-4 py-2.5 rounded-xl bg-slate-800 dark:bg-slate-800 border border-slate-700 dark:border-slate-700 text-slate-200 dark:text-slate-200 placeholder-slate-500 text-sm focus:outline-none focus:border-violet-500 transition-colors resize-none"
+              className="w-full px-4 py-3 rounded-xl bg-slate-800 border border-slate-700 text-slate-200 placeholder-slate-500 text-sm focus:outline-none focus:border-violet-500 focus:ring-1 focus:ring-violet-500/30 transition-all resize-none"
             />
-          </div>
+          </motion.div>
           {error && (
             <motion.p
               initial={{ opacity: 0, y: -10 }}
@@ -153,41 +176,50 @@ export default function Contact() {
               {error}
             </motion.p>
           )}
-          <button
-            type="submit"
-            disabled={sent || sending}
-            className="w-full px-6 py-3 rounded-xl bg-violet-600 hover:bg-violet-500 disabled:bg-violet-600/50 disabled:cursor-not-allowed text-white font-semibold text-sm transition-colors shadow-lg shadow-violet-500/30 flex items-center justify-center gap-2"
-          >
-            {sending ? (
-              <span className="inline-block w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" aria-hidden="true" />
-            ) : null}
-            {sent
-              ? lang === 'ar'
-                ? 'تم الإرسال ✓'
-                : lang === 'fr'
-                  ? 'Envoyé ✓'
-                  : 'Sent ✓'
-              : sending
+          <motion.div variants={itemVariants}>
+            <button
+              type="submit"
+              disabled={sent || sending}
+              className="w-full px-6 py-3 rounded-xl bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 disabled:from-violet-600/50 disabled:to-indigo-600/50 disabled:cursor-not-allowed text-white font-semibold text-sm transition-all shadow-lg shadow-violet-500/30 hover:shadow-violet-500/40 active:scale-[0.98] flex items-center justify-center gap-2"
+            >
+              {sending ? (
+                <span className="inline-block w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+              ) : null}
+              {sent
                 ? lang === 'ar'
-                  ? 'جارٍ الإرسال...'
+                  ? 'تم الإرسال ✓'
                   : lang === 'fr'
-                    ? 'Envoi...'
-                    : 'Sending...'
-                : T.cta}
-          </button>
+                    ? 'Envoyé ✓'
+                    : 'Sent ✓'
+                : sending
+                  ? lang === 'ar'
+                    ? 'جارٍ الإرسال...'
+                    : lang === 'fr'
+                      ? 'Envoi...'
+                      : 'Sending...'
+                  : T.cta}
+            </button>
+          </motion.div>
         </motion.form>
 
-        <div className="grid sm:grid-cols-2 gap-4 mt-10">
+        <motion.div
+          className="grid sm:grid-cols-2 gap-4 mt-10"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
           {contactLinks.map(({ label, href, description, icon, highlight }) => (
-            <a
+            <motion.a
               key={label}
               href={href}
               target={href.startsWith('mailto') ? '_self' : '_blank'}
               rel="noreferrer"
-              className={`flex items-center gap-4 p-5 rounded-2xl border transition-colors group ${
+              variants={itemVariants}
+              className={`flex items-center gap-4 p-5 rounded-2xl border transition-all group active:scale-[0.98] ${
                 highlight
                   ? 'bg-violet-600/10 border-violet-500/40 hover:border-violet-400 hover:bg-violet-600/20'
-                  : 'bg-slate-800 dark:bg-slate-800 border-slate-700 dark:border-slate-700 hover:border-violet-500/50 hover:bg-slate-700/50'
+                  : 'bg-slate-800 border-slate-700 hover:border-violet-500/50 hover:bg-slate-700/50'
               }`}
               aria-label={label}
             >
@@ -195,18 +227,18 @@ export default function Contact() {
                 className={`flex-shrink-0 transition-colors ${
                   highlight
                     ? 'text-violet-400 group-hover:text-violet-300'
-                    : 'text-slate-300 dark:text-slate-300 group-hover:text-violet-400'
+                    : 'text-slate-300 group-hover:text-violet-400'
                 }`}
               >
                 {icon}
               </span>
               <div className={isRTL ? 'text-right' : 'text-left'}>
-                <p className="text-white dark:text-white font-semibold text-sm">{label}</p>
-                <p className="text-slate-400 dark:text-slate-400 text-xs mt-0.5">{description}</p>
+                <p className="text-white font-semibold text-sm">{label}</p>
+                <p className="text-slate-400 text-xs mt-0.5">{description}</p>
               </div>
-            </a>
+            </motion.a>
           ))}
-        </div>
+        </motion.div>
       </div>
     </motion.section>
   )
@@ -248,6 +280,14 @@ function FacebookIcon() {
   return (
     <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
       <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+    </svg>
+  )
+}
+
+function FacebookProfileIcon() {
+  return (
+    <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm.283 4.177c1.57 0 2.847.65 3.7 1.568l-1.815 1.815c-.432-.493-1.093-.866-1.885-.866-1.463 0-2.685 1.238-2.685 2.706 0 .243.028.477.094.694l-2.667 2.113c-.828-1.152-1.305-2.528-1.305-4.02 0-3.86 3.13-7.01 6.563-7.01zM5.747 8.674c.523-1.06 1.282-1.97 2.214-2.677l2.686 2.126c-.666.49-1.199 1.166-1.514 1.96L5.747 8.674zm13.222 1.887l-3.822 1.84c.153.43.237.895.237 1.38 0 1.347-.68 2.54-1.717 3.264l2.452 2.856c1.64-1.336 2.85-3.38 2.85-6.12 0-.756-.123-1.48-.334-2.163l.334-.057zm-4.402 3.95c0-1.47-1.192-2.663-2.653-2.663a2.67 2.67 0 00-1.28.34L8.53 9.56c.572-.507 1.262-.872 2.037-1.015l1.256 3.928c.126.022.25.038.376.038 1.472 0 2.664 1.193 2.664 2.663 0 .31-.06.604-.158.878l-2.206 2.56a4.37 4.37 0 01-1.523-.266l-.503 3.767c.62.14 1.26.206 1.89.206 2.717 0 5.145-1.065 6.92-2.785l-2.79-3.246c.38-.506.61-1.124.61-1.8z" />
     </svg>
   )
 }

@@ -1,4 +1,5 @@
 import { HelmetProvider } from 'react-helmet-async'
+import { motion, useScroll } from 'framer-motion'
 import './index.css'
 import { useLang } from './context/LanguageContext'
 import { ThemeProvider } from './context/ThemeContext'
@@ -14,12 +15,23 @@ import BackToTop from './components/BackToTop'
 import SEO from './components/SEO'
 import type { Lang } from './types'
 
+function ScrollProgress() {
+  const { scrollYProgress } = useScroll()
+  return (
+    <motion.div
+      className="fixed top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-violet-600 to-indigo-500 origin-left z-[60]"
+      style={{ scaleX: scrollYProgress }}
+    />
+  )
+}
+
 function App() {
   const { lang, isRTL } = useLang()
 
   return (
     <>
       <SEO lang={lang as Lang} t={translations[lang].seo} />
+      <ScrollProgress />
       <div dir={isRTL ? 'rtl' : 'ltr'} lang={lang === 'ar' ? 'ar' : undefined}>
         <Navbar />
         <main>

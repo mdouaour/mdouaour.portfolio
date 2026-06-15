@@ -1,32 +1,39 @@
 @import "tailwindcss";
 
-:root {
-  --accent: #7c3aed;
-  --accent-light: #8b5cf6;
+@theme {
+  --color-brand: #7c3aed;
+  --color-brand-light: #a78bfa;
+  --color-brand-dark: #5b21b6;
+  --color-surface: #0f172a;
+  --color-surface-alt: #1e293b;
+  --color-surface-card: #1e293b;
+  --color-border: #334155;
+  --color-text: #e2e8f0;
+  --color-text-muted: #94a3b8;
+  --color-text-dim: #64748b;
 }
 
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 5rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
   margin: 0;
-  font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
-  background: #0f172a;
-  color: #e2e8f0;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: 'Inter', system-ui, 'Segoe UI', Roboto, sans-serif;
+  background: var(--color-surface);
+  color: var(--color-text);
 }
 
-/* Light theme overrides */
 html:not(.dark) body {
   background: #f8fafc;
   color: #1e293b;
 }
 
 :lang(ar) {
-  font-family: 'Segoe UI', Tahoma, 'Arabic Typesetting', 'Traditional Arabic',
-    system-ui, sans-serif;
+  font-family: 'Segoe UI', Tahoma, 'Arabic Typesetting', 'Traditional Arabic', system-ui, sans-serif;
   line-height: 1.8;
 }
 
@@ -34,11 +41,29 @@ html:not(.dark) body {
   text-align: right;
 }
 
-/* Smooth theme transitions */
+h1, h2, h3, h4 {
+  text-wrap: balance;
+}
+
+p, li {
+  text-wrap: pretty;
+}
+
+img {
+  outline: 1px solid rgba(0, 0, 0, 0.08);
+  outline-offset: -1px;
+}
+
+@media (prefers-color-scheme: dark) {
+  img {
+    outline-color: rgba(255, 255, 255, 0.08);
+  }
+}
+
 *,
 *::before,
 *::after {
-  transition-property: background-color, border-color, box-shadow;
-  transition-duration: 0.2s;
+  transition-property: background-color, border-color, box-shadow, color;
+  transition-duration: 0.15s;
   transition-timing-function: ease;
 }

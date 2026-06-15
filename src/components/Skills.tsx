@@ -43,6 +43,23 @@ const skillGroups: SkillGroup[] = [
   },
 ]
 
+const groupVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.4, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] },
+  }),
+}
+
+const barVariants = {
+  hidden: { width: 0 },
+  visible: (level: number) => ({
+    width: `${level}%`,
+    transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] },
+  }),
+}
+
 export default function Skills() {
   const { lang, isRTL } = useLang()
   const T = translations[lang].skills
@@ -63,11 +80,12 @@ export default function Skills() {
           {skillGroups.map((group, i) => (
             <motion.div
               key={group.categoryKey}
-              className="bg-slate-800 dark:bg-slate-800 rounded-2xl p-5 border border-slate-700 dark:border-slate-700 hover:border-violet-500/40 transition-colors"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              custom={i}
+              variants={groupVariants}
+              initial="hidden"
+              whileInView="visible"
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: i * 0.1 }}
+              className="bg-slate-800 rounded-2xl p-5 border border-slate-700 hover:border-violet-500/40 transition-colors"
             >
               <h3 className="text-violet-300 font-semibold text-sm uppercase tracking-wide mb-4">
                 {T.categories[group.categoryKey]}
@@ -76,18 +94,19 @@ export default function Skills() {
                 {group.skills.map(({ name, level }) => (
                   <li key={name}>
                     <div className="flex justify-between mb-1">
-                      <span className="text-slate-300 dark:text-slate-300 text-sm">{name}</span>
-                      <span className="text-violet-400 text-xs font-mono">
+                      <span className="text-slate-300 text-sm">{name}</span>
+                      <span className="text-violet-400 text-xs font-mono font-variant-numeric-tabular">
                         {level}%
                       </span>
                     </div>
-                    <div className="h-1.5 bg-slate-700 dark:bg-slate-700 rounded-full overflow-hidden">
+                    <div className="h-1.5 bg-slate-700 rounded-full overflow-hidden">
                       <motion.div
-                        className="h-full bg-violet-500 rounded-full"
-                        initial={{ width: 0 }}
-                        whileInView={{ width: `${level}%` }}
+                        className="h-full rounded-full bg-gradient-to-r from-violet-500 to-indigo-500"
+                        custom={level}
+                        variants={barVariants}
+                        initial="hidden"
+                        whileInView="visible"
                         viewport={{ once: true }}
-                        transition={{ duration: 0.8, ease: 'easeOut' }}
                         role="progressbar"
                         aria-valuenow={level}
                         aria-valuemin={0}

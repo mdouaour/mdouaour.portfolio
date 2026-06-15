@@ -15,8 +15,10 @@ export default function Hero() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
     >
-      <div className="absolute inset-0 bg-gradient-to-b from-violet-900/10 via-transparent to-transparent pointer-events-none" aria-hidden="true" />
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-violet-500/5 rounded-full blur-3xl pointer-events-none" aria-hidden="true" />
+      <div className="absolute inset-0 bg-gradient-to-b from-violet-600/10 via-transparent to-transparent pointer-events-none" aria-hidden="true" />
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-radial from-violet-500/8 via-violet-500/5 to-transparent rounded-full blur-3xl pointer-events-none" aria-hidden="true" />
+      <div className="absolute top-1/2 left-1/4 w-[400px] h-[400px] bg-indigo-500/5 rounded-full blur-3xl pointer-events-none" aria-hidden="true" />
+
       <motion.div
         className="w-28 h-28 rounded-full mb-6 ring-4 ring-violet-500/40 shadow-lg shadow-violet-500/20 overflow-hidden"
         initial={{ scale: 0 }}
@@ -30,47 +32,81 @@ export default function Hero() {
         />
       </motion.div>
 
-      <p className="text-slate-400 dark:text-slate-400 text-sm mb-2 tracking-wide">{T.greeting}</p>
+      <motion.p
+        className="text-violet-400 text-sm mb-2 tracking-widest uppercase font-medium"
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.1 }}
+      >
+        {T.greeting}
+      </motion.p>
 
-      <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white dark:text-white leading-tight mb-4">
-        Mohammed Yassine{' '}
-        <span className="text-violet-400">Douaouria</span>
-      </h1>
+      <motion.h1
+        className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-4"
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.15 }}
+      >
+        {T.name.split(' ').slice(0, -1).join(' ')}{' '}
+        <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-indigo-400">
+          {T.name.split(' ').pop()}
+        </span>
+      </motion.h1>
 
-      <p className="text-violet-300 font-semibold text-base sm:text-lg mb-4">
+      <motion.p
+        className="text-violet-300 font-semibold text-base sm:text-lg mb-4"
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.2 }}
+      >
         {T.tagline}
-      </p>
+      </motion.p>
 
-      <p className="text-slate-400 dark:text-slate-400 max-w-2xl mb-8 leading-relaxed text-sm sm:text-base">
+      <motion.p
+        className="text-slate-400 max-w-2xl mb-8 leading-relaxed text-sm sm:text-base"
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.25 }}
+      >
         {T.description}
-      </p>
+      </motion.p>
 
-      <div className="flex flex-wrap justify-center gap-3 mb-10">
+      <motion.div
+        className="flex flex-wrap justify-center gap-3 mb-10"
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.3 }}
+      >
         <SocialLink href="https://github.com/mdouaour" label="GitHub" icon={<GithubIcon />} />
         <SocialLink
           href="https://www.linkedin.com/in/mohammed-yassine-douaouria-0a2272121"
           label="LinkedIn"
           icon={<LinkedInIcon />}
         />
-        <SocialLink href="https://www.facebook.com/mdouaourSolutions" label="Facebook" icon={<FacebookIcon />} />
+        <SocialLink href="https://www.facebook.com/mdouaour/" label="Facebook" icon={<FacebookIcon />} />
         <SocialLink href="https://linktr.ee/mdouaour" label="Linktree" icon={<LinktreeIcon />} />
-        <SocialLink href="https://twitter.com/mdoer" label="Twitter" icon={<XIcon />} />
-      </div>
+        <SocialLink href="https://twitter.com/mdoer" label="X" icon={<XIcon />} />
+      </motion.div>
 
-      <div className="flex flex-wrap justify-center gap-3">
+      <motion.div
+        className="flex flex-wrap justify-center gap-3"
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.35 }}
+      >
         <a
           href="#projects"
-          className="px-6 py-3 rounded-xl bg-violet-600 hover:bg-violet-500 text-white font-semibold text-sm transition-colors shadow-lg shadow-violet-500/30"
+          className="px-6 py-3 rounded-xl bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 text-white font-semibold text-sm transition-all duration-200 shadow-lg shadow-violet-500/30 hover:shadow-violet-500/40 active:scale-[0.97]"
         >
           {T.cta} ↓
         </a>
         <a
           href="#contact"
-          className="px-6 py-3 rounded-xl border border-violet-500 hover:bg-violet-500/10 text-violet-300 font-semibold text-sm transition-colors"
+          className="px-6 py-3 rounded-xl border border-violet-500/50 hover:bg-violet-500/10 text-violet-300 font-semibold text-sm transition-all duration-200 active:scale-[0.97]"
         >
           {T.hire}
         </a>
-      </div>
+      </motion.div>
     </motion.section>
   )
 }
@@ -81,7 +117,7 @@ function SocialLink({ href, label, icon }: { href: string; label: string; icon: 
       href={href}
       target="_blank"
       rel="noreferrer"
-      className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-slate-800 dark:bg-slate-800 hover:bg-slate-700 text-slate-200 text-sm font-medium transition-colors border border-slate-700"
+      className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-slate-800/80 hover:bg-slate-700/80 text-slate-300 text-sm font-medium transition-all duration-200 border border-slate-700 hover:border-violet-500/40 active:scale-[0.97]"
       aria-label={label}
     >
       {icon}
@@ -106,18 +142,18 @@ function LinkedInIcon() {
   )
 }
 
-function LinktreeIcon() {
-  return (
-    <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M7.953 15.066c-.08-.043-.08.042 0 0m8.09-8.521c.04-.037.04.037 0 0M12 0C5.374 0 0 5.373 0 12s5.374 12 12 12 12-5.373 12-12S18.626 0 12 0m-.437 4.25h.875c.136 0 .248.112.248.25v5.5l3.286-3.286a.248.248 0 0 1 .351 0l.619.619a.247.247 0 0 1 0 .35L13.25 10.97l3.942 3.94a.248.248 0 0 1 0 .35l-.62.62a.25.25 0 0 1-.35 0L12 11.659l-4.222 4.22a.25.25 0 0 1-.35 0l-.62-.619a.248.248 0 0 1 0-.35l3.942-3.94-3.692-3.688a.248.248 0 0 1 0-.35l.619-.619a.248.248 0 0 1 .351 0L11.314 9.99v-5.49c0-.138.112-.25.249-.25m-3.439 15h7.752a.25.25 0 0 0 .25-.25v-.875a.25.25 0 0 0-.25-.25H8.124a.25.25 0 0 0-.25.25V19a.25.25 0 0 0 .25.25" />
-    </svg>
-  )
-}
-
 function FacebookIcon() {
   return (
     <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
       <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+    </svg>
+  )
+}
+
+function LinktreeIcon() {
+  return (
+    <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M7.953 15.066c-.08-.043-.08.042 0 0m8.09-8.521c.04-.037.04.037 0 0M12 0C5.374 0 0 5.373 0 12s5.374 12 12 12 12-5.373 12-12S18.626 0 12 0m-.437 4.25h.875c.136 0 .248.112.248.25v5.5l3.286-3.286a.248.248 0 0 1 .351 0l.619.619a.247.247 0 0 1 0 .35L13.25 10.97l3.942 3.94a.248.248 0 0 1 0 .35l-.62.62a.25.25 0 0 1-.35 0L12 11.659l-4.222 4.22a.25.25 0 0 1-.35 0l-.62-.619a.248.248 0 0 1 0-.35l3.942-3.94-3.692-3.688a.248.248 0 0 1 0-.35l.619-.619a.248.248 0 0 1 .351 0L11.314 9.99v-5.49c0-.138.112-.25.249-.25m-3.439 15h7.752a.25.25 0 0 0 .25-.25v-.875a.25.25 0 0 0-.25-.25H8.124a.25.25 0 0 0-.25.25V19a.25.25 0 0 0 .25.25" />
     </svg>
   )
 }

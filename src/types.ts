@@ -56,6 +56,7 @@ export interface ContactStrings {
   linkedin: string
   linktree: string
   facebook: string
+  facebookProfile: string
 }
 
 export interface FooterStrings {
