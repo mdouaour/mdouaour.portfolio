@@ -38,7 +38,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 bg-slate-900/95 dark:bg-slate-900/95 backdrop-blur border-b border-slate-800 dark:border-slate-800 transition-transform duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 bg-glass backdrop-blur border-b border-border transition-transform duration-300 ${
         visible ? 'translate-y-0' : '-translate-y-full'
       }`}
       dir={isRTL ? 'rtl' : 'ltr'}
@@ -52,7 +52,7 @@ export default function Navbar() {
             href="https://github.com/mdouaour/mdouaour.portfolio"
             target="_blank"
             rel="noreferrer"
-            className="hidden sm:inline-flex items-center gap-1 px-2 py-0.5 text-xs rounded-full bg-slate-800 border border-slate-700 text-slate-400 hover:text-emerald-400 hover:border-emerald-500/40 transition-colors"
+            className="hidden sm:inline-flex items-center gap-1 px-2 py-0.5 text-xs rounded-full bg-surface-elevated border border-border text-text-dim hover:text-emerald-400 hover:border-emerald-500/40 transition-colors"
             aria-label="View portfolio source code"
           >
             <svg width="10" height="10" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -67,7 +67,7 @@ export default function Navbar() {
             <li key={href}>
               <a
                 href={href}
-                className="text-slate-300 dark:text-slate-300 hover:text-emerald-400 transition-colors text-sm font-medium"
+                className="text-text-muted hover:text-emerald-400 transition-colors text-sm font-medium"
               >
                 {label}
               </a>
@@ -79,14 +79,14 @@ export default function Navbar() {
           {/* Theme toggle */}
           <button
             onClick={toggleTheme}
-            className="p-2 rounded-lg text-slate-400 hover:text-emerald-400 hover:bg-slate-800 transition-colors"
+            className="p-2 rounded-lg text-text-dim hover:text-emerald-400 hover:bg-surface-elevated transition-colors"
             aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
           >
             {theme === 'dark' ? <SunIcon /> : <MoonIcon />}
           </button>
 
           <div
-            className="flex items-center gap-1 bg-slate-800 dark:bg-slate-800 rounded-lg p-1 border border-slate-700 dark:border-slate-700"
+            className="flex items-center gap-1 bg-surface-elevated rounded-lg p-1 border border-border"
             role="group"
             aria-label="Language selector"
           >
@@ -98,7 +98,7 @@ export default function Navbar() {
                 className={`px-2 py-0.5 rounded text-xs font-semibold transition-colors ${
                   lang === code
                     ? 'bg-emerald-600 text-white'
-                    : 'text-slate-400 hover:text-slate-200'
+                    : 'text-text-dim hover:text-text'
                 }`}
               >
                 {label}
@@ -107,7 +107,7 @@ export default function Navbar() {
           </div>
 
           <button
-            className="sm:hidden p-2 text-slate-400 hover:text-emerald-400 transition-colors"
+            className="sm:hidden p-2 text-text-dim hover:text-emerald-400 transition-colors"
             onClick={() => setMenuOpen((o) => !o)}
             aria-label="Toggle menu"
             aria-expanded={menuOpen}
@@ -132,7 +132,7 @@ export default function Navbar() {
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="sm:hidden overflow-hidden border-t border-slate-800 bg-slate-900/95 px-4"
+            className="sm:hidden overflow-hidden border-t border-border bg-glass px-4"
           >
             <ul className="flex flex-col gap-3 pt-3 pb-4">
               {navLinks.map(({ label, href }) => (
@@ -145,7 +145,7 @@ export default function Navbar() {
                   <a
                     href={href}
                     onClick={() => setMenuOpen(false)}
-                    className="block text-slate-300 hover:text-emerald-400 transition-colors text-sm font-medium py-1"
+                    className="block text-text-muted hover:text-emerald-400 transition-colors text-sm font-medium py-1"
                   >
                     {label}
                   </a>

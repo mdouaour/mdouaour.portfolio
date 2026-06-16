@@ -34,7 +34,7 @@ export default function About() {
     <motion.section
       id="about"
       dir={isRTL ? 'rtl' : 'ltr'}
-      className="py-20 px-4 bg-slate-800/40"
+      className="py-20 px-4 bg-surface-alt/40"
       initial={{ opacity: 0, y: reduce ? 0 : 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-100px' }}
@@ -49,11 +49,11 @@ export default function About() {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            <h3 className="text-white font-semibold text-lg mb-3">
+            <h3 className="text-text font-semibold text-lg mb-3">
               {T.background}
             </h3>
             <motion.p
-              className="text-slate-400 leading-relaxed mb-4"
+              className="text-text-muted leading-relaxed mb-4"
               variants={V.item}
               initial="hidden"
               whileInView="visible"
@@ -62,7 +62,7 @@ export default function About() {
               {T.backgroundText1}
             </motion.p>
             <motion.p
-              className="text-slate-400 leading-relaxed mb-6"
+              className="text-text-muted leading-relaxed mb-6"
               variants={V.item}
               initial="hidden"
               whileInView="visible"
@@ -71,7 +71,7 @@ export default function About() {
               {T.backgroundText2}
             </motion.p>
 
-            <h3 className="text-white font-semibold text-lg mb-3">
+            <h3 className="text-text font-semibold text-lg mb-3">
               {T.whatIDo}
             </h3>
             <motion.ul
@@ -85,7 +85,7 @@ export default function About() {
                 <motion.li
                   key={service}
                   variants={V.item}
-                  className="flex items-start gap-2 text-slate-400 text-sm"
+                  className="flex items-start gap-2 text-text-muted text-sm"
                 >
                   <span className="text-emerald-400 mt-0.5 flex-shrink-0">▹</span>
                   {service}
@@ -101,7 +101,7 @@ export default function About() {
             viewport={{ once: true }}
             transition={{ delay: reduce ? 0 : 0.1 }}
           >
-            <h3 className="text-white font-semibold text-lg mb-3">
+            <h3 className="text-text font-semibold text-lg mb-3">
               {T.education}
             </h3>
             <motion.ul
@@ -132,7 +132,7 @@ function SectionHeading({ children }: { children: React.ReactNode }) {
   const reduce = useReducedMotion()
   return (
     <div className="text-center">
-      <h2 className="text-3xl sm:text-4xl font-bold text-white">{children}</h2>
+      <h2 className="text-3xl sm:text-4xl font-bold text-text">{children}</h2>
       {reduce ? (
         <div className="mt-3 mx-auto w-16 h-1 rounded-full bg-gradient-to-r from-emerald-500 to-cyan-500" />
       ) : (
@@ -153,11 +153,26 @@ function InfoItem({ icon, title, subtitle }: { icon: string; title: string; subt
     <div className="flex items-start gap-3">
       <span className="text-xl mt-0.5" aria-hidden="true">{icon}</span>
       <div>
-        <p className="text-white font-medium">{title}</p>
-        <p className="text-slate-400 text-sm">{subtitle}</p>
+        <p className="text-text font-medium">{title}</p>
+        <p className="text-text-muted text-sm">{subtitle}</p>
       </div>
     </div>
   )
 }
 
 export { SectionHeading }
+
+export function SectionDivider() {
+  const reduce = useReducedMotion()
+  return (
+    <motion.div
+      className="max-w-5xl mx-auto px-4"
+      initial={{ opacity: reduce ? 1 : 0, scaleX: reduce ? 1 : 0 }}
+      whileInView={{ opacity: 1, scaleX: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: reduce ? 0 : motionTokens.duration.slow, ease: motionTokens.easing.smooth }}
+    >
+      <div className="h-px bg-gradient-to-r from-transparent via-border to-transparent" />
+    </motion.div>
+  )
+}

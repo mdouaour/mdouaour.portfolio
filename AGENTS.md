@@ -20,3 +20,8 @@
 - Tailwind utility classes only (no CSS modules)
 - Mobile-first responsive design
 - No comments in code
+
+## Git
+- **ALWAYS commit and push after completing meaningful work** — don't leave changes uncommitted
+- Commit message format: `type: concise description`
+- Auto-deploys via Vercel on push to main

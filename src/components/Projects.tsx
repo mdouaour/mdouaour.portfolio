@@ -34,7 +34,7 @@ export default function Projects() {
     <motion.section
       id="projects"
       dir={isRTL ? 'rtl' : 'ltr'}
-      className="py-20 px-4 bg-slate-800/40"
+      className="py-20 px-4 bg-surface-alt/40"
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-100px' }}
@@ -84,7 +84,7 @@ function ProjectCard({
   return (
     <article
       onClick={onSelect}
-      className="cursor-pointer bg-slate-800 border border-slate-700 rounded-2xl p-6 flex flex-col gap-4 hover:border-emerald-500/50 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 group h-full"
+      className="cursor-pointer bg-surface-card border border-border rounded-2xl p-6 flex flex-col gap-4 hover:border-emerald-500/50 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 group h-full"
     >
       {project.image ? (
         <div className="overflow-hidden rounded-lg">
@@ -97,7 +97,7 @@ function ProjectCard({
         </div>
       ) : (
         <div
-          className="w-full h-36 rounded-lg bg-slate-700/60 flex items-center justify-center border border-slate-600"
+          className="w-full h-36 rounded-lg bg-surface-elevated/60 flex items-center justify-center border border-border"
           aria-hidden="true"
         >
           <svg
@@ -107,7 +107,7 @@ function ProjectCard({
             stroke="currentColor"
             strokeWidth="1.5"
             viewBox="0 0 24 24"
-            className="text-slate-500"
+            className="text-text-dim"
             aria-hidden="true"
           >
             <rect x="3" y="3" width="18" height="18" rx="2" />
@@ -117,7 +117,7 @@ function ProjectCard({
       )}
 
       <div className="flex items-start justify-between gap-3">
-        <h3 className="text-white font-semibold text-lg group-hover:text-emerald-300 transition-colors leading-snug">
+        <h3 className="text-text font-semibold text-lg group-hover:text-emerald-300 transition-colors leading-snug">
           {title}
         </h3>
         <span
@@ -127,15 +127,15 @@ function ProjectCard({
         </span>
       </div>
 
-      <p className="text-slate-400 text-sm leading-relaxed">{description}</p>
+      <p className="text-text-muted text-sm leading-relaxed">{description}</p>
 
       <div>
-        <p className="text-slate-500 text-xs uppercase tracking-wide mb-2 font-medium">
+        <p className="text-text-dim text-xs uppercase tracking-wide mb-2 font-medium">
           {T.features}
         </p>
         <ul className="space-y-1">
           {features.map((feat) => (
-            <li key={feat} className="text-slate-400 text-xs flex items-start gap-1.5">
+            <li key={feat} className="text-text-muted text-xs flex items-start gap-1.5">
               <span className="text-emerald-400 flex-shrink-0">▹</span>
               {feat}
             </li>
@@ -154,12 +154,12 @@ function ProjectCard({
         ))}
       </div>
 
-      <div className="flex flex-wrap gap-4 mt-auto pt-2 border-t border-slate-700">
+      <div className="flex flex-wrap gap-4 mt-auto pt-2 border-t border-border">
         <a
           href={project.github}
           target="_blank"
           rel="noreferrer"
-          className="inline-flex items-center gap-1.5 text-sm text-slate-300 hover:text-emerald-400 transition-colors"
+          className="inline-flex items-center gap-1.5 text-sm text-text-muted hover:text-emerald-400 transition-colors"
           aria-label={`View ${title} on GitHub`}
         >
           <GithubIcon />

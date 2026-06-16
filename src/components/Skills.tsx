@@ -1,9 +1,10 @@
-import { motion } from 'framer-motion'
+import { motion, useMotionValue, useTransform, useSpring, useInView } from 'framer-motion'
 import { useLang } from '../context/LanguageContext'
 import { translations } from '../data/translations'
 import { SectionHeading } from './About'
 import { useReducedMotion } from '../hooks/useReducedMotion'
 import { motionTokens } from '../lib/motionConfig'
+import { useEffect, useRef } from 'react'
 import type { SkillGroup } from '../types'
 
 const skillGroups: SkillGroup[] = [
@@ -97,7 +98,7 @@ export default function Skills() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="bg-slate-800 rounded-2xl p-5 border border-slate-700 hover:border-emerald-500/40 shadow-sm hover:shadow-md transition-all duration-200"
+              className="bg-surface-card rounded-2xl p-5 border border-border hover:border-emerald-500/40 shadow-sm hover:shadow-md transition-all duration-200"
             >
               <h3 className="text-emerald-300 font-semibold text-sm uppercase tracking-wide mb-4">
                 {T.categories[group.categoryKey]}
@@ -106,12 +107,10 @@ export default function Skills() {
                 {group.skills.map(({ name, level }) => (
                   <li key={name}>
                     <div className="flex justify-between mb-1">
-                      <span className="text-slate-300 text-sm">{name}</span>
-                      <span className="text-emerald-400 text-xs font-mono font-variant-numeric-tabular">
-                        {level}%
-                      </span>
+                      <span className="text-text-muted text-sm">{name}</span>
+                      <AnimatedCount to={level} reduce={reduce} />
                     </div>
-                    <div className="h-1.5 bg-slate-700 rounded-full overflow-hidden">
+                    <div className="h-1.5 bg-surface-elevated rounded-full overflow-hidden">
                       <motion.div
                         className="h-full rounded-full bg-gradient-to-r from-emerald-500 to-cyan-500"
                         custom={level}
@@ -134,5 +133,23 @@ export default function Skills() {
         </div>
       </div>
     </motion.section>
+  )
+}
+
+function AnimatedCount({ to, reduce }: { to: number; reduce: boolean }) {
+  const ref = useRef<HTMLSpanElement>(null)
+  const inView = useInView(ref, { once: true })
+  const mv = useMotionValue(0)
+  const spring = useSpring(mv, { stiffness: 80, damping: 15 })
+  const rounded = useTransform(spring, (v) => Math.round(v))
+
+  useEffect(() => {
+    if (reduce || inView) mv.set(to)
+  }, [inView, reduce, to, mv])
+
+  return (
+    <span ref={ref} className="text-emerald-400 text-xs font-mono font-variant-numeric-tabular">
+      {reduce ? to : <motion.span>{rounded}</motion.span>}%
+    </span>
   )
 }
