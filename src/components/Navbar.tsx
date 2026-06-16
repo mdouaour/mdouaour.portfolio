@@ -45,14 +45,14 @@ export default function Navbar() {
     >
       <div className="max-w-5xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
         <div className="flex items-center gap-3">
-          <a href="#hero" className="text-violet-400 font-bold text-lg tracking-tight">
+          <a href="#hero" className="text-emerald-400 font-bold text-lg tracking-tight">
             mdouaour
           </a>
           <a
             href="https://github.com/mdouaour/mdouaour.portfolio"
             target="_blank"
             rel="noreferrer"
-            className="hidden sm:inline-flex items-center gap-1 px-2 py-0.5 text-xs rounded-full bg-slate-800 border border-slate-700 text-slate-400 hover:text-violet-400 hover:border-violet-500/40 transition-colors"
+            className="hidden sm:inline-flex items-center gap-1 px-2 py-0.5 text-xs rounded-full bg-slate-800 border border-slate-700 text-slate-400 hover:text-emerald-400 hover:border-emerald-500/40 transition-colors"
             aria-label="View portfolio source code"
           >
             <svg width="10" height="10" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -67,7 +67,7 @@ export default function Navbar() {
             <li key={href}>
               <a
                 href={href}
-                className="text-slate-300 dark:text-slate-300 hover:text-violet-400 transition-colors text-sm font-medium"
+                className="text-slate-300 dark:text-slate-300 hover:text-emerald-400 transition-colors text-sm font-medium"
               >
                 {label}
               </a>
@@ -79,7 +79,7 @@ export default function Navbar() {
           {/* Theme toggle */}
           <button
             onClick={toggleTheme}
-            className="p-2 rounded-lg text-slate-400 hover:text-violet-400 hover:bg-slate-800 transition-colors"
+            className="p-2 rounded-lg text-slate-400 hover:text-emerald-400 hover:bg-slate-800 transition-colors"
             aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
           >
             {theme === 'dark' ? <SunIcon /> : <MoonIcon />}
@@ -97,7 +97,7 @@ export default function Navbar() {
                 aria-pressed={lang === code}
                 className={`px-2 py-0.5 rounded text-xs font-semibold transition-colors ${
                   lang === code
-                    ? 'bg-violet-600 text-white'
+                    ? 'bg-emerald-600 text-white'
                     : 'text-slate-400 hover:text-slate-200'
                 }`}
               >
@@ -107,7 +107,7 @@ export default function Navbar() {
           </div>
 
           <button
-            className="sm:hidden p-2 text-slate-400 hover:text-violet-400 transition-colors"
+            className="sm:hidden p-2 text-slate-400 hover:text-emerald-400 transition-colors"
             onClick={() => setMenuOpen((o) => !o)}
             aria-label="Toggle menu"
             aria-expanded={menuOpen}
@@ -145,7 +145,7 @@ export default function Navbar() {
                   <a
                     href={href}
                     onClick={() => setMenuOpen(false)}
-                    className="block text-slate-300 hover:text-violet-400 transition-colors text-sm font-medium py-1"
+                    className="block text-slate-300 hover:text-emerald-400 transition-colors text-sm font-medium py-1"
                   >
                     {label}
                   </a>

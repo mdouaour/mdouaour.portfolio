@@ -87,7 +87,7 @@ export default function About() {
                   variants={V.item}
                   className="flex items-start gap-2 text-slate-400 text-sm"
                 >
-                  <span className="text-violet-400 mt-0.5 flex-shrink-0">▹</span>
+                  <span className="text-emerald-400 mt-0.5 flex-shrink-0">▹</span>
                   {service}
                 </motion.li>
               ))}
@@ -134,10 +134,10 @@ function SectionHeading({ children }: { children: React.ReactNode }) {
     <div className="text-center">
       <h2 className="text-3xl sm:text-4xl font-bold text-white">{children}</h2>
       {reduce ? (
-        <div className="mt-3 mx-auto w-16 h-1 rounded-full bg-gradient-to-r from-violet-500 to-indigo-500" />
+        <div className="mt-3 mx-auto w-16 h-1 rounded-full bg-gradient-to-r from-emerald-500 to-cyan-500" />
       ) : (
         <motion.div
-          className="mt-3 mx-auto w-16 h-1 rounded-full bg-gradient-to-r from-violet-500 to-indigo-500"
+          className="mt-3 mx-auto w-16 h-1 rounded-full bg-gradient-to-r from-emerald-500 to-cyan-500"
           initial={{ width: 0 }}
           whileInView={{ width: 64 }}
           viewport={{ once: true }}

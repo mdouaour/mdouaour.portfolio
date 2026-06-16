@@ -23,7 +23,7 @@ export default function Footer() {
           href="https://github.com/mdouaour/mdouaour.portfolio"
           target="_blank"
           rel="noreferrer"
-          className="hover:text-violet-400 transition-colors"
+          className="hover:text-emerald-400 transition-colors"
         >
           {T.source}
         </a>

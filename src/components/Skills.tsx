@@ -97,9 +97,9 @@ export default function Skills() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="bg-slate-800 rounded-2xl p-5 border border-slate-700 hover:border-violet-500/40 transition-colors"
+              className="bg-slate-800 rounded-2xl p-5 border border-slate-700 hover:border-emerald-500/40 shadow-sm hover:shadow-md transition-all duration-200"
             >
-              <h3 className="text-violet-300 font-semibold text-sm uppercase tracking-wide mb-4">
+              <h3 className="text-emerald-300 font-semibold text-sm uppercase tracking-wide mb-4">
                 {T.categories[group.categoryKey]}
               </h3>
               <ul className="space-y-3">
@@ -107,13 +107,13 @@ export default function Skills() {
                   <li key={name}>
                     <div className="flex justify-between mb-1">
                       <span className="text-slate-300 text-sm">{name}</span>
-                      <span className="text-violet-400 text-xs font-mono font-variant-numeric-tabular">
+                      <span className="text-emerald-400 text-xs font-mono font-variant-numeric-tabular">
                         {level}%
                       </span>
                     </div>
                     <div className="h-1.5 bg-slate-700 rounded-full overflow-hidden">
                       <motion.div
-                        className="h-full rounded-full bg-gradient-to-r from-violet-500 to-indigo-500"
+                        className="h-full rounded-full bg-gradient-to-r from-emerald-500 to-cyan-500"
                         custom={level}
                         variants={V.bar}
                         initial="hidden"

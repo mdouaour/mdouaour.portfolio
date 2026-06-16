@@ -19,7 +19,7 @@ function ScrollProgress() {
   const { scrollYProgress } = useScroll()
   return (
     <motion.div
-      className="fixed top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-violet-600 to-indigo-500 origin-left z-[60]"
+      className="fixed top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-emerald-600 to-cyan-500 origin-left z-[60]"
       style={{ scaleX: scrollYProgress }}
     />
   )

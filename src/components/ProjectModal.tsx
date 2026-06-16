@@ -128,7 +128,7 @@ export const ProjectModal = ({ project, lang, onClose }: ProjectModalProps) => {
             <ul className="space-y-1.5">
               {features.map((feat) => (
                 <li key={feat} className="text-slate-400 flex items-start gap-2 text-sm">
-                  <span className="text-violet-400 flex-shrink-0 mt-0.5">▹</span>
+                  <span className="text-emerald-400 flex-shrink-0 mt-0.5">▹</span>
                   {feat}
                 </li>
               ))}
@@ -141,7 +141,7 @@ export const ProjectModal = ({ project, lang, onClose }: ProjectModalProps) => {
               {project.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="text-xs text-violet-300 bg-violet-500/10 border border-violet-500/20 px-2.5 py-1 rounded-full"
+                  className="text-xs text-emerald-300 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-1 rounded-full"
                 >
                   {tag}
                 </span>
@@ -160,7 +160,7 @@ export const ProjectModal = ({ project, lang, onClose }: ProjectModalProps) => {
                 href={project.github}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-700 hover:bg-slate-600 text-slate-200 text-sm transition-colors"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-700 hover:bg-slate-600 text-slate-200 text-sm transition-all hover:-translate-y-0.5 shadow-sm"
                 aria-label={`View source code on GitHub`}
               >
                 <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -174,7 +174,7 @@ export const ProjectModal = ({ project, lang, onClose }: ProjectModalProps) => {
                 href={project.demo}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-violet-600 hover:bg-violet-500 text-white text-sm transition-colors"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-400 hover:to-cyan-400 text-white text-sm transition-all shadow-lg shadow-emerald-500/30 hover:-translate-y-0.5"
                 aria-label="View live demo"
               >
                 <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" aria-hidden="true">
