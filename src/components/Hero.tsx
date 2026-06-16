@@ -42,7 +42,7 @@ export default function Hero() {
           initial={{ scale: reduce ? 1 : 0 }}
           animate={{ scale: 1 }}
           transition={reduce ? { duration: 0 } : springs.bouncy}
-          whileHover={{ scale: 1.06, ring: '4px solid rgba(52, 211, 153, 0.6)' }}
+          whileHover={{ scale: 1.06 }}
         >
           <img
             src="https://github.com/mdouaour.png"

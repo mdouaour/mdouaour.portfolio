@@ -1,10 +1,10 @@
-import { motion, useMotionValue, useTransform, useSpring, useInView } from 'framer-motion'
+import { motion, useMotionValue, useTransform, useSpring, useInView, useMotionValueEvent } from 'framer-motion'
 import { useLang } from '../context/LanguageContext'
 import { translations } from '../data/translations'
 import { SectionHeading } from './About'
 import { useReducedMotion } from '../hooks/useReducedMotion'
 import { motionTokens } from '../lib/motionConfig'
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import type { SkillGroup } from '../types'
 
 const skillGroups: SkillGroup[] = [
@@ -139,9 +139,12 @@ export default function Skills() {
 function AnimatedCount({ to, reduce }: { to: number; reduce: boolean }) {
   const ref = useRef<HTMLSpanElement>(null)
   const inView = useInView(ref, { once: true })
+  const [display, setDisplay] = useState(0)
   const mv = useMotionValue(0)
   const spring = useSpring(mv, { stiffness: 80, damping: 15 })
   const rounded = useTransform(spring, (v) => Math.round(v))
+
+  useMotionValueEvent(rounded, 'change', setDisplay)
 
   useEffect(() => {
     if (reduce || inView) mv.set(to)
@@ -149,7 +152,7 @@ function AnimatedCount({ to, reduce }: { to: number; reduce: boolean }) {
 
   return (
     <span ref={ref} className="text-emerald-400 text-xs font-mono font-variant-numeric-tabular">
-      {reduce ? to : <motion.span>{rounded}</motion.span>}%
+      {reduce ? to : display}%
     </span>
   )
 }
