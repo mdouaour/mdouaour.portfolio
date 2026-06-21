@@ -96,6 +96,54 @@
     }
   },
   {
+    "id": "free-claude-code",
+    "status": "completed",
+    "kpi": "",
+    "github": "https://github.com/mdouaour/free-claude-code",
+    "demo": null,
+    "image": null,
+    "tags": ["Python", "AI", "Claude Code", "Open Source"],
+    "title": {
+      "en": "free-claude-code — Use Claude Code for Free",
+      "fr": "free-claude-code — Utiliser Claude Code Gratuitement",
+      "ar": "free-claude-code — استخدم Claude Code مجاناً"
+    },
+    "description": {
+      "en": "A Python tool that enables developers to use Claude Code without a paid API key. Opens AI-powered coding to everyone by routing through free provider tiers.",
+      "fr": "Un outil Python qui permet aux développeurs d'utiliser Claude Code sans clé API payante. Rend le codage IA accessible à tous via des fournisseurs gratuits.",
+      "ar": "أداة Python تمكن المطورين من استخدام Claude Code بدون مفتاح API مدفوع. تجعل البرمجة بالذكاء الاصطناعي متاحة للجميع."
+    },
+    "features": {
+      "en": ["Zero-cost Claude Code access", "Multi-provider fallback routing", "Python-based CLI tool", "Open-source community tool"],
+      "fr": ["Accès Claude Code gratuit", "Routage multi-fournisseur", "Outil CLI en Python", "Outil open-source communautaire"],
+      "ar": ["وصول مجاني لـ Claude Code", "توجيه متعدد المزودين", "أداة أوامر Python", "أداة مفتوحة المصدر"]
+    }
+  },
+  {
+    "id": "openclaude",
+    "status": "completed",
+    "kpi": "",
+    "github": "https://github.com/mdouaour/openclaude",
+    "demo": null,
+    "image": null,
+    "tags": ["TypeScript", "AI", "LLM", "Open Source"],
+    "title": {
+      "en": "OpenClaude — Claude Code for Any LLM",
+      "fr": "OpenClaude — Claude Code pour n'importe quel LLM",
+      "ar": "OpenClaude — Claude Code لأي نموذج لغوي"
+    },
+    "description": {
+      "en": "Opens Claude Code to any LLM backend — OpenAI, Gemini, DeepSeek, Ollama. A bridge that lets developers use Claude Code's workflow with their preferred model provider.",
+      "fr": "Ouvre Claude Code à n'importe quel LLM — OpenAI, Gemini, DeepSeek, Ollama. Un pont qui permet aux développeurs d'utiliser le workflow Claude Code avec leur fournisseur préféré.",
+      "ar": "يفتح Claude Code لأي نموذج لغوي — OpenAI و Gemini و DeepSeek و Ollama. جسر يسمح للمطورين باستخدام سير عمل Claude Code مع مزودهم المفضل."
+    },
+    "features": {
+      "en": ["Multi-LLM provider support", "OpenAI, Gemini, DeepSeek, Ollama backends", "TypeScript codebase", "Developer tooling ecosystem"],
+      "fr": ["Support multi-fournisseur LLM", "Backends OpenAI, Gemini, DeepSeek, Ollama", "Codebase TypeScript", "Écosystème d'outils développeur"],
+      "ar": ["دعم مزودي نماذج لغوية متعددين", "OpenAI، Gemini، DeepSeek، Ollama", "قاعدة كود TypeScript", "أدوات مطورين"]
+    }
+  },
+  {
     "id": "fitsquad-ai",
     "status": "in-progress",
     "kpi": "",
