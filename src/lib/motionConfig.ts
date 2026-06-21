@@ -8,7 +8,7 @@ export const motionTokens = {
   easing: {
     smooth: [0.22, 1, 0.36, 1] as [number, number, number, number],
     sharp: [0.4, 0, 0.2, 1] as [number, number, number, number],
-    bounce: [0.34, 1.56, 0.64, 1] as [number, number, number, number],
+    organic: [0.34, 1.1, 0.4, 1] as [number, number, number, number],
   },
   distance: {
     xs: 4,
@@ -27,6 +27,6 @@ export const motionTokens = {
 export const springs = {
   snappy: { type: 'spring' as const, stiffness: 300, damping: 30 },
   gentle: { type: 'spring' as const, stiffness: 120, damping: 14 },
-  bouncy: { type: 'spring' as const, stiffness: 400, damping: 10 },
+  organic: { type: 'spring' as const, stiffness: 180, damping: 20 },
   instant: { type: 'spring' as const, stiffness: 600, damping: 35 },
 }

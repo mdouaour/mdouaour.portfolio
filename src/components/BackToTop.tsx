@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion, AnimatePresence } from 'motion/react'
 
 export default function BackToTop() {
   const [show, setShow] = useState(false)
@@ -19,7 +19,7 @@ export default function BackToTop() {
           exit={{ opacity: 0, scale: 0.5 }}
           transition={{ duration: 0.2 }}
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="fixed bottom-6 right-6 z-50 p-3 rounded-full bg-emerald-500 hover:bg-emerald-400 text-white shadow-lg shadow-emerald-500/30 hover:-translate-y-0.5 transition-all"
+          className="fixed bottom-6 right-6 z-50 p-3 bg-accent hover:bg-accent/80 text-[#1F201D] transition-colors"
           aria-label="Scroll to top"
         >
           <svg width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" aria-hidden="true">

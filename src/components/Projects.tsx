@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+import { motion } from 'motion/react'
 import { useLang } from '../context/LanguageContext'
 import { translations } from '../data/translations'
 import { SectionHeading } from './About'
@@ -9,20 +9,11 @@ import { useState } from 'react'
 
 const statusConfig: Record<string, { className: string }> = {
   completed: {
-    className: 'bg-green-500/20 text-green-400 border border-green-500/30',
+    className: 'bg-brand/10 text-brand border border-brand/30',
   },
   'in-progress': {
-    className: 'bg-amber-500/20 text-amber-400 border border-amber-500/30',
+    className: 'bg-accent/10 text-accent border border-accent/30',
   },
-}
-
-const cardVariants = {
-  hidden: { opacity: 0, y: 30 },
-  visible: (i: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.4, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] },
-  }),
 }
 
 export default function Projects() {
@@ -34,7 +25,7 @@ export default function Projects() {
     <motion.section
       id="projects"
       dir={isRTL ? 'rtl' : 'ltr'}
-      className="py-20 px-4 bg-surface-alt/40"
+      className="py-24 px-4 bg-surface-alt"
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-100px' }}
@@ -46,11 +37,10 @@ export default function Projects() {
           {(projectsData as Project[]).map((project, i) => (
             <motion.div
               key={project.id}
-              custom={i}
-              variants={cardVariants}
-              initial="hidden"
-              whileInView="visible"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: i * 0.08 }}
             >
               <ProjectCard project={project} T={T} lang={lang} onSelect={() => setSelectedProject(project)} />
             </motion.div>
@@ -84,22 +74,19 @@ function ProjectCard({
   return (
     <article
       onClick={onSelect}
-      className="cursor-pointer bg-surface-card border border-border rounded-2xl p-6 flex flex-col gap-4 hover:border-emerald-500/50 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 group h-full"
+      className="cursor-pointer bg-surface-card border border-border p-6 flex flex-col gap-4 hover:border-brand/40 transition-all group h-full"
     >
       {project.image ? (
-        <div className="overflow-hidden rounded-lg">
+        <div className="overflow-hidden">
           <img
             src={project.image}
             alt={title}
-            className="w-full h-36 object-cover transition-transform duration-300 group-hover:scale-105"
+            className="w-full h-36 object-cover transition-transform duration-300 group-hover:scale-[1.02]"
             loading="lazy"
           />
         </div>
       ) : (
-        <div
-          className="w-full h-36 rounded-lg bg-surface-elevated/60 flex items-center justify-center border border-border"
-          aria-hidden="true"
-        >
+        <div className="w-full h-36 bg-surface-elevated flex items-center justify-center border border-border" aria-hidden="true">
           <svg
             width="40"
             height="40"
@@ -117,11 +104,11 @@ function ProjectCard({
       )}
 
       <div className="flex items-start justify-between gap-3">
-        <h3 className="text-text font-semibold text-lg group-hover:text-emerald-300 transition-colors leading-snug">
+        <h3 className="text-text font-semibold text-lg transition-colors leading-snug">
           {title}
         </h3>
         <span
-          className={`text-xs font-medium px-2 py-1 rounded-full whitespace-nowrap flex-shrink-0 ${badge.className}`}
+          className={`text-xs font-medium px-2 py-1 whitespace-nowrap flex-shrink-0 ${badge.className}`}
         >
           {T.status[project.status]}
         </span>
@@ -136,7 +123,7 @@ function ProjectCard({
         <ul className="space-y-1">
           {features.map((feat) => (
             <li key={feat} className="text-text-muted text-xs flex items-start gap-1.5">
-              <span className="text-emerald-400 flex-shrink-0">▹</span>
+              <span className="text-accent flex-shrink-0">→</span>
               {feat}
             </li>
           ))}
@@ -147,19 +134,19 @@ function ProjectCard({
         {project.tags.map((tag) => (
           <span
             key={tag}
-            className="text-xs text-emerald-300 bg-emerald-500/10 border border-emerald-500/20 px-2 py-0.5 rounded-full"
+            className="text-xs text-brand bg-brand/10 border border-brand/20 px-2 py-0.5"
           >
             {tag}
           </span>
         ))}
       </div>
 
-      <div className="flex flex-wrap gap-4 mt-auto pt-2 border-t border-border">
+      <div className="flex flex-wrap gap-4 mt-auto pt-3 border-t border-border">
         <a
           href={project.github}
           target="_blank"
           rel="noreferrer"
-          className="inline-flex items-center gap-1.5 text-sm text-text-muted hover:text-emerald-400 transition-colors"
+          className="inline-flex items-center gap-1.5 text-sm text-text-muted hover:text-brand transition-colors"
           aria-label={`View ${title} on GitHub`}
         >
           <GithubIcon />
@@ -170,7 +157,7 @@ function ProjectCard({
             href={project.demo}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-1.5 text-sm text-emerald-300 hover:text-emerald-400 transition-colors"
+            className="inline-flex items-center gap-1.5 text-sm text-brand hover:text-brand-light transition-colors"
             aria-label={`Live demo for ${title}`}
           >
             <ExternalLinkIcon />

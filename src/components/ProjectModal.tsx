@@ -1,5 +1,5 @@
-import { useEffect, useRef, type ReactNode } from 'react'
-import { motion } from 'framer-motion'
+import { useEffect, useRef } from 'react'
+import { motion } from 'motion/react'
 import { translations } from '../data/translations'
 import { useReducedMotion } from '../hooks/useReducedMotion'
 import { motionTokens, springs } from '../lib/motionConfig'
@@ -98,13 +98,13 @@ export const ProjectModal = ({ project, lang, onClose }: ProjectModalProps) => {
         ref={panelRef}
         {...scale}
         transition={springs.gentle}
-        className="relative bg-surface-card rounded-2xl p-6 max-w-4xl w-full max-h-[85vh] overflow-y-auto shadow-2xl"
+        className="relative bg-surface-card p-6 max-w-4xl w-full max-h-[85vh] overflow-y-auto shadow-2xl"
         onClick={(e) => e.stopPropagation()}
         tabIndex={-1}
       >
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 w-10 h-10 flex items-center justify-center rounded-full bg-surface-elevated/50 hover:bg-surface-elevated text-text-dim hover:text-text transition-colors"
+          className="absolute top-4 right-4 w-10 h-10 flex items-center justify-center bg-surface-elevated/50 hover:bg-surface-elevated text-text-dim hover:text-text transition-colors"
           aria-label="Close modal"
         >
           <svg width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" aria-hidden="true">
@@ -116,10 +116,10 @@ export const ProjectModal = ({ project, lang, onClose }: ProjectModalProps) => {
           <h2 id="modal-title" className="text-2xl font-bold text-text">{title}</h2>
 
           {project.image && (
-            <img src={project.image} alt={title} className="w-full rounded-xl" loading="lazy" />
+            <img src={project.image} alt={title} className="w-full" loading="lazy" />
           )}
 
-          <p className="text-text-dim leading-relaxed">{description}</p>
+          <p className="text-text-muted leading-relaxed">{description}</p>
 
           <div className="border-t border-border pt-4">
             <h3 className="font-semibold text-text-muted mb-3">
@@ -127,8 +127,8 @@ export const ProjectModal = ({ project, lang, onClose }: ProjectModalProps) => {
             </h3>
             <ul className="space-y-1.5">
               {features.map((feat) => (
-                <li key={feat} className="text-text-dim flex items-start gap-2 text-sm">
-                  <span className="text-emerald-400 flex-shrink-0 mt-0.5">▹</span>
+                <li key={feat} className="text-text-muted flex items-start gap-2 text-sm">
+                  <span className="text-accent flex-shrink-0 mt-0.5">→</span>
                   {feat}
                 </li>
               ))}
@@ -141,7 +141,7 @@ export const ProjectModal = ({ project, lang, onClose }: ProjectModalProps) => {
               {project.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="text-xs text-emerald-300 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-1 rounded-full"
+                  className="text-xs text-accent bg-accent/10 border border-accent/20 px-2.5 py-1"
                 >
                   {tag}
                 </span>
@@ -151,7 +151,7 @@ export const ProjectModal = ({ project, lang, onClose }: ProjectModalProps) => {
 
           <div className="border-t border-border pt-4">
             <h3 className="font-semibold text-text-muted mb-2">KPI</h3>
-            <p className="text-text-muted">{project.kpi || 'N/A'}</p>
+            <p className="text-text-dim">{project.kpi || 'N/A'}</p>
           </div>
 
           <div className="flex flex-wrap gap-4 pt-2">
@@ -160,7 +160,7 @@ export const ProjectModal = ({ project, lang, onClose }: ProjectModalProps) => {
                 href={project.github}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-surface-elevated hover:bg-surface-hover text-text text-sm transition-all hover:-translate-y-0.5 shadow-sm"
+                className="inline-flex items-center gap-2 px-4 py-2 bg-surface-elevated hover:bg-surface-hover text-text text-sm transition-all hover:-translate-y-0.5 shadow-sm"
                 aria-label={`View source code on GitHub`}
               >
                 <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -174,7 +174,7 @@ export const ProjectModal = ({ project, lang, onClose }: ProjectModalProps) => {
                 href={project.demo}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-400 hover:to-cyan-400 text-text text-sm transition-all shadow-lg shadow-emerald-500/30 hover:-translate-y-0.5"
+                className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-brand to-accent hover:from-brand-light hover:to-accent text-white text-sm transition-all shadow-lg shadow-accent/20 hover:-translate-y-0.5"
                 aria-label="View live demo"
               >
                 <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" aria-hidden="true">
