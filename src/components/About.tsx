@@ -1,4 +1,4 @@
-import { motion } from 'motion/react'
+import { motion } from 'framer-motion'
 import { useLang } from '../context/LanguageContext'
 import { translations } from '../data/translations'
 import { useReducedMotion } from '../hooks/useReducedMotion'
@@ -14,7 +14,7 @@ function useVariants() {
       },
     },
     item: {
-      hidden: { opacity: reduce ? 1 : 0, x: reduce ? 0 : -16 },
+      hidden: { opacity: reduce ? 1 : 0, x: reduce ? 0 : -20 },
       visible: { opacity: 1, x: 0, transition: { duration: motionTokens.duration.normal, ease: motionTokens.easing.smooth } },
     },
     card: {
@@ -34,7 +34,7 @@ export default function About() {
     <motion.section
       id="about"
       dir={isRTL ? 'rtl' : 'ltr'}
-      className="py-24 px-4 bg-surface-alt"
+      className="py-20 px-4 bg-surface-alt/40"
       initial={{ opacity: 0, y: reduce ? 0 : 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-100px' }}
@@ -42,14 +42,14 @@ export default function About() {
     >
       <div className="max-w-5xl mx-auto">
         <SectionHeading>{T.title}</SectionHeading>
-        <div className="grid md:grid-cols-2 gap-12 mt-12 text-left">
+        <div className="grid md:grid-cols-2 gap-10 mt-10 text-left">
           <motion.div
             variants={V.card}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
           >
-            <h3 className="text-text font-semibold text-lg mb-4">
+            <h3 className="text-text font-semibold text-lg mb-3">
               {T.background}
             </h3>
             <motion.p
@@ -62,7 +62,7 @@ export default function About() {
               {T.backgroundText1}
             </motion.p>
             <motion.p
-              className="text-text-muted leading-relaxed mb-8"
+              className="text-text-muted leading-relaxed mb-6"
               variants={V.item}
               initial="hidden"
               whileInView="visible"
@@ -71,7 +71,7 @@ export default function About() {
               {T.backgroundText2}
             </motion.p>
 
-            <h3 className="text-text font-semibold text-lg mb-4">
+            <h3 className="text-text font-semibold text-lg mb-3">
               {T.whatIDo}
             </h3>
             <motion.ul
@@ -87,7 +87,7 @@ export default function About() {
                   variants={V.item}
                   className="flex items-start gap-2 text-text-muted text-sm"
                 >
-                  <span className="text-accent mt-0.5 flex-shrink-0">→</span>
+                  <span className="text-emerald-400 mt-0.5 flex-shrink-0">▹</span>
                   {service}
                 </motion.li>
               ))}
@@ -101,24 +101,24 @@ export default function About() {
             viewport={{ once: true }}
             transition={{ delay: reduce ? 0 : 0.1 }}
           >
-            <h3 className="text-text font-semibold text-lg mb-4">
+            <h3 className="text-text font-semibold text-lg mb-3">
               {T.education}
             </h3>
             <motion.ul
-              className="space-y-4"
+              className="space-y-3"
               variants={V.container}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
             >
               <motion.li variants={V.item}>
-                <InfoItem title={T.degree} subtitle={T.university} />
+                <InfoItem icon="🎓" title={T.degree} subtitle={T.university} />
               </motion.li>
               <motion.li variants={V.item}>
-                <InfoItem title={T.alx} subtitle={T.alxSub} />
+                <InfoItem icon="🏅" title={T.alx} subtitle={T.alxSub} />
               </motion.li>
               <motion.li variants={V.item}>
-                <InfoItem title={T.location} subtitle={T.locationSub} />
+                <InfoItem icon="📍" title={T.location} subtitle={T.locationSub} />
               </motion.li>
             </motion.ul>
           </motion.div>
@@ -129,21 +129,33 @@ export default function About() {
 }
 
 function SectionHeading({ children }: { children: React.ReactNode }) {
+  const reduce = useReducedMotion()
   return (
     <div className="text-center">
-      <span className="text-accent text-xs font-medium tracking-[0.2em] uppercase mb-2 block">
-        {children}
-      </span>
-      <div className="w-8 h-px bg-accent mx-auto" />
+      <h2 className="text-3xl sm:text-4xl font-bold text-text">{children}</h2>
+      {reduce ? (
+        <div className="mt-3 mx-auto w-16 h-1 rounded-full bg-gradient-to-r from-emerald-500 to-cyan-500" />
+      ) : (
+        <motion.div
+          className="mt-3 mx-auto w-16 h-1 rounded-full bg-gradient-to-r from-emerald-500 to-cyan-500"
+          initial={{ width: 0 }}
+          whileInView={{ width: 64 }}
+          viewport={{ once: true }}
+          transition={{ duration: motionTokens.duration.normal, delay: 0.2 }}
+        />
+      )}
     </div>
   )
 }
 
-function InfoItem({ title, subtitle }: { title: string; subtitle: string }) {
+function InfoItem({ icon, title, subtitle }: { icon: string; title: string; subtitle: string }) {
   return (
-    <div className="border-l-2 border-brand pl-4">
-      <p className="text-text font-medium">{title}</p>
-      <p className="text-text-dim text-sm mt-1">{subtitle}</p>
+    <div className="flex items-start gap-3">
+      <span className="text-xl mt-0.5" aria-hidden="true">{icon}</span>
+      <div>
+        <p className="text-text font-medium">{title}</p>
+        <p className="text-text-muted text-sm">{subtitle}</p>
+      </div>
     </div>
   )
 }
@@ -160,7 +172,7 @@ export function SectionDivider() {
       viewport={{ once: true }}
       transition={{ duration: reduce ? 0 : motionTokens.duration.slow, ease: motionTokens.easing.smooth }}
     >
-      <div className="h-px bg-border" />
+      <div className="h-px bg-gradient-to-r from-transparent via-border to-transparent" />
     </motion.div>
   )
 }

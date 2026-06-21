@@ -1,5 +1,5 @@
 import { useState, type FormEvent } from 'react'
-import { motion } from 'motion/react'
+import { motion } from 'framer-motion'
 import { useLang } from '../context/LanguageContext'
 import { translations } from '../data/translations'
 import { SectionHeading } from './About'
@@ -9,6 +9,8 @@ import { motionTokens } from '../lib/motionConfig'
 const EMAIL = 'yacine23i@hotmail.com'
 const WHATSAPP = 'https://wa.me/213664796262'
 const FORMSPREE_URL = 'https://formspree.io/f/xjkyekdv'
+
+const EASE_SMOOTH = [0.22, 1, 0.36, 1] as [number, number, number, number]
 
 export default function Contact() {
   const { lang, isRTL } = useLang()
@@ -24,7 +26,7 @@ export default function Contact() {
 
   const itemVariants = {
     hidden: { opacity: reduce ? 1 : 0, y: reduce ? 0 : 16 },
-    visible: { opacity: 1, y: 0, transition: { duration: motionTokens.duration.normal, ease: motionTokens.easing.smooth } },
+    visible: { opacity: 1, y: 0, transition: { duration: motionTokens.duration.normal, ease: EASE_SMOOTH } },
   }
   const [sent, setSent] = useState(false)
   const [sending, setSending] = useState(false)
@@ -37,24 +39,49 @@ export default function Contact() {
       href: `mailto:${EMAIL}`,
       description: EMAIL,
       icon: <EmailIcon />,
+      highlight: true,
     },
     {
       label: T.whatsapp,
       href: WHATSAPP,
       description: '+213 664 79 62 62',
       icon: <WhatsAppIcon />,
+      highlight: true,
     },
     {
       label: T.github,
       href: 'https://github.com/mdouaour',
       description: 'github.com/mdouaour',
       icon: <GithubIcon />,
+      highlight: false,
     },
     {
       label: T.linkedin,
       href: 'https://www.linkedin.com/in/mohammed-yassine-douaouria-0a2272121',
       description: 'linkedin.com/in/mdouaour',
       icon: <LinkedInIcon />,
+      highlight: false,
+    },
+    {
+      label: T.facebook,
+      href: 'https://www.facebook.com/mdouaourSolutions',
+      description: 'facebook.com/mdouaourSolutions',
+      icon: <FacebookIcon />,
+      highlight: false,
+    },
+    {
+      label: T.facebookProfile,
+      href: 'https://www.facebook.com/mdouaour/',
+      description: 'facebook.com/mdouaour',
+      icon: <FacebookProfileIcon />,
+      highlight: false,
+    },
+    {
+      label: T.linktree,
+      href: 'https://linktr.ee/mdouaour',
+      description: 'linktr.ee/mdouaour',
+      icon: <LinktreeIcon />,
+      highlight: false,
     },
   ]
 
@@ -85,7 +112,7 @@ export default function Contact() {
     <motion.section
       id="contact"
       dir={isRTL ? 'rtl' : 'ltr'}
-      className="py-24 px-4"
+      className="py-20 px-4"
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-100px' }}
@@ -94,7 +121,7 @@ export default function Contact() {
       <div className="max-w-3xl mx-auto text-center">
         <SectionHeading>{T.title}</SectionHeading>
         <motion.p
-          className="text-text-muted mt-6 leading-relaxed max-w-xl mx-auto"
+          className="text-text-muted mt-6 leading-relaxed max-w-2xl mx-auto"
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -105,7 +132,7 @@ export default function Contact() {
 
         <motion.form
           onSubmit={handleSubmit}
-          className="mt-8 max-w-lg mx-auto text-left space-y-4"
+          className="mt-8 max-w-xl mx-auto text-left space-y-4"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -119,7 +146,7 @@ export default function Contact() {
               required
               value={formData.name}
               onChange={(e) => setFormData((p) => ({ ...p, name: e.target.value }))}
-              className="w-full px-4 py-3 bg-surface-card border border-border text-text placeholder-text-dim text-sm focus:outline-none focus:border-brand transition-all"
+              className="w-full px-4 py-3 rounded-xl bg-surface-card border border-border text-text placeholder-text-dim text-sm focus:outline-none focus:border-emerald-400 focus:ring-2 focus:ring-emerald-500/20 transition-all"
             />
           </motion.div>
           <motion.div variants={itemVariants}>
@@ -130,7 +157,7 @@ export default function Contact() {
               required
               value={formData.email}
               onChange={(e) => setFormData((p) => ({ ...p, email: e.target.value }))}
-              className="w-full px-4 py-3 bg-surface-card border border-border text-text placeholder-text-dim text-sm focus:outline-none focus:border-brand transition-all"
+              className="w-full px-4 py-3 rounded-xl bg-surface-card border border-border text-text placeholder-text-dim text-sm focus:outline-none focus:border-emerald-400 focus:ring-2 focus:ring-emerald-500/20 transition-all"
             />
           </motion.div>
           <motion.div variants={itemVariants}>
@@ -141,7 +168,7 @@ export default function Contact() {
               required
               value={formData.message}
               onChange={(e) => setFormData((p) => ({ ...p, message: e.target.value }))}
-              className="w-full px-4 py-3 bg-surface-card border border-border text-text placeholder-text-dim text-sm focus:outline-none focus:border-brand transition-all resize-none"
+              className="w-full px-4 py-3 rounded-xl bg-surface-card border border-border text-text placeholder-text-dim text-sm focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500/30 transition-all resize-none"
             />
           </motion.div>
           {error && (
@@ -158,7 +185,7 @@ export default function Contact() {
             <button
               type="submit"
               disabled={sent || sending}
-              className="w-full px-6 py-3 bg-brand hover:bg-brand-dark disabled:bg-brand/50 disabled:cursor-not-allowed text-white text-sm font-medium transition-colors flex items-center justify-center gap-2"
+              className="w-full px-6 py-3 rounded-xl bg-gradient-to-r from-emerald-600 to-cyan-600 hover:from-emerald-500 hover:to-cyan-500 disabled:from-emerald-600/50 disabled:to-cyan-600/50 disabled:cursor-not-allowed text-text font-semibold text-sm transition-all shadow-lg shadow-emerald-500/30 hover:shadow-emerald-500/40 active:scale-[0.98] flex items-center justify-center gap-2"
             >
               {sending ? (
                 <span className="inline-block w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
@@ -187,17 +214,27 @@ export default function Contact() {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          {contactLinks.map(({ label, href, description, icon }) => (
+          {contactLinks.map(({ label, href, description, icon, highlight }) => (
             <motion.a
               key={label}
               href={href}
               target={href.startsWith('mailto') ? '_self' : '_blank'}
               rel="noreferrer"
               variants={itemVariants}
-              className="flex items-center gap-4 p-5 border border-border hover:border-brand/40 transition-colors group"
+              className={`flex items-center gap-4 p-5 rounded-2xl border transition-all group active:scale-[0.98] ${
+                highlight
+                  ? 'bg-emerald-600/10 border-emerald-500/40 hover:border-emerald-400 hover:bg-emerald-600/20 shadow-sm'
+                  : 'bg-surface-card border-border hover:border-emerald-500/50 hover:bg-surface-elevated/50'
+              }`}
               aria-label={label}
             >
-              <span className="flex-shrink-0 text-text-dim group-hover:text-brand transition-colors">
+              <span
+                className={`flex-shrink-0 transition-colors ${
+                  highlight
+                    ? 'text-emerald-400 group-hover:text-emerald-300'
+                    : 'text-text-muted group-hover:text-emerald-400'
+                }`}
+              >
                 {icon}
               </span>
               <div className={isRTL ? 'text-right' : 'text-left'}>
@@ -240,6 +277,30 @@ function LinkedInIcon() {
   return (
     <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
       <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.95v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.35-1.85 3.58 0 4.24 2.36 4.24 5.43v6.31zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM3.56 20.45h3.56V9H3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z" />
+    </svg>
+  )
+}
+
+function FacebookIcon() {
+  return (
+    <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+    </svg>
+  )
+}
+
+function FacebookProfileIcon() {
+  return (
+    <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm.283 4.177c1.57 0 2.847.65 3.7 1.568l-1.815 1.815c-.432-.493-1.093-.866-1.885-.866-1.463 0-2.685 1.238-2.685 2.706 0 .243.028.477.094.694l-2.667 2.113c-.828-1.152-1.305-2.528-1.305-4.02 0-3.86 3.13-7.01 6.563-7.01zM5.747 8.674c.523-1.06 1.282-1.97 2.214-2.677l2.686 2.126c-.666.49-1.199 1.166-1.514 1.96L5.747 8.674zm13.222 1.887l-3.822 1.84c.153.43.237.895.237 1.38 0 1.347-.68 2.54-1.717 3.264l2.452 2.856c1.64-1.336 2.85-3.38 2.85-6.12 0-.756-.123-1.48-.334-2.163l.334-.057zm-4.402 3.95c0-1.47-1.192-2.663-2.653-2.663a2.67 2.67 0 00-1.28.34L8.53 9.56c.572-.507 1.262-.872 2.037-1.015l1.256 3.928c.126.022.25.038.376.038 1.472 0 2.664 1.193 2.664 2.663 0 .31-.06.604-.158.878l-2.206 2.56a4.37 4.37 0 01-1.523-.266l-.503 3.767c.62.14 1.26.206 1.89.206 2.717 0 5.145-1.065 6.92-2.785l-2.79-3.246c.38-.506.61-1.124.61-1.8z" />
+    </svg>
+  )
+}
+
+function LinktreeIcon() {
+  return (
+    <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M7.953 15.066c-.08-.043-.08.042 0 0m8.09-8.521c.04-.037.04.037 0 0M12 0C5.374 0 0 5.373 0 12s5.374 12 12 12 12-5.373 12-12S18.626 0 12 0m-.437 4.25h.875c.136 0 .248.112.248.25v5.5l3.286-3.286a.248.248 0 0 1 .351 0l.619.619a.247.247 0 0 1 0 .35L13.25 10.97l3.942 3.94a.248.248 0 0 1 0 .35l-.62.62a.25.25 0 0 1-.35 0L12 11.659l-4.222 4.22a.25.25 0 0 1-.35 0l-.62-.619a.248.248 0 0 1 0-.35l3.942-3.94-3.692-3.688a.248.248 0 0 1 0-.35l.619-.619a.248.248 0 0 1 .351 0L11.314 9.99v-5.49c0-.138.112-.25.249-.25m-3.439 15h7.752a.25.25 0 0 0 .25-.25v-.875a.25.25 0 0 0-.25-.25H8.124a.25.25 0 0 0-.25.25V19a.25.25 0 0 0 .25.25" />
     </svg>
   )
 }
