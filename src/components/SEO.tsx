@@ -19,14 +19,21 @@ const jsonLd = {
       familyName: 'Douaouria',
       url: BASE_URL,
       jobTitle: 'Full-Stack Developer & AI-Assisted Engineer',
+      alumniOf: [
+        { '@type': 'CollegeOrUniversity', name: 'University of Guelma, Algeria' },
+        { '@type': 'Organization', name: 'ALX Africa (Holberton School)' },
+      ],
+      address: { '@type': 'PostalAddress', addressLocality: 'Guelma', addressCountry: 'DZ' },
       sameAs: [
         'https://github.com/mdouaour',
         'https://www.linkedin.com/in/mohammed-yassine-douaouria-0a2272121',
         'https://x.com/mdouaour',
         'https://www.facebook.com/mdouaour/',
         'https://www.facebook.com/mdouaourSolutions',
+        'https://www.tiktok.com/@mdouaour_',
+        'https://linktr.ee/mdouaour',
       ],
-      knowsAbout: ['Web Development', 'AI-Assisted Development', 'API Design', 'Desktop Applications'],
+      knowsAbout: ['Web Development', 'AI-Assisted Development', 'API Design', 'Desktop Applications', 'Open Source', 'Content Creation'],
     },
     {
       '@type': 'WebSite',

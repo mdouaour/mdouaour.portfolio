@@ -7,7 +7,7 @@ import { useReducedMotion } from '../hooks/useReducedMotion'
 import { motionTokens } from '../lib/motionConfig'
 
 const EMAIL = 'yacine23i@hotmail.com'
-const WHATSAPP = 'https://wa.me/213654927818'
+const WHATSAPP = 'https://wa.me/213664796262'
 const FORMSPREE_URL = 'https://formspree.io/f/xjkyekdv'
 
 const EASE_SMOOTH = [0.22, 1, 0.36, 1] as [number, number, number, number]
@@ -44,7 +44,7 @@ export default function Contact() {
     {
       label: T.whatsapp,
       href: WHATSAPP,
-      description: '+213 65 492 7818',
+      description: '+213 664 79 62 62',
       icon: <WhatsAppIcon />,
       highlight: true,
     },

@@ -94,5 +94,125 @@
       "fr": ["Gestion complète des stocks", "Architecture MVC propre", "Base de données MySQL", "Opérations CRUD complètes", "Interface Java Swing"],
       "ar": ["إدارة كاملة للمخزون", "بنية MVC نظيفة", "قاعدة بيانات MySQL", "عمليات CRUD كاملة", "واجهة Java Swing"]
     }
+  },
+  {
+    "id": "free-claude-code",
+    "status": "completed",
+    "kpi": "",
+    "github": "https://github.com/mdouaour/free-claude-code",
+    "demo": null,
+    "image": null,
+    "tags": ["Python", "AI", "Claude Code", "Open Source"],
+    "title": {
+      "en": "free-claude-code — Use Claude Code for Free",
+      "fr": "free-claude-code — Utiliser Claude Code Gratuitement",
+      "ar": "free-claude-code — استخدم Claude Code مجاناً"
+    },
+    "description": {
+      "en": "A Python tool that enables developers to use Claude Code without a paid API key. Opens AI-powered coding to everyone by routing through free provider tiers.",
+      "fr": "Un outil Python qui permet aux développeurs d'utiliser Claude Code sans clé API payante. Rend le codage IA accessible à tous via des fournisseurs gratuits.",
+      "ar": "أداة Python تمكن المطورين من استخدام Claude Code بدون مفتاح API مدفوع. تجعل البرمجة بالذكاء الاصطناعي متاحة للجميع."
+    },
+    "features": {
+      "en": ["Zero-cost Claude Code access", "Multi-provider fallback routing", "Python-based CLI tool", "Open-source community tool"],
+      "fr": ["Accès Claude Code gratuit", "Routage multi-fournisseur", "Outil CLI en Python", "Outil open-source communautaire"],
+      "ar": ["وصول مجاني لـ Claude Code", "توجيه متعدد المزودين", "أداة أوامر Python", "أداة مفتوحة المصدر"]
+    }
+  },
+  {
+    "id": "openclaude",
+    "status": "completed",
+    "kpi": "",
+    "github": "https://github.com/mdouaour/openclaude",
+    "demo": null,
+    "image": null,
+    "tags": ["TypeScript", "AI", "LLM", "Open Source"],
+    "title": {
+      "en": "OpenClaude — Claude Code for Any LLM",
+      "fr": "OpenClaude — Claude Code pour n'importe quel LLM",
+      "ar": "OpenClaude — Claude Code لأي نموذج لغوي"
+    },
+    "description": {
+      "en": "Opens Claude Code to any LLM backend — OpenAI, Gemini, DeepSeek, Ollama. A bridge that lets developers use Claude Code's workflow with their preferred model provider.",
+      "fr": "Ouvre Claude Code à n'importe quel LLM — OpenAI, Gemini, DeepSeek, Ollama. Un pont qui permet aux développeurs d'utiliser le workflow Claude Code avec leur fournisseur préféré.",
+      "ar": "يفتح Claude Code لأي نموذج لغوي — OpenAI و Gemini و DeepSeek و Ollama. جسر يسمح للمطورين باستخدام سير عمل Claude Code مع مزودهم المفضل."
+    },
+    "features": {
+      "en": ["Multi-LLM provider support", "OpenAI, Gemini, DeepSeek, Ollama backends", "TypeScript codebase", "Developer tooling ecosystem"],
+      "fr": ["Support multi-fournisseur LLM", "Backends OpenAI, Gemini, DeepSeek, Ollama", "Codebase TypeScript", "Écosystème d'outils développeur"],
+      "ar": ["دعم مزودي نماذج لغوية متعددين", "OpenAI، Gemini، DeepSeek، Ollama", "قاعدة كود TypeScript", "أدوات مطورين"]
+    }
+  },
+  {
+    "id": "fitsquad-ai",
+    "status": "in-progress",
+    "kpi": "",
+    "github": "https://github.com/mdouaour/FitSquad-AI",
+    "demo": null,
+    "image": null,
+    "tags": ["TypeScript", "AI", "Fitness", "Next.js"],
+    "title": {
+      "en": "FitSquad-AI — AI Fitness Platform",
+      "fr": "FitSquad-AI — Plateforme Fitness IA",
+      "ar": "FitSquad-AI — منصة لياقة بالذكاء الاصطناعي"
+    },
+    "description": {
+      "en": "An AI-powered fitness planning application that generates personalized workout and nutrition plans using artificial intelligence. Modern stack with TypeScript and Next.js.",
+      "fr": "Une application de fitness pilotée par IA qui génère des plans d'entraînement et de nutrition personnalisés. Stack moderne avec TypeScript et Next.js.",
+      "ar": "تطبيق لياقة مدعوم بالذكاء الاصطناعي يولد خطط تمارين وتغذية مخصصة. تقنية حديثة مع TypeScript و Next.js."
+    },
+    "features": {
+      "en": ["AI-generated workout plans", "Personalized nutrition guidance", "TypeScript + Next.js frontend", "Modern responsive design"],
+      "fr": ["Plans d'entraînement générés par IA", "Conseils nutrition personnalisés", "Frontend TypeScript + Next.js", "Design responsive moderne"],
+      "ar": ["خطط تمارين مولّدة بالذكاء الاصطناعي", "إرشادات تغذية مخصصة", "واجهة TypeScript + Next.js", "تصميم متجاوب حديث"]
+    }
+  },
+  {
+    "id": "houatimotoguelma",
+    "status": "in-progress",
+    "kpi": "",
+    "github": "https://github.com/mdouaour/houatimotoguelma",
+    "demo": null,
+    "image": null,
+    "tags": ["TypeScript", "Mobile", "Motorcycle", "Algeria"],
+    "title": {
+      "en": "Houati Moto Guelma — Motorcycle Services",
+      "fr": "Houati Moto Guelma — Services Moto",
+      "ar": "هواتي موتو قالمة — خدمات الدراجات النارية"
+    },
+    "description": {
+      "en": "A motorcycle services app for the Guelma region. Connects riders with repair shops, spare parts dealers, and fellow enthusiasts in the local community.",
+      "fr": "Une application de services moto pour la région de Guelma. Connecte les motards aux ateliers de réparation, vendeurs de pièces et passionnés locaux.",
+      "ar": "تطبيق خدمات الدراجات النارية لمنطقة قالمة. يربط الدراجين بمحلات الإصلاح وقطع الغيار والمتحمسين المحليين."
+    },
+    "features": {
+      "en": ["Motorcycle service directory", "Repair shop locator", "Spare parts marketplace", "Local rider community", "TypeScript modern stack"],
+      "fr": ["Annuaire de services moto", "Localisation d'ateliers", "Marché de pièces détachées", "Communauté de motards", "Stack TypeScript moderne"],
+      "ar": ["دليل خدمات الدراجات النارية", "محدد مواقع ورش الإصلاح", "سوق قطع الغيار", "مجتمع الدراجين المحلي", "تقنية TypeScript حديثة"]
+    }
+  },
+  {
+    "id": "taxi-moto",
+    "status": "in-progress",
+    "kpi": "",
+    "github": "https://github.com/mdouaour/Taxi.moto",
+    "demo": null,
+    "image": null,
+    "tags": ["TypeScript", "Mobile", "Transportation", "Algeria"],
+    "title": {
+      "en": "Taxi.moto — Moto-Taxi Booking Platform",
+      "fr": "Taxi.moto — Plateforme de Réservation Moto-Taxi",
+      "ar": "Taxi.moto — منصة حجز تاكسي الدراجات النارية"
+    },
+    "description": {
+      "en": "A motorcycle taxi booking platform designed for Algerian cities. Enables quick, affordable urban transportation through an easy-to-use booking interface.",
+      "fr": "Une plateforme de réservation de moto-taxi pour les villes algériennes. Permet un transport urbain rapide et abordable via une interface simple.",
+      "ar": "منصة حجز تاكسي الدراجات النارية للمدن الجزائرية. تمكن من النقل الحضري السريع وبأسعار معقولة."
+    },
+    "features": {
+      "en": ["Moto-taxi booking system", "Real-time rider tracking", "Urban transportation focus", "TypeScript full-stack build"],
+      "fr": ["Système de réservation moto-taxi", "Suivi en temps réel", "Focus transport urbain", "Stack TypeScript"],
+      "ar": ["نظام حجز تاكسي الدراجات", "تتبع فوري للراكب", "تركيز على النقل الحضري", "تقنية TypeScript"]
+    }
   }
 ]

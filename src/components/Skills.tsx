@@ -11,28 +11,31 @@ const skillGroups: SkillGroup[] = [
   {
     categoryKey: 'frontend',
     skills: [
-      { name: 'React', level: 80 },
-      { name: 'JavaScript / TypeScript', level: 78 },
-      { name: 'Tailwind CSS', level: 82 },
+      { name: 'React', level: 82 },
+      { name: 'Next.js', level: 62 },
+      { name: 'TypeScript', level: 78 },
+      { name: 'Tailwind CSS', level: 84 },
       { name: 'HTML / CSS', level: 88 },
     ],
   },
   {
     categoryKey: 'backend',
     skills: [
-      { name: 'Node.js / Express', level: 70 },
       { name: 'Python', level: 90 },
+      { name: 'Node.js / Express', level: 72 },
       { name: 'REST APIs', level: 78 },
-      { name: 'SQLite / MySQL', level: 78 },
+      { name: 'MySQL / SQL', level: 78 },
+      { name: 'Docker', level: 48 },
     ],
   },
   {
     categoryKey: 'tools',
     skills: [
+      { name: 'Claude Code', level: 92 },
+      { name: 'AI SDK / APIs', level: 68 },
       { name: 'Git & GitHub', level: 88 },
-      { name: 'AI-Assisted Dev', level: 85 },
-      { name: 'Vite / Build Tools', level: 72 },
       { name: 'Linux / Shell', level: 78 },
+      { name: 'Vite / Build Tools', level: 72 },
     ],
   },
   {
@@ -40,6 +43,7 @@ const skillGroups: SkillGroup[] = [
     skills: [
       { name: 'Python', level: 90 },
       { name: 'JavaScript', level: 78 },
+      { name: 'TypeScript', level: 78 },
       { name: 'Java', level: 72 },
       { name: 'C', level: 68 },
     ],
