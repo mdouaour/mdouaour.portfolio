@@ -1,12 +1,9 @@
-import { lazy, Suspense } from 'react'
 import { motion } from 'framer-motion'
 import { useLang } from '../context/LanguageContext'
 import { translations } from '../data/translations'
 import { useReducedMotion } from '../hooks/useReducedMotion'
 import { motionTokens, springs } from '../lib/motionConfig'
 import FloatingShapes from './FloatingShapes'
-
-const ThreeBackground = lazy(() => import('./ThreeBackground'))
 
 export default function Hero() {
   const { lang, isRTL } = useLang()
@@ -23,7 +20,6 @@ export default function Hero() {
       transition={{ duration: reduce ? 0.01 : motionTokens.duration.slow }}
     >
       <FloatingShapes />
-      <Suspense fallback={null}><ThreeBackground /></Suspense>
       <div className="absolute inset-0 bg-gradient-to-b from-emerald-600/10 via-transparent to-transparent pointer-events-none" aria-hidden="true" />
       <motion.div
         className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] bg-gradient-radial from-emerald-500/8 via-emerald-500/5 to-transparent rounded-full blur-3xl pointer-events-none"
