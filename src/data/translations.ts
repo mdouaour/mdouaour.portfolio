@@ -7,7 +7,7 @@ export const translations: TranslationSet = {
     seo: {
       title: 'Mohammed Yassine Douaouria — Full-Stack Developer & AI-Assisted Builder',
       description:
-        'Full-stack developer from Guelma, Algeria building web apps, desktop systems, APIs, and AI-powered products. Available for freelance and remote collaboration worldwide.',
+        'Full-stack developer from Guelma, Algeria. I build web apps, desktop systems, APIs, and AI-powered products. Available for freelance and remote collaboration worldwide.',
     },
     nav: {
       about: 'About',
@@ -20,14 +20,14 @@ export const translations: TranslationSet = {
       name: 'Mohammed Yassine Douaouria',
       tagline: 'Full-Stack Developer · AI-Assisted Engineer · Content Creator',
       description:
-        'Freelance developer and open-source contributor ranked #55 in Algeria (200+ GitHub followers, 100+ repos). I architect and ship production-grade software — web platforms, RESTful APIs, desktop applications, and AI-augmented systems. Entrepreneur at heart, builder by craft, teacher by passion.',
+        'I architect and ship production-grade software — web platforms, RESTful APIs, desktop applications, and AI-augmented systems. 109+ GitHub repos, 200+ followers. Entrepreneur at heart, builder by craft, teacher by passion.',
       cta: 'Explore My Work',
     },
     about: {
       title: 'About Me',
       background: 'Background',
       backgroundText1:
-        'Computer Science graduate from the University of Guelma, Algeria, and ALX Software Engineering alumni. Built 100+ GitHub repositories — ranked #55 in Algeria by followers (200+) with 92% commit activity in 2026.',
+        'Computer Science graduate from the University of Guelma, Algeria, and ALX Software Engineering alumni. 109+ public repositories on GitHub.',
       backgroundText2:
         'My edge is AI-accelerated development. I combine modern engineering with AI tools to ship faster without cutting corners. SaaS, POS, APIs, or AI products — I design, build, deploy, and maintain. I also share my engineering journey as a content creator on X, LinkedIn, TikTok, and Facebook.',
       whatIDo: 'What I Build',
@@ -89,7 +89,7 @@ export const translations: TranslationSet = {
     seo: {
       title: 'Mohammed Yassine Douaouria — Développeur Full-Stack & IA-Assisté',
       description:
-        'Développeur full-stack de Guelma, Algérie spécialisé dans les applications web, desktop, APIs et produits IA. Disponible pour freelance et collaboration à distance dans le monde entier.',
+        'Développeur full-stack de Guelma, Algérie. Je construis des apps web, desktop, API et produits IA. Disponible pour freelance et collaboration à distance.',
     },
     nav: {
       about: 'À propos',
@@ -102,16 +102,16 @@ export const translations: TranslationSet = {
       name: 'Mohammed Yassine Douaouria',
       tagline: 'Développeur Full-Stack · Ingénieur IA-Assisté · Créateur de Contenu',
       description:
-        'Développeur freelance et contributeur open-source classé #55 en Algérie (200+ abonnés GitHub, 100+ dépôts). J\'architecture et livre des logiciels prêts pour la production — plateformes web, APIs, applications desktop et systèmes IA. Entrepreneur dans l\'âme, bâtisseur de métier, enseignant par passion.',
+        'J\'architecture et livre des logiciels prêts pour la production — plateformes web, APIs REST, applications desktop et systèmes IA. 109+ dépôts GitHub, 200+ abonnés. Entrepreneur dans l\'âme, bâtisseur de métier, enseignant par passion.',
       cta: 'Explorer mes projets',
     },
     about: {
       title: 'À Propos',
       background: 'Parcours',
       backgroundText1:
-        'Diplômé en Informatique de l\'Université de Guelma et participant au programme ALX Software Engineering. Plus de 100 dépôts GitHub — classé #55 en Algérie (200+ abonnés) avec 92% d\'activité de commit en 2026.',
+        'Diplômé en Informatique de l\'Université de Guelma et du programme ALX Software Engineering. 109+ dépôts publics sur GitHub.',
       backgroundText2:
-        'Mon atout : un workflow accéléré par l\'IA. J\'allie pratiques modernes et outils d\'IA pour livrer plus vite sans sacrifier la qualité. SaaS, POS, API ou produit IA — je conçois, construis, déploie et maintiens. Je partage aussi mon parcours d\'ingénieur en tant que créateur de contenu sur X, LinkedIn, TikTok et Facebook.',
+        'Mon atout : un workflow accéléré par l\'IA. J\'allie pratiques modernes et outils d\'IA pour livrer plus vite sans sacrifier la qualité. SaaS, POS, API ou produit IA — je conçois, construis, déploie et maintiens. Je partage aussi mon parcours d\'ingénieur sur X, LinkedIn, TikTok et Facebook.',
       whatIDo: 'Ce que je construis',
       services: [
         'Applications Web (React, Next.js, Node.js, APIs REST)',
@@ -171,7 +171,7 @@ export const translations: TranslationSet = {
     seo: {
       title: 'محمد ياسين دواوريا — مطور Full-Stack ومنتجات الذكاء الاصطناعي',
       description:
-        'مطور full-stack من قالمة، الجزائر، أبني تطبيقات الويب، أنظمة سطح المكتب، واجهات برمجية، ومنتجات الذكاء الاصطناعي. متاح للعمل الحر والتعاون عن بُعد حول العالم.',
+        'مطور full-stack من قالمة، الجزائر. أبني تطبيقات الويب، برامج سطح المكتب، واجهات برمجية، ومنتجات الذكاء الاصطناعي. متاح للعمل الحر والتعاون عن بُعد.',
     },
     nav: {
       about: 'عني',
@@ -184,14 +184,14 @@ export const translations: TranslationSet = {
       name: 'محمد ياسين دواوريا',
       tagline: 'مطور Full-Stack · مهندس بالذكاء الاصطناعي · صانع محتوى',
       description:
-        'مطور مستقل ومساهم في المصادر المفتوحة — مصنف #55 في الجزائر (200+ متابع على GitHub، 100+ مستودع). أُصمم وأُطلق برمجيات جاهزة للإنتاج — منصات ويب، واجهات RESTful، تطبيقات سطح مكتب، وأنظمة ذكاء اصطناعي. رائد أعمال بالروح، باني بالمهنة، معلم بالشغف.',
+        'أُصمم وأُطلق برمجيات جاهزة للإنتاج — منصات ويب، واجهات RESTful، تطبيقات سطح مكتب، وأنظمة ذكاء اصطناعي. 109+ مستودع على GitHub، 200+ متابع. رائد أعمال بالروح، باني بالمهنة، معلم بالشغف.',
       cta: 'استكشف أعمالي',
     },
     about: {
       title: 'عني',
       background: 'الخلفية',
       backgroundText1:
-        'خريج علوم الحاسوب من جامعة قالمة ومتخرج من برنامج ALX لهندسة البرمجيات. بنيت أكثر من 100 مستودع على GitHub — مصنف #55 في الجزائر (200+ متابع) مع 92% نشاط commits في 2026.',
+        'خريج علوم الحاسوب من جامعة قالمة ومتخرج من برنامج ALX لهندسة البرمجيات. 109+ مستودع عام على GitHub.',
       backgroundText2:
         'ميزتي التنافسية: تطوير معزز بالذكاء الاصطناعي. أدمج الهندسة الحديثة بأدوات الذكاء الاصطناعي لأنتج بشكل أسرع دون التضحية بالجودة. SaaS، نقاط بيع، APIs، أو منتجات ذكاء اصطناعي — أصمم، أبني، أنشر، وأصون. كما أشارك رحلتي الهندسية كصانع محتوى على X، LinkedIn، TikTok، وفيسبوك.',
       whatIDo: 'ما أبنيه',

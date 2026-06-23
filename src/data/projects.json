@@ -1,5 +1,29 @@
 [
   {
+    "id": "tapis",
+    "status": "completed",
+    "kpi": "Next.js 16 · Supabase · Arabic-first e-commerce",
+    "github": "https://github.com/mdouaour/tapis",
+    "demo": null,
+    "image": "/screenshots/tapis.jpg",
+    "tags": ["TypeScript", "Next.js", "Supabase", "E-Commerce"],
+    "title": {
+      "en": "Tapis — Algerian Carpet E-Commerce",
+      "fr": "Tapis — E-Commerce de Tapis Algérien",
+      "ar": "تاپيس — متجر سجاد جزائري إلكتروني"
+    },
+    "description": {
+      "en": "Premium e-commerce platform for traditional and modern Algerian carpets. Arabic-first with full RTL, dual-language (Arabic/French), mobile-optimized. Next.js 16 App Router with Supabase backend, shadcn/ui components, and WhatsApp-native checkout flow.",
+      "fr": "Plateforme e-commerce premium pour les tapis algériens traditionnels et modernes. Arabe prioritaire avec RTL complet, bilingue (Arabe/Français), optimisé mobile. Next.js 16 App Router avec backend Supabase, composants shadcn/ui et paiement WhatsApp natif.",
+      "ar": "منصة تجارة إلكترونية ممتازة للسجاد الجزائري التقليدي والحديث. الأولوية للعربية مع دعم كامل للـ RTL، ثنائية اللغة (عربية/فرنسية)، محسّنة للجوال. Next.js 16 مع Supabase ومكونات shadcn/ui ودفع عبر واتساب."
+    },
+    "features": {
+      "en": ["Next.js 16 App Router with Server Components", "Arabic-first with next-intl i18n (AR/FR)", "Supabase PostgreSQL + Row Level Security", "shadcn/ui accessible component system", "WhatsApp-native order flow (COD)"],
+      "fr": ["Next.js 16 App Router avec Server Components", "Arabe prioritaire avec next-intl i18n (AR/FR)", "Supabase PostgreSQL + Row Level Security", "Système de composants shadcn/ui accessible", "Paiement WhatsApp natif (COD)"],
+      "ar": ["Next.js 16 مع خادم المكونات", "عربية أولاً مع next-intl (عربي/فرنسي)", "Supabase PostgreSQL + أمن على مستوى الصف", "نظام مكونات shadcn/ui", "طلب عبر واتساب (الدفع عند الاستلام)"]
+    }
+  },
+  {
     "id": "guelma-guide",
     "status": "completed",
     "kpi": "",
@@ -13,38 +37,38 @@
       "ar": "دليل قالمة — منصة سياحية"
     },
     "description": {
-      "en": "A comprehensive tourism guide for Guelma, Algeria. Built with modern TypeScript and React, it showcases local attractions, cultural heritage, history, and travel information for visitors.",
-      "fr": "Un guide touristique complet pour Guelma, Algérie. Construit avec TypeScript et React moderne, il présente les attractions locales, le patrimoine culturel et les informations de voyage.",
-      "ar": "دليل سياحي شامل لقالمة، الجزائر. مبني بـ TypeScript و React الحديث، يعرض المعالم المحلية والتراث الثقافي ومعلومات السفر."
+      "en": "Comprehensive tourism guide for Guelma, Algeria. TypeScript + React frontend showcasing local attractions, cultural heritage, and travel logistics. Fully responsive, SEO-optimized.",
+      "fr": "Guide touristique complet pour Guelma, Algérie. Frontend TypeScript + React présentant les attractions locales, le patrimoine culturel et les informations pratiques. Entièrement responsive, optimisé SEO.",
+      "ar": "دليل سياحي شامل لقالمة، الجزائر. واجهة TypeScript + React تعرض المعالم المحلية والتراث الثقافي ومعلومات السفر. متجاوب بالكامل، محسّن لمحركات البحث."
     },
     "features": {
-      "en": ["Tourism attraction showcase", "Cultural heritage & history", "Modern TypeScript + React", "Fully responsive design"],
-      "fr": ["Présentation des attractions", "Patrimoine culturel et histoire", "TypeScript + React moderne", "Design entièrement responsive"],
-      "ar": ["عرض المعالم السياحية", "التراث الثقافي والتاريخ", "TypeScript + React حديث", "تصميم متجاوب بالكامل"]
+      "en": ["Tourism attraction showcase with rich media", "Cultural heritage & history sections", "TypeScript + React modern stack", "Fully responsive, SEO-optimized design"],
+      "fr": ["Présentation des attractions avec médias riches", "Sections patrimoine culturel et histoire", "Stack TypeScript + React moderne", "Design responsive optimisé SEO"],
+      "ar": ["عرض المعالم السياحية بوسائط غنية", "أقسام التراث الثقافي والتاريخ", "تقنية TypeScript + React حديثة", "تصميم متجاوب محسّن لمحركات البحث"]
     }
   },
   {
-    "id": "tari9i-bus",
+    "id": "fitsquad-ai",
     "status": "in-progress",
-    "kpi": "",
-    "github": "https://github.com/mdouaour/Tari9i-Bus",
+    "kpi": "Next.js 15 · AI-powered · Deployed",
+    "github": "https://github.com/mdouaour/FitSquad-AI",
     "demo": null,
-    "image": "/screenshots/tari9i-bus.jpg",
-    "tags": ["JavaScript", "Node.js", "Real-Time", "Tracking"],
+    "image": "/screenshots/fitsquad-ai.jpg",
+    "tags": ["TypeScript", "Next.js", "AI", "Fitness"],
     "title": {
-      "en": "Tari9i-Bus — Real-Time Bus Tracking",
-      "fr": "Tari9i-Bus — Suivi de Bus en Temps Réel",
-      "ar": "Tari9i-Bus — تتبع الحافلات فورياً"
+      "en": "FitSquad-AI — AI Fitness Platform",
+      "fr": "FitSquad-AI — Plateforme Fitness IA",
+      "ar": "FitSquad-AI — منصة لياقة بالذكاء الاصطناعي"
     },
     "description": {
-      "en": "A real-time bus tracking application for Algerian cities. Helps commuters track public transport, plan routes, and navigate efficiently using JavaScript and Node.js.",
-      "fr": "Une application de suivi de bus en temps réel pour les villes algériennes. Aide les voyageurs à suivre les transports, planifier leurs itinéraires et naviguer efficacement.",
-      "ar": "تطبيق تتبع حافلات فوري للمدن الجزائرية. يساعد المسافرين على تتبع النقل العام وتخطيط المسارات والتنقل بكفاءة."
+      "en": "AI-powered fitness platform that generates personalized workout and nutrition plans. Next.js 15 frontend with LLM integration for dynamic plan generation. Live deployment.",
+      "fr": "Plateforme fitness propulsée par l'IA générant des plans d'entraînement et de nutrition personnalisés. Frontend Next.js 15 avec intégration LLM. Déploiement en ligne.",
+      "ar": "منصة لياقة تعمل بالذكاء الاصطناعي تولّد خطط تمارين وتغذية مخصصة. واجهة Next.js 15 مع تكامل LLM. منشورة مباشرة."
     },
     "features": {
-      "en": ["Real-time GPS bus tracking", "Route planning & optimization", "JavaScript + Node.js backend", "Algerian city support"],
-      "fr": ["Suivi GPS en temps réel", "Planification d'itinéraires", "Backend JavaScript + Node.js", "Support des villes algériennes"],
-      "ar": ["تتبع GPS فوري للحافلات", "تخطيط المسارات وتحسينها", "خادم JavaScript + Node.js", "دعم المدن الجزائرية"]
+      "en": ["AI-generated personalized workout plans", "LLM-powered nutrition guidance", "Next.js 15 with TypeScript", "Live deployment"],
+      "fr": ["Plans d'entraînement générés par IA", "Conseils nutrition basés sur LLM", "Next.js 15 avec TypeScript", "Déploiement en ligne"],
+      "ar": ["خطط تمارين مخصصة بالذكاء الاصطناعي", "إرشادات تغذية عبر LLM", "Next.js 15 مع TypeScript", "منشور ومباشر"]
     }
   },
   {
@@ -56,67 +80,43 @@
     "image": "/screenshots/gestion-commerce.jpg",
     "tags": ["Python", "PySide6", "SQLite", "Desktop"],
     "title": {
-      "en": "Gestion Commerce — Smart POS System",
-      "fr": "Gestion Commerce — Système POS Intelligent",
-      "ar": "إدارة التجارة — نظام نقاط بيع ذكي"
+      "en": "Gestion Commerce — POS & Inventory",
+      "fr": "Gestion Commerce — POS et Stock",
+      "ar": "إدارة التجارة — نقاط البيع والمخزون"
     },
     "description": {
-      "en": "A full-featured point-of-sale and inventory management desktop application. Built with Python and PySide6, it handles products, sales, stock tracking, and reporting for small to medium businesses.",
-      "fr": "Une application de bureau complète pour la gestion des points de vente et des stocks. Construite avec Python et PySide6, elle gère les produits, les ventes et les rapports.",
-      "ar": "تطبيق سطح مكتب متكامل لنقاط البيع وإدارة المخزون. مبني بـ Python و PySide6، يدير المنتجات والمبيعات والتقارير."
+      "en": "Desktop point-of-sale and inventory management system. Python + PySide6 GUI with SQLite backend. Product management, sales tracking, stock monitoring, and reporting for small to medium businesses.",
+      "fr": "Système de point de vente et gestion de stocks desktop. Interface Python + PySide6 avec base SQLite. Gestion des produits, suivi des ventes et rapports pour PME.",
+      "ar": "نظام نقاط بيع وإدارة مخزون لسطح المكتب. واجهة Python + PySide6 مع قاعدة SQLite. إدارة المنتجات والمبيعات والتقارير للشركات الصغيرة والمتوسطة."
     },
     "features": {
-      "en": ["Complete POS interface", "Inventory & stock tracking", "Sales reports & analytics", "Local SQLite database", "Desktop GUI with PySide6"],
-      "fr": ["Interface POS complète", "Suivi des stocks", "Rapports de vente et analyses", "Base SQLite locale", "Interface graphique PySide6"],
-      "ar": ["واجهة نقاط بيع كاملة", "تتبع المخزون", "تقارير المبيعات والتحليلات", "قاعدة بيانات SQLite محلية", "واجهة رسومية PySide6"]
+      "en": ["Full POS interface with transaction flow", "Inventory & stock level tracking", "Sales reports and analytics", "Local SQLite persistence", "PySide6 desktop GUI"],
+      "fr": ["Interface POS complète", "Suivi des stocks en temps réel", "Rapports de vente et analyses", "Persistance SQLite locale", "Interface graphique PySide6"],
+      "ar": ["واجهة نقاط بيع كاملة", "تتبع المخزون والكميات", "تقارير المبيعات والتحليلات", "قاعدة SQLite محلية", "واجهة رسومية PySide6"]
     }
   },
   {
-    "id": "gestion-de-stock",
-    "status": "completed",
-    "kpi": "",
-    "github": "https://github.com/mdouaour/gestion-de-stock",
-    "demo": null,
-    "image": "/screenshots/gestion-de-stock.jpg",
-    "tags": ["Java", "Swing", "MySQL", "Desktop"],
-    "title": {
-      "en": "Gestion de Stock — Inventory Manager",
-      "fr": "Gestion de Stock — Gestionnaire d'Inventaire",
-      "ar": "إدارة المخزون — مدير المخزون"
-    },
-    "description": {
-      "en": "A Java Swing desktop application for inventory and stock management with a MySQL backend. Features a clean MVC architecture with full CRUD operations and data persistence.",
-      "fr": "Une application de bureau Java Swing pour la gestion des stocks avec MySQL. Architecture MVC propre avec opérations CRUD complètes et persistance des données.",
-      "ar": "تطبيق سطح مكتب Java Swing لإدارة المخزون مع MySQL. بنية MVC نظيفة مع عمليات CRUD كاملة واستمرارية البيانات."
-    },
-    "features": {
-      "en": ["Full stock & inventory management", "Clean MVC architecture", "MySQL database backend", "Complete CRUD operations", "Java Swing desktop GUI"],
-      "fr": ["Gestion complète des stocks", "Architecture MVC propre", "Base de données MySQL", "Opérations CRUD complètes", "Interface Java Swing"],
-      "ar": ["إدارة كاملة للمخزون", "بنية MVC نظيفة", "قاعدة بيانات MySQL", "عمليات CRUD كاملة", "واجهة Java Swing"]
-    }
-  },
-  {
-    "id": "fitsquad-ai",
+    "id": "servises-marketing",
     "status": "in-progress",
-    "kpi": "",
-    "github": "https://github.com/mdouaour/FitSquad-AI",
+    "kpi": "Next.js 16 · Prisma · NextAuth · 3 languages",
+    "github": "https://github.com/mdouaour/servises-marketing",
     "demo": null,
     "image": null,
-    "tags": ["TypeScript", "AI", "Fitness", "Next.js"],
+    "tags": ["TypeScript", "Next.js", "Prisma", "Marketplace"],
     "title": {
-      "en": "FitSquad-AI — AI Fitness Platform",
-      "fr": "FitSquad-AI — Plateforme Fitness IA",
-      "ar": "FitSquad-AI — منصة لياقة بالذكاء الاصطناعي"
+      "en": "Servises Marketing — Service Marketplace",
+      "fr": "Servises Marketing — Marketplace de Services",
+      "ar": "Servises Marketing — سوق الخدمات"
     },
     "description": {
-      "en": "An AI-powered fitness planning application that generates personalized workout and nutrition plans using artificial intelligence. Modern stack with TypeScript and Next.js.",
-      "fr": "Une application de fitness pilotée par IA qui génère des plans d'entraînement et de nutrition personnalisés. Stack moderne avec TypeScript et Next.js.",
-      "ar": "تطبيق لياقة مدعوم بالذكاء الاصطناعي يولد خطط تمارين وتغذية مخصصة. تقنية حديثة مع TypeScript و Next.js."
+      "en": "Bilingual service marketplace connecting providers and clients in Algeria. Next.js 16 with Prisma (PostgreSQL), NextAuth v5, Redis caching. Cart + checkout with local payment methods (COD, CIB, BaridiMob).",
+      "fr": "Marketplace de services bilingue connectant prestataires et clients en Algérie. Next.js 16 avec Prisma (PostgreSQL), NextAuth v5, cache Redis. Panier + paiement local (COD, CIB, BaridiMob).",
+      "ar": "سوق خدمات ثنائي اللغة يربط مقدمي الخدمات بالعملاء في الجزائر. Next.js 16 مع Prisma و NextAuth v5. سلة تسوق ودفع محلي."
     },
     "features": {
-      "en": ["AI-generated workout plans", "Personalized nutrition guidance", "TypeScript + Next.js frontend", "Modern responsive design"],
-      "fr": ["Plans d'entraînement générés par IA", "Conseils nutrition personnalisés", "Frontend TypeScript + Next.js", "Design responsive moderne"],
-      "ar": ["خطط تمارين مولّدة بالذكاء الاصطناعي", "إرشادات تغذية مخصصة", "واجهة TypeScript + Next.js", "تصميم متجاوب حديث"]
+      "en": ["Provider-client service marketplace", "NextAuth v5 (email + OAuth)", "PostgreSQL via Prisma ORM", "Redis caching layer", "Local payments: COD, CIB, BaridiMob", "Trilingual: AR/FR/EN"],
+      "fr": ["Marketplace prestataire-client", "NextAuth v5 (email + OAuth)", "PostgreSQL via Prisma ORM", "Cache Redis", "Paiements locaux: COD, CIB, BaridiMob", "Trilingue: AR/FR/EN"],
+      "ar": ["سوق خدمات يربط مزود-عميل", "NextAuth v5 (بريد + OAuth)", "PostgreSQL عبر Prisma", "تخزين مؤقت Redis", "دفع محلي: COD, CIB, BaridiMob", "ثلاثي اللغات"]
     }
   },
   {
@@ -133,38 +133,38 @@
       "ar": "هواتي موتو قالمة — خدمات الدراجات النارية"
     },
     "description": {
-      "en": "A motorcycle services app for the Guelma region. Connects riders with repair shops, spare parts dealers, and fellow enthusiasts in the local community.",
-      "fr": "Une application de services moto pour la région de Guelma. Connecte les motards aux ateliers de réparation, vendeurs de pièces et passionnés locaux.",
-      "ar": "تطبيق خدمات الدراجات النارية لمنطقة قالمة. يربط الدراجين بمحلات الإصلاح وقطع الغيار والمتحمسين المحليين."
+      "en": "Motorcycle services directory for the Guelma region. Connects riders with repair shops, spare parts dealers, and the local community. TypeScript/React stack.",
+      "fr": "Annuaire de services moto pour la région de Guelma. Connecte les motards aux ateliers de réparation, vendeurs de pièces et à la communauté locale. Stack TypeScript/React.",
+      "ar": "دليل خدمات الدراجات النارية لمنطقة قالمة. يربط الدراجين بمحلات الإصلاح وقطع الغيار والمجتمع المحلي. تقنية TypeScript/React."
     },
     "features": {
-      "en": ["Motorcycle service directory", "Repair shop locator", "Spare parts marketplace", "Local rider community", "TypeScript modern stack"],
-      "fr": ["Annuaire de services moto", "Localisation d'ateliers", "Marché de pièces détachées", "Communauté de motards", "Stack TypeScript moderne"],
-      "ar": ["دليل خدمات الدراجات النارية", "محدد مواقع ورش الإصلاح", "سوق قطع الغيار", "مجتمع الدراجين المحلي", "تقنية TypeScript حديثة"]
+      "en": ["Motorcycle service directory", "Repair shop & parts locator", "Local rider community", "TypeScript modern stack"],
+      "fr": ["Annuaire de services moto", "Localisation d'ateliers et pièces", "Communauté de motards locale", "Stack TypeScript moderne"],
+      "ar": ["دليل خدمات الدراجات النارية", "محدد مواقع ورش وقطع الغيار", "مجتمع دراجين محلي", "تقنية TypeScript حديثة"]
     }
   },
   {
-    "id": "tissuin",
-    "status": "completed",
+    "id": "tari9i-bus",
+    "status": "in-progress",
     "kpi": "",
-    "github": "https://github.com/mdouaour/TissuIn",
+    "github": "https://github.com/mdouaour/Tari9i-Bus",
     "demo": null,
-    "image": null,
-    "tags": ["TypeScript", "Next.js", "E-Commerce", "Stripe"],
+    "image": "/screenshots/tari9i-bus.jpg",
+    "tags": ["JavaScript", "Node.js", "Real-Time", "Tracking"],
     "title": {
-      "en": "TissuIn — E-Commerce Platform",
-      "fr": "TissuIn — Plateforme E-Commerce",
-      "ar": "TissuIn — منصة تجارة إلكترونية"
+      "en": "Tari9i-Bus — Real-Time Bus Tracking",
+      "fr": "Tari9i-Bus — Suivi de Bus en Temps Réel",
+      "ar": "Tari9i-Bus — تتبع الحافلات فورياً"
     },
     "description": {
-      "en": "A modern e-commerce platform for textile and fabric products. Built with Next.js and TypeScript, featuring product catalog, shopping cart, secure payments, and order management.",
-      "fr": "Une plateforme e-commerce moderne pour les produits textiles. Construite avec Next.js et TypeScript, elle propose un catalogue, un panier, des paiements sécurisés et la gestion des commandes.",
-      "ar": "منصة تجارة إلكترونية حديثة لمنتجات النسيج والأقمشة. مبنية بـ Next.js و TypeScript، وتوفر كتالوج المنتجات وسلة التسوق والمدفوعات الآمنة وإدارة الطلبات."
+      "en": "Real-time bus tracking for Algerian cities. Node.js backend processing GPS data, helping commuters track public transport and plan routes efficiently.",
+      "fr": "Suivi de bus en temps réel pour les villes algériennes. Backend Node.js traitant les données GPS pour aider les voyageurs à suivre les transports et planifier leurs trajets.",
+      "ar": "تتبع فوري للحافلات للمدن الجزائرية. خادم Node.js يعالج بيانات GPS لمساعدة المسافرين على تتبع النقل العام وتخطيط مساراتهم."
     },
     "features": {
-      "en": ["Product catalog with search", "Shopping cart & checkout", "Secure Stripe payments", "Order management dashboard", "Responsive Next.js frontend"],
-      "fr": ["Catalogue avec recherche", "Panier et commande", "Paiements Stripe sécurisés", "Tableau de bord des commandes", "Frontend Next.js responsive"],
-      "ar": ["كتالوج منتجات مع بحث", "سلة تسوق وإتمام شراء", "مدفوعات Stripe آمنة", "لوحة تحكم لإدارة الطلبات", "واجهة Next.js متجاوبة"]
+      "en": ["Real-time GPS bus tracking", "Route planning", "JavaScript + Node.js backend", "Algerian city support"],
+      "fr": ["Suivi GPS en temps réel", "Planification d'itinéraires", "Backend JavaScript + Node.js", "Support des villes algériennes"],
+      "ar": ["تتبع GPS فوري للحافلات", "تخطيط المسارات", "خادم JavaScript + Node.js", "دعم المدن الجزائرية"]
     }
   }
 ]
