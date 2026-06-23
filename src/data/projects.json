@@ -101,7 +101,7 @@
     "kpi": "Next.js 16 · Prisma · NextAuth · 3 languages",
     "github": "https://github.com/mdouaour/servises-marketing",
     "demo": null,
-    "image": null,
+    "image": "/screenshots/servises-marketing.jpg",
     "tags": ["TypeScript", "Next.js", "Prisma", "Marketplace"],
     "title": {
       "en": "Servises Marketing — Service Marketplace",
@@ -125,7 +125,7 @@
     "kpi": "",
     "github": "https://github.com/mdouaour/houatimotoguelma",
     "demo": null,
-    "image": null,
+    "image": "/screenshots/houatimotoguelma.jpg",
     "tags": ["TypeScript", "Mobile", "Motorcycle", "Algeria"],
     "title": {
       "en": "Houati Moto Guelma — Motorcycle Services",
