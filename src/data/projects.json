@@ -166,5 +166,77 @@
       "fr": ["Suivi GPS en temps réel", "Planification d'itinéraires", "Backend JavaScript + Node.js", "Support des villes algériennes"],
       "ar": ["تتبع GPS فوري للحافلات", "تخطيط المسارات", "خادم JavaScript + Node.js", "دعم المدن الجزائرية"]
     }
+  },
+  {
+    "id": "facturation-electronique",
+    "status": "completed",
+    "kpi": "Next.js 16 · Prisma 7 · DGI-compliant · PDF",
+    "github": "https://github.com/mdouaour/facturation-electronique",
+    "demo": null,
+    "image": "/screenshots/facturation.jpg",
+    "tags": ["TypeScript", "Next.js", "Prisma", "PostgreSQL", "DGI", "Algeria"],
+    "title": {
+      "en": "Facturation Électronique — DGI-Compliant E-Invoicing",
+      "fr": "Facturation Électronique — Facturation Conforme à la DGI",
+      "ar": "الفوترة الإلكترونية — فواتير مطابقة للمديرية العامة للضرائب"
+    },
+    "description": {
+      "en": "DGI-compliant electronic invoicing SaaS for Algeria. Manages clients (IFU/RC/NIS/NIF/Art), automatic TVA calculation (19%/9%/0/exempt), 200 DA timbre fiscal, multi-article invoices with PDF generation, and dashboards.",
+      "fr": "SaaS de facturation électronique conforme à la DGI pour l'Algérie. Gère les clients (IFU/RC/NIS/NIF/Art), calcul automatique de la TVA (19%/9%/0/exonéré), timbre fiscal 200 DA, factures multi-articles avec génération PDF, et tableaux de bord.",
+      "ar": "برنامج فواتير إلكترونية مطابق للمديرية العامة للضرائب للجزائر. إدارة العملاء، حساب الضريبة تلقائياً، طابع ضريبي 200 دج، فواتير متعددة المواد مع PDF ولوحات القيادة."
+    },
+    "features": {
+      "en": ["DGI-compliant invoice format (IFU/RC/NIS/NIF/Art)", "Automatic TVA (19%/9%/0/exempt) & timbre fiscal (200 DA)", "Multi-article invoices with PDF download", "Client management with Algerian fiscal identifiers", "Dashboard with revenue and invoice analytics"],
+      "fr": ["Format facture conforme DGI (IFU/RC/NIS/NIF/Art)", "TVA automatique (19%/9%/0/exonéré) & timbre fiscal (200 DA)", "Factures multi-articles avec PDF", "Gestion clients avec identifiants fiscaux algériens", "Tableau de bord avec analyse des revenus"],
+      "ar": ["تنسيق فواتير مطابق للمديرية العامة للضرائب", "حساب الضريبة تلقائياً والطابع الضريبي", "فواتير متعددة المواد مع تحميل PDF", "إدارة العملاء بالمعرفات الضريبية الجزائرية", "لوحة قيادة مع تحليل الإيرادات"]
+    }
+  },
+  {
+    "id": "gestion-stock-whatsapp",
+    "status": "completed",
+    "kpi": "Next.js 16 · Prisma 7 · WhatsApp · Real-time",
+    "github": "https://github.com/mdouaour/gestion-stock-whatsapp",
+    "demo": null,
+    "image": "/screenshots/gestion-stock.jpg",
+    "tags": ["TypeScript", "Next.js", "Prisma", "PostgreSQL", "WhatsApp", "Inventory"],
+    "title": {
+      "en": "Gestion Stock — Inventory & WhatsApp Ordering",
+      "fr": "Gestion Stock — Inventaire et Commandes WhatsApp",
+      "ar": "إدارة المخزون — المخزون والطلب عبر واتساب"
+    },
+    "description": {
+      "en": "Inventory management SaaS with WhatsApp ordering for Algerian businesses. Product/category management, stock movements (entry/exit/transfer), order tracking with wa.me links, low stock alerts, and real-time dashboard.",
+      "fr": "SaaS de gestion d'inventaire avec commandes WhatsApp pour les entreprises algériennes. Gestion produits/catégories, mouvements de stock (entrée/sortie/transfert), suivi des commandes avec liens wa.me, alertes stock faible, et tableau de bord en temps réel.",
+      "ar": "برنامج إدارة مخزون مع الطلب عبر واتساب للشركات الجزائرية. إدارة المنتجات والفئات، حركات المخزون، تتبع الطلبات مع روابط واتساب، تنبيهات المخزون المنخفض، ولوحة قيادة فورية."
+    },
+    "features": {
+      "en": ["Product & category management", "Stock movements: entry, exit, transfer", "Order tracking with wa.me WhatsApp links", "Low stock alerts & notifications", "Real-time inventory dashboard"],
+      "fr": ["Gestion des produits et catégories", "Mouvements de stock: entrée, sortie, transfert", "Suivi des commandes avec liens wa.me WhatsApp", "Alertes de stock faible", "Tableau de bord en temps réel"],
+      "ar": ["إدارة المنتجات والفئات", "حركات المخزون: إدخال، إخراج، تحويل", "تتبع الطلبات مع روابط واتساب", "تنبيهات المخزون المنخفض", "لوحة قيادة فورية"]
+    }
+  },
+  {
+    "id": "sites-vitrines",
+    "status": "completed",
+    "kpi": "Next.js 16 · Visual Editor · 6 templates · Live preview",
+    "github": "https://github.com/mdouaour/sites-vitrines",
+    "demo": null,
+    "image": "/screenshots/sites-vitrines.jpg",
+    "tags": ["TypeScript", "Next.js", "Prisma", "PostgreSQL", "Website Builder"],
+    "title": {
+      "en": "Sites Vitrines — Algerian Business Website Generator",
+      "fr": "Sites Vitrines — Générateur de Sites Web pour Entreprises Algériennes",
+      "ar": "المواقع التعريفية — منشئ مواقع للشركات الجزائرية"
+    },
+    "description": {
+      "en": "Website generator for Algerian small businesses. 6 sector templates (restaurant, salon, pharmacy, real estate, auto, general). Drag-free visual editor with customizable sections, colors, fonts, and images. Live public sites at /s/:slug.",
+      "fr": "Générateur de sites web pour les petites entreprises algériennes. 6 templates sectoriels (restaurant, salon, pharmacie, immobilier, auto, général). Éditeur visuel sans glisser-déposer avec sections personnalisables. Sites publics en direct sur /s/:slug.",
+      "ar": "منشئ مواقع للشركات الجزائرية الصغيرة. 6 قوالب قطاعية (مطعم، صالون، صيدلية، عقارات، سيارات، عام). محرر بصري بأقسام قابلة للتخصيص. مواقع منشورة مباشرة على /s/:slug."
+    },
+    "features": {
+      "en": ["6 sector-specific templates", "Visual website editor (no code, no drag-drop)", "Customizable colors, fonts, images & sections", "Live public sites at /s/:slug", "Algerian market focused: restaurant, salon, pharmacy, real estate, auto"],
+      "fr": ["6 templates sectoriels", "Éditeur visuel de site (sans code, sans glisser-déposer)", "Couleurs, polices, images et sections personnalisables", "Sites publics en direct sur /s/:slug", "Focus marché algérien: restaurant, salon, pharmacie, immobilier, auto"],
+      "ar": ["6 قوالب قطاعية", "محرر بصري (بدون كود)", "ألوان وخطوط وصور وأقسام قابلة للتخصيص", "مواقع منشورة مباشرة على /s/:slug", "تركيز على السوق الجزائري"]
+    }
   }
 ]
