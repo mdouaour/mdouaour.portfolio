@@ -62,10 +62,10 @@ export default function ThreeBackground() {
     geometry.setAttribute('color', new THREE.BufferAttribute(colors, 3))
 
     const material = new THREE.PointsMaterial({
-      size: 1.2,
+      size: 1.8,
       vertexColors: true,
       transparent: true,
-      opacity: 0.3,
+      opacity: 0.5,
       sizeAttenuation: true,
       blending: THREE.AdditiveBlending,
       depthWrite: false,
@@ -105,7 +105,7 @@ export default function ThreeBackground() {
     const lineMaterial = new THREE.LineBasicMaterial({
       color: 0x8b5cf6,
       transparent: true,
-      opacity: 0.02,
+      opacity: 0.04,
       blending: THREE.AdditiveBlending,
       depthWrite: false,
     })
