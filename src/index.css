@@ -3,9 +3,9 @@
 :root {
   --bg-surface: #f5f5fa;
   --bg-surface-alt: #ffffff;
-  --bg-card: rgba(255, 255, 255, 0.7);
+  --bg-card: rgba(255, 255, 255, 0.85);
   --bg-elevated: #e8e8f0;
-  --bg-glass: rgba(245, 245, 250, 0.85);
+  --bg-glass: rgba(245, 245, 250, 0.95);
   --text-primary: #1a1a2e;
   --text-secondary: #4b5563;
   --text-muted: #52525b;
@@ -21,9 +21,9 @@
 .dark {
   --bg-surface: #08080f;
   --bg-surface-alt: #0d0d1a;
-  --bg-card: rgba(255, 255, 255, 0.03);
+  --bg-card: rgba(255, 255, 255, 0.08);
   --bg-elevated: rgba(255, 255, 255, 0.06);
-  --bg-glass: rgba(8, 8, 15, 0.85);
+  --bg-glass: rgba(8, 8, 15, 0.95);
   --text-primary: #e8e8f0;
   --text-secondary: #9ca3af;
   --text-muted: #a1a1aa;

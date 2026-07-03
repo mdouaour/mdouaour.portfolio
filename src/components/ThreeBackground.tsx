@@ -1,8 +1,8 @@
 import { useEffect, useRef } from 'react'
 import * as THREE from 'three'
 
-const PARTICLE_COUNT = 1800
-const CONNECTION_DIST = 120
+const PARTICLE_COUNT = 800
+const CONNECTION_DIST = 100
 const AUTO_ROTATE_SPEED = 0.0002
 
 export default function ThreeBackground() {
@@ -62,10 +62,10 @@ export default function ThreeBackground() {
     geometry.setAttribute('color', new THREE.BufferAttribute(colors, 3))
 
     const material = new THREE.PointsMaterial({
-      size: 2.5,
+      size: 1.2,
       vertexColors: true,
       transparent: true,
-      opacity: 0.8,
+      opacity: 0.3,
       sizeAttenuation: true,
       blending: THREE.AdditiveBlending,
       depthWrite: false,
@@ -105,7 +105,7 @@ export default function ThreeBackground() {
     const lineMaterial = new THREE.LineBasicMaterial({
       color: 0x8b5cf6,
       transparent: true,
-      opacity: 0.06,
+      opacity: 0.02,
       blending: THREE.AdditiveBlending,
       depthWrite: false,
     })
