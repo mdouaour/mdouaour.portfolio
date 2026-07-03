@@ -116,7 +116,7 @@ export default function Hero() {
       >
         <a
           href="#projects"
-          className="px-6 py-3 rounded-xl bg-gradient-to-r from-violet-500 to-cyan-500 hover:from-violet-400 hover:to-cyan-400 text-white font-semibold text-sm transition-all duration-200 shadow-lg shadow-violet-500/30 hover:shadow-violet-500/40 hover:-translate-y-0.5 active:scale-[0.97]"
+          className="px-6 py-3 rounded-xl bg-gradient-to-r from-violet-500 to-cyan-500 hover:from-violet-400 hover:to-cyan-400 text-white [text-shadow:0_1px_2px_#00000073] font-semibold text-sm transition-all duration-200 shadow-lg shadow-violet-500/30 hover:shadow-violet-500/40 hover:-translate-y-0.5 active:scale-[0.97]"
         >
           {T.cta} ↓
         </a>

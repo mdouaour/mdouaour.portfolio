@@ -185,7 +185,7 @@ export default function Contact() {
             <button
               type="submit"
               disabled={sent || sending}
-              className="w-full px-6 py-3 rounded-xl bg-gradient-to-r from-violet-600 to-cyan-600 hover:from-violet-500 hover:to-cyan-500 disabled:from-violet-600/50 disabled:to-cyan-600/50 disabled:cursor-not-allowed text-white font-semibold text-sm transition-all shadow-lg shadow-violet-500/30 hover:shadow-violet-500/40 active:scale-[0.98] flex items-center justify-center gap-2"
+              className="w-full px-6 py-3 rounded-xl bg-gradient-to-r from-violet-600 to-cyan-600 hover:from-violet-500 hover:to-cyan-500 disabled:from-violet-600/50 disabled:to-cyan-600/50 disabled:cursor-not-allowed text-white [text-shadow:0_1px_2px_#00000073] font-semibold text-sm transition-all shadow-lg shadow-violet-500/30 hover:shadow-violet-500/40 active:scale-[0.98] flex items-center justify-center gap-2"
             >
               {sending ? (
                 <span className="inline-block w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />

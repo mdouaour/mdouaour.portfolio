@@ -174,7 +174,7 @@ export const ProjectModal = ({ project, lang, onClose }: ProjectModalProps) => {
                 href={project.demo}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-violet-500 to-cyan-500 hover:from-violet-400 hover:to-cyan-400 text-white text-sm transition-all shadow-lg shadow-violet-500/30 hover:-translate-y-0.5"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-violet-500 to-cyan-500 hover:from-violet-400 hover:to-cyan-400 text-white [text-shadow:0_1px_2px_#00000073] text-sm transition-all shadow-lg shadow-violet-500/30 hover:-translate-y-0.5"
                 aria-label="View live demo"
               >
                 <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" aria-hidden="true">
