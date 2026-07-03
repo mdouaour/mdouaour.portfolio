@@ -87,7 +87,7 @@ export default function About() {
                   variants={V.item}
                   className="flex items-start gap-2 text-text-muted text-sm"
                 >
-                  <span className="text-violet-400 mt-0.5 flex-shrink-0">▹</span>
+                  <span className="text-text-accent mt-0.5 flex-shrink-0">▹</span>
                   {service}
                 </motion.li>
               ))}

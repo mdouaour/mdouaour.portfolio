@@ -231,8 +231,8 @@ export default function Contact() {
               <span
                 className={`flex-shrink-0 transition-colors ${
                   highlight
-                    ? 'text-violet-400 group-hover:text-violet-300'
-                    : 'text-text-muted group-hover:text-violet-400'
+                    ? 'text-text-accent group-hover:text-text-accent'
+                    : 'text-text-muted group-hover:text-text-accent'
                 }`}
               >
                 {icon}

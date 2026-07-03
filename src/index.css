@@ -9,6 +9,7 @@
   --text-primary: #1a1a2e;
   --text-secondary: #4b5563;
   --text-muted: #9ca3af;
+  --text-accent: #6d28d9;
   --border-color: rgba(0, 0, 0, 0.08);
   --border-light: rgba(0, 0, 0, 0.12);
   --surface-hover: rgba(0, 0, 0, 0.05);
@@ -26,6 +27,7 @@
   --text-primary: #e8e8f0;
   --text-secondary: #9ca3af;
   --text-muted: #6b7280;
+  --text-accent: #a78bfa;
   --border-color: rgba(255, 255, 255, 0.06);
   --border-light: rgba(255, 255, 255, 0.10);
   --surface-hover: rgba(255, 255, 255, 0.05);
@@ -48,6 +50,7 @@
   --color-text: var(--text-primary);
   --color-text-muted: var(--text-secondary);
   --color-text-dim: var(--text-muted);
+  --color-text-accent: var(--text-accent);
   --color-border: var(--border-color);
   --color-border-light: var(--border-light);
   --color-surface-hover: var(--surface-hover);

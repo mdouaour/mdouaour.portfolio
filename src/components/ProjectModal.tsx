@@ -128,7 +128,7 @@ export const ProjectModal = ({ project, lang, onClose }: ProjectModalProps) => {
             <ul className="space-y-1.5">
               {features.map((feat) => (
                 <li key={feat} className="text-text-dim flex items-start gap-2 text-sm">
-                  <span className="text-violet-400 flex-shrink-0 mt-0.5">▹</span>
+                  <span className="text-text-accent flex-shrink-0 mt-0.5">▹</span>
                   {feat}
                 </li>
               ))}
@@ -141,7 +141,7 @@ export const ProjectModal = ({ project, lang, onClose }: ProjectModalProps) => {
               {project.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="text-xs text-violet-300 bg-violet-500/10 border border-violet-500/20 px-2.5 py-1 rounded-full"
+                  className="text-xs text-text-accent bg-violet-500/10 border border-violet-500/20 px-2.5 py-1 rounded-full"
                 >
                   {tag}
                 </span>

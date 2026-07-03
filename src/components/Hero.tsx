@@ -53,7 +53,7 @@ export default function Hero() {
       </motion.div>
 
       <motion.p
-        className="text-violet-400 text-sm mb-2 tracking-widest uppercase font-medium"
+        className="text-text-accent text-sm mb-2 tracking-widest uppercase font-medium"
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.1 }}
@@ -74,7 +74,7 @@ export default function Hero() {
       </motion.h1>
 
       <motion.p
-        className="text-violet-300 font-semibold text-base sm:text-lg mb-4"
+        className="text-text-accent font-semibold text-base sm:text-lg mb-4"
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2 }}
