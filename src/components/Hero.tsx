@@ -3,7 +3,6 @@ import { useLang } from '../context/LanguageContext'
 import { translations } from '../data/translations'
 import { useReducedMotion } from '../hooks/useReducedMotion'
 import { motionTokens, springs } from '../lib/motionConfig'
-import FloatingShapes from './FloatingShapes'
 
 export default function Hero() {
   const { lang, isRTL } = useLang()
@@ -19,10 +18,9 @@ export default function Hero() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: reduce ? 0.01 : motionTokens.duration.slow }}
     >
-      <FloatingShapes />
-      <div className="absolute inset-0 bg-gradient-to-b from-emerald-600/10 via-transparent to-transparent pointer-events-none" aria-hidden="true" />
+      <div className="absolute inset-0 bg-gradient-to-b from-violet-600/10 via-transparent to-transparent pointer-events-none" aria-hidden="true" />
       <motion.div
-        className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] bg-gradient-radial from-emerald-500/8 via-emerald-500/5 to-transparent rounded-full blur-3xl pointer-events-none"
+        className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] bg-gradient-radial from-violet-500/8 via-violet-500/5 to-transparent rounded-full blur-3xl pointer-events-none"
         aria-hidden="true"
         animate={reduce ? {} : { scale: [1, 1.06, 1], opacity: [0.06, 0.1, 0.06] }}
         transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
@@ -40,7 +38,7 @@ export default function Hero() {
         transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
       >
         <motion.div
-          className="w-28 h-28 rounded-full mb-6 ring-4 ring-emerald-500/40 shadow-lg shadow-emerald-500/20 overflow-hidden"
+          className="w-28 h-28 rounded-full mb-6 ring-4 ring-violet-500/40 shadow-lg shadow-violet-500/20 overflow-hidden"
           initial={{ scale: reduce ? 1 : 0 }}
           animate={{ scale: 1 }}
           transition={reduce ? { duration: 0 } : springs.bouncy}
@@ -55,7 +53,7 @@ export default function Hero() {
       </motion.div>
 
       <motion.p
-        className="text-emerald-400 text-sm mb-2 tracking-widest uppercase font-medium"
+        className="text-violet-400 text-sm mb-2 tracking-widest uppercase font-medium"
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.1 }}
@@ -70,13 +68,13 @@ export default function Hero() {
         transition={{ delay: 0.15 }}
       >
         {T.name.split(' ').slice(0, -1).join(' ')}{' '}
-        <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 to-cyan-300">
+        <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-300 to-cyan-300">
           {T.name.split(' ').pop()}
         </span>
       </motion.h1>
 
       <motion.p
-        className="text-emerald-300 font-semibold text-base sm:text-lg mb-4"
+        className="text-violet-300 font-semibold text-base sm:text-lg mb-4"
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2 }}
@@ -118,7 +116,7 @@ export default function Hero() {
       >
         <a
           href="#projects"
-          className="px-6 py-3 rounded-xl bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-400 hover:to-cyan-400 text-text font-semibold text-sm transition-all duration-200 shadow-lg shadow-emerald-500/30 hover:shadow-emerald-500/40 hover:-translate-y-0.5 active:scale-[0.97]"
+          className="px-6 py-3 rounded-xl bg-gradient-to-r from-violet-500 to-cyan-500 hover:from-violet-400 hover:to-cyan-400 text-white font-semibold text-sm transition-all duration-200 shadow-lg shadow-violet-500/30 hover:shadow-violet-500/40 hover:-translate-y-0.5 active:scale-[0.97]"
         >
           {T.cta} ↓
         </a>
@@ -133,7 +131,7 @@ function SocialLink({ href, label, icon }: { href: string; label: string; icon: 
       href={href}
       target="_blank"
       rel="noreferrer"
-      className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-surface-card/80 hover:bg-surface-elevated/80 text-text-muted text-sm font-medium transition-all duration-200 border border-border hover:border-emerald-500/40 active:scale-[0.97]"
+      className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-surface-card/80 hover:bg-surface-elevated/80 text-text-muted text-sm font-medium transition-all duration-200 border border-border hover:border-violet-500/40 active:scale-[0.97]"
       aria-label={label}
     >
       {icon}

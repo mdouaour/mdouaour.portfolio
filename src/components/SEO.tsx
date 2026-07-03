@@ -18,6 +18,7 @@ const jsonLd = {
       givenName: 'Mohammed Yassine',
       familyName: 'Douaouria',
       url: BASE_URL,
+      image: `${BASE_URL}/profile.jpg`,
       jobTitle: 'Full-Stack Developer & AI-Assisted Engineer',
       alumniOf: [
         { '@type': 'CollegeOrUniversity', name: 'University of Guelma, Algeria' },
@@ -40,6 +41,11 @@ const jsonLd = {
       name: 'Mohammed Yassine Douaouria — Portfolio',
       url: BASE_URL,
       description: 'Full-stack developer portfolio featuring web apps, desktop systems, APIs, and AI-powered products.',
+      potentialAction: {
+        '@type': 'SearchAction',
+        target: { '@type': 'EntryPoint', urlTemplate: `${BASE_URL}/?q={search_term_string}` },
+        'query-input': 'required name=search_term_string',
+      },
     },
   ],
 };

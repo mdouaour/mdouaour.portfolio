@@ -146,7 +146,7 @@ export default function Contact() {
               required
               value={formData.name}
               onChange={(e) => setFormData((p) => ({ ...p, name: e.target.value }))}
-              className="w-full px-4 py-3 rounded-xl bg-surface-card border border-border text-text placeholder-text-dim text-sm focus:outline-none focus:border-emerald-400 focus:ring-2 focus:ring-emerald-500/20 transition-all"
+              className="w-full px-4 py-3 rounded-xl bg-surface-card border border-border text-text placeholder-text-dim text-sm focus:outline-none focus:border-violet-400 focus:ring-2 focus:ring-violet-500/20 transition-all"
             />
           </motion.div>
           <motion.div variants={itemVariants}>
@@ -157,7 +157,7 @@ export default function Contact() {
               required
               value={formData.email}
               onChange={(e) => setFormData((p) => ({ ...p, email: e.target.value }))}
-              className="w-full px-4 py-3 rounded-xl bg-surface-card border border-border text-text placeholder-text-dim text-sm focus:outline-none focus:border-emerald-400 focus:ring-2 focus:ring-emerald-500/20 transition-all"
+              className="w-full px-4 py-3 rounded-xl bg-surface-card border border-border text-text placeholder-text-dim text-sm focus:outline-none focus:border-violet-400 focus:ring-2 focus:ring-violet-500/20 transition-all"
             />
           </motion.div>
           <motion.div variants={itemVariants}>
@@ -168,7 +168,7 @@ export default function Contact() {
               required
               value={formData.message}
               onChange={(e) => setFormData((p) => ({ ...p, message: e.target.value }))}
-              className="w-full px-4 py-3 rounded-xl bg-surface-card border border-border text-text placeholder-text-dim text-sm focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500/30 transition-all resize-none"
+              className="w-full px-4 py-3 rounded-xl bg-surface-card border border-border text-text placeholder-text-dim text-sm focus:outline-none focus:border-violet-500 focus:ring-1 focus:ring-violet-500/30 transition-all resize-none"
             />
           </motion.div>
           {error && (
@@ -185,7 +185,7 @@ export default function Contact() {
             <button
               type="submit"
               disabled={sent || sending}
-              className="w-full px-6 py-3 rounded-xl bg-gradient-to-r from-emerald-600 to-cyan-600 hover:from-emerald-500 hover:to-cyan-500 disabled:from-emerald-600/50 disabled:to-cyan-600/50 disabled:cursor-not-allowed text-text font-semibold text-sm transition-all shadow-lg shadow-emerald-500/30 hover:shadow-emerald-500/40 active:scale-[0.98] flex items-center justify-center gap-2"
+              className="w-full px-6 py-3 rounded-xl bg-gradient-to-r from-violet-600 to-cyan-600 hover:from-violet-500 hover:to-cyan-500 disabled:from-violet-600/50 disabled:to-cyan-600/50 disabled:cursor-not-allowed text-white font-semibold text-sm transition-all shadow-lg shadow-violet-500/30 hover:shadow-violet-500/40 active:scale-[0.98] flex items-center justify-center gap-2"
             >
               {sending ? (
                 <span className="inline-block w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
@@ -223,16 +223,16 @@ export default function Contact() {
               variants={itemVariants}
               className={`flex items-center gap-4 p-5 rounded-2xl border transition-all group active:scale-[0.98] ${
                 highlight
-                  ? 'bg-emerald-600/10 border-emerald-500/40 hover:border-emerald-400 hover:bg-emerald-600/20 shadow-sm'
-                  : 'bg-surface-card border-border hover:border-emerald-500/50 hover:bg-surface-elevated/50'
+                  ? 'bg-violet-600/10 border-violet-500/40 hover:border-violet-400 hover:bg-violet-600/20 shadow-sm'
+                  : 'bg-surface-card border-border hover:border-violet-500/50 hover:bg-surface-elevated/50'
               }`}
               aria-label={label}
             >
               <span
                 className={`flex-shrink-0 transition-colors ${
                   highlight
-                    ? 'text-emerald-400 group-hover:text-emerald-300'
-                    : 'text-text-muted group-hover:text-emerald-400'
+                    ? 'text-violet-400 group-hover:text-violet-300'
+                    : 'text-text-muted group-hover:text-violet-400'
                 }`}
               >
                 {icon}

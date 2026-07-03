@@ -84,7 +84,7 @@ function ProjectCard({
   return (
     <article
       onClick={onSelect}
-      className="cursor-pointer bg-surface-card border border-border rounded-2xl p-6 flex flex-col gap-4 hover:border-emerald-500/50 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 group h-full"
+      className="cursor-pointer bg-surface-card border border-border rounded-2xl p-6 flex flex-col gap-4 hover:border-violet-500/50 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 group h-full"
     >
       {project.image ? (
         <div className="overflow-hidden rounded-lg">
@@ -117,7 +117,7 @@ function ProjectCard({
       )}
 
       <div className="flex items-start justify-between gap-3">
-        <h3 className="text-text font-semibold text-lg group-hover:text-emerald-300 transition-colors leading-snug">
+        <h3 className="text-text font-semibold text-lg group-hover:text-violet-300 transition-colors leading-snug">
           {title}
         </h3>
         <span
@@ -136,7 +136,7 @@ function ProjectCard({
         <ul className="space-y-1">
           {features.map((feat) => (
             <li key={feat} className="text-text-muted text-xs flex items-start gap-1.5">
-              <span className="text-emerald-400 flex-shrink-0">▹</span>
+              <span className="text-violet-400 flex-shrink-0">▹</span>
               {feat}
             </li>
           ))}
@@ -147,7 +147,7 @@ function ProjectCard({
         {project.tags.map((tag) => (
           <span
             key={tag}
-            className="text-xs text-emerald-300 bg-emerald-500/10 border border-emerald-500/20 px-2 py-0.5 rounded-full"
+            className="text-xs text-violet-300 bg-violet-500/10 border border-violet-500/20 px-2 py-0.5 rounded-full"
           >
             {tag}
           </span>
@@ -159,7 +159,7 @@ function ProjectCard({
           href={project.github}
           target="_blank"
           rel="noreferrer"
-          className="inline-flex items-center gap-1.5 text-sm text-text-muted hover:text-emerald-400 transition-colors"
+          className="inline-flex items-center gap-1.5 text-sm text-text-muted hover:text-violet-400 transition-colors"
           aria-label={`View ${title} on GitHub`}
         >
           <GithubIcon />
@@ -170,7 +170,7 @@ function ProjectCard({
             href={project.demo}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-1.5 text-sm text-emerald-300 hover:text-emerald-400 transition-colors"
+            className="inline-flex items-center gap-1.5 text-sm text-violet-300 hover:text-violet-400 transition-colors"
             aria-label={`Live demo for ${title}`}
           >
             <ExternalLinkIcon />

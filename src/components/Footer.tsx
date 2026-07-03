@@ -52,7 +52,7 @@ export default function Footer() {
                 <li key={key}>
                   <a
                     href={`#${key}`}
-                    className="text-text-dim hover:text-emerald-400 transition-colors"
+                    className="text-text-dim hover:text-violet-400 transition-colors"
                   >
                     {Nav[key]}
                   </a>
@@ -61,7 +61,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#hero"
-                  className="text-text-dim hover:text-emerald-400 transition-colors"
+                  className="text-text-dim hover:text-violet-400 transition-colors"
                 >
                   {isRTL ? 'أعلى الصفحة' : 'Back to Top'}
                 </a>
@@ -81,7 +81,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noreferrer"
                   aria-label={link.label}
-                  className="w-9 h-9 flex items-center justify-center rounded-xl bg-surface-elevated hover:bg-surface-hover text-text-dim hover:text-emerald-400 transition-all hover:-translate-y-0.5"
+                  className="w-9 h-9 flex items-center justify-center rounded-xl bg-surface-elevated hover:bg-surface-hover text-text-dim hover:text-violet-400 transition-all hover:-translate-y-0.5"
                 >
                   <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path d={link.icon} />
@@ -99,7 +99,7 @@ export default function Footer() {
               <li>
                 <a
                   href={`mailto:hello@mdouaour.tech`}
-                  className="text-text-dim hover:text-emerald-400 transition-colors"
+                  className="text-text-dim hover:text-violet-400 transition-colors"
                 >
                   hello@mdouaour.tech
                 </a>
@@ -109,7 +109,7 @@ export default function Footer() {
                   href="https://github.com/mdouaour/mdouaour.portfolio"
                   target="_blank"
                   rel="noreferrer"
-                  className="text-text-dim hover:text-emerald-400 transition-colors"
+                  className="text-text-dim hover:text-violet-400 transition-colors"
                 >
                   {T.source}
                 </a>

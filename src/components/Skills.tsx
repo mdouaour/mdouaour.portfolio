@@ -102,9 +102,9 @@ export default function Skills() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              className="bg-surface-card rounded-2xl p-5 border border-border hover:border-emerald-500/40 shadow-sm hover:shadow-md transition-all duration-200"
+              className="bg-surface-card rounded-2xl p-5 border border-border hover:border-violet-500/40 shadow-sm hover:shadow-md transition-all duration-200"
             >
-              <h3 className="text-emerald-300 font-semibold text-sm uppercase tracking-wide mb-4">
+              <h3 className="text-violet-300 font-semibold text-sm uppercase tracking-wide mb-4">
                 {T.categories[group.categoryKey]}
               </h3>
               <ul className="space-y-3">
@@ -116,7 +116,7 @@ export default function Skills() {
                     </div>
                     <div className="h-1.5 bg-surface-elevated rounded-full overflow-hidden">
                       <motion.div
-                        className="h-full rounded-full bg-gradient-to-r from-emerald-500 to-cyan-500"
+                        className="h-full rounded-full bg-gradient-to-r from-violet-500 to-cyan-500"
                         custom={level}
                         variants={V.bar}
                         initial="hidden"
@@ -155,7 +155,7 @@ function AnimatedCount({ to, reduce }: { to: number; reduce: boolean }) {
   }, [inView, reduce, to, mv])
 
   return (
-    <span ref={ref} className="text-emerald-400 text-xs font-mono font-variant-numeric-tabular">
+    <span ref={ref} className="text-violet-400 text-xs font-mono font-variant-numeric-tabular">
       {reduce ? to : display}%
     </span>
   )
