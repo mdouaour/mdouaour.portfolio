@@ -1,5 +1,29 @@
 [
   {
+    "id": "boutique-en-ligne",
+    "status": "completed",
+    "kpi": "FastAPI · React 19 · SQLite · 5 modules",
+    "github": "",
+    "demo": null,
+    "image": "/screenshots/boutique-en-ligne.jpg",
+    "tags": ["Python", "FastAPI", "React", "SQLite", "SaaS", "E-Commerce"],
+    "title": {
+      "en": "Boutique en Ligne — Modular Shop Software for Algerian Merchants",
+      "fr": "Boutique en Ligne — Logiciels modulaires pour commerçants algériens",
+      "ar": "متجر على الإنترنت — برمجيات معيارية للتجار الجزائريين"
+    },
+    "description": {
+      "en": "SaaS for boutiques that sell on Facebook, Instagram and TikTok and deliver themselves. Five separately-priced modules on one codebase: shareable catalogue, order board with phone-order entry, delivery zones by commune, size and colour stock, and a customer file with loyalty points. Cash on delivery, WhatsApp order links, no commission, no card terminal.",
+      "fr": "SaaS pour les boutiques qui vendent sur Facebook, Instagram et TikTok et livrent elles-mêmes. Cinq modules vendus séparément sur un seul code : catalogue partageable, tableau de commandes avec saisie des commandes par téléphone, zones de livraison par commune, stock par taille et couleur, et fiche client avec points de fidélité. Paiement à la livraison, liens de commande WhatsApp, zéro commission, aucun terminal bancaire.",
+      "ar": "برنامج سحابي للمتاجر التي تبيع عبر فيسبوك وإنستغرام وتيك توك وتوصل بنفسها. خمس وحدات مسعّرة بشكل منفصل على قاعدة كود واحدة: كتالوج قابل للمشاركة، لوحة طلبات مع إدخال الطلبات الهاتفية، مناطق توصيل حسب البلدية، مخزون حسب المقاس واللون، وملف عملاء مع نقاط الولاء. الدفع عند الاستلام، روابط طلب عبر واتساب، بدون عمولة، وبدون جهاز دفع."
+    },
+    "features": {
+      "en": ["Public catalogue on a shareable link with WhatsApp ordering", "Order board with manual entry for phone orders", "Delivery zones and rates per commune", "Size and colour variants with low-stock alerts", "Loyalty points and customer file", "One deployment, five modules gated by subscription"],
+      "fr": ["Catalogue public sur un lien partageable avec commande WhatsApp", "Tableau de commandes avec saisie manuelle des commandes par téléphone", "Zones et tarifs de livraison par commune", "Variantes de taille et couleur avec alertes de rupture", "Points de fidélité et fiche client", "Un seul déploiement, cinq modules activés par abonnement"],
+      "ar": ["كتالوج عام على رابط قابل للمشاركة مع الطلب عبر واتساب", "لوحة طلبات مع إدخال يدوي للطلبات الهاتفية", "مناطق وأسعار التوصيل حسب البلدية", "متغيرات المقاس واللون مع تنبيهات نفاد المخزون", "نقاط الولاء وملف العملاء", "نشر واحد، خمس وحدات مفعّلة حسب الاشتراك"]
+    }
+  },
+  {
     "id": "tapis",
     "status": "completed",
     "kpi": "Next.js 16 · Supabase · Arabic-first e-commerce",
